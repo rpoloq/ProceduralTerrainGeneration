@@ -15,7 +15,7 @@ public class MapGenerator : MonoBehaviour {
 	public Gradient colorGradient;
 	
 	public void DrawMapInEditor() {
-		MapData mapData = GenerateMapDataWithJobs(Vector2.zero);
+		MapData mapData = GenerateMapData(Vector2.zero);
 
 		MapDisplay display = FindObjectOfType<MapDisplay> ();
 		if (configSettings.editorPreviewSettings.drawMode == EditorPreviewSettings.DrawMode.NoiseMap) {
@@ -23,9 +23,7 @@ public class MapGenerator : MonoBehaviour {
 		} else if (configSettings.editorPreviewSettings.drawMode == EditorPreviewSettings.DrawMode.ColourMap) {
 			display.DrawTexture (TextureGenerator.TextureFromColourMap (mapData.colourMap, MapChunkSize, MapChunkSize));
 		} else if (configSettings.editorPreviewSettings.drawMode == EditorPreviewSettings.DrawMode.Mesh) {
-			// display.DrawMesh (MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, mapChunkSize), 
-			// 	TextureGenerator.TextureFromColourMap (mapData.colourMap, mapChunkSize, mapChunkSize));
-			display.DrawMesh (GenerateMeshDataWithJobs(mapData, configSettings.meshSettings, MapChunkSize), 
+			display.DrawMesh (MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize), 
 				TextureGenerator.TextureFromColourMap (mapData.colourMap, MapChunkSize, MapChunkSize));
 		}
 	}
@@ -37,8 +35,8 @@ public class MapGenerator : MonoBehaviour {
 	}
 
 	public void RequestMeshData(MapData mapData, int lod, Action<MeshData> callback) {
-		// MeshData meshData = MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, mapChunkSize);
-		MeshData meshData = GenerateMeshDataWithJobs(mapData, configSettings.meshSettings, MapChunkSize);
+		MeshData meshData = MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize);
+		// MeshData meshData = GenerateMeshDataWithJobs(mapData, configSettings.meshSettings, MapChunkSize);
 		callback(meshData);
 	}
 
@@ -59,7 +57,22 @@ public class MapGenerator : MonoBehaviour {
 		// 		}
 		// 	}
 		// }
+		
+		Color[] gradientColorArray = new Color[100];
 
+		for (int i = 0; i < 100; i++)
+		{
+			gradientColorArray[i] = colorGradient.Evaluate(i / 100f);
+		}
+		
+		for (int y = 0; y < MapChunkSize; y++)
+		{
+			for (int x = 0; x < MapChunkSize; x++)
+			{
+				int index = y * MapChunkSize + x;
+				colourMap[index] = gradientColorArray[Mathf.Clamp(Mathf.Abs(Mathf.RoundToInt(noiseMap[index] * 100)), 0, 99)];
+			}
+		}
 
 		return new MapData (noiseMap, colourMap);
 	}
@@ -71,7 +84,7 @@ public class MapGenerator : MonoBehaviour {
 
 		for (int i = 0; i < 100; i++)
 		{
-			gradientColorArray[i] = colorGradient.Evaluate(i / 100);
+			gradientColorArray[i] = colorGradient.Evaluate(i / 100f);
 		}
 		
 		MapDataGeneratorJob mapDataGeneratorJob = new MapDataGeneratorJob(configSettings.heightMapSettings, MapChunkSize, new float2(centre.x, centre.y), gradientColorArray);

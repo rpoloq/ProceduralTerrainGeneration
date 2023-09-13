@@ -29,7 +29,7 @@ public struct MapDataGeneratorJob : IJobParallelFor
     {
         int x = threadIndex % _mapChunkSize;
         int y = threadIndex / _mapChunkSize;
-        float2 pos = new float2(x, y);
+        float2 pos = new float2(x, -y);
 
         float currentHeight = Noise.GenerateNoiseValue(_centre + pos, _heightMapSettings);
 
@@ -42,7 +42,7 @@ public struct MapDataGeneratorJob : IJobParallelFor
         //     }
         // }
         
-        _colMap[threadIndex] = _colorGradient[Mathf.Clamp(Mathf.Abs(Mathf.RoundToInt(currentHeight)), 0, 100)];
+        _colMap[threadIndex] = _colorGradient[Mathf.Clamp(Mathf.Abs(Mathf.RoundToInt(currentHeight * 100)), 0, 99)];
 
         _heightMap[threadIndex] = currentHeight;
     }

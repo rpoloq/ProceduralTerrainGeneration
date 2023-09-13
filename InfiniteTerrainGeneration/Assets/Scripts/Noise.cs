@@ -128,7 +128,10 @@ public static class Noise {
 		// }
 
 		octaveOffsets.Dispose();
-
+		
+		float normalizedHeight = (noiseHeight + 1) / (maxPossibleHeight/0.9f);
+		noiseHeight = Mathf.Clamp(normalizedHeight,0, maxPossibleHeight);
+		
 		return noiseHeight;
 	}
 
