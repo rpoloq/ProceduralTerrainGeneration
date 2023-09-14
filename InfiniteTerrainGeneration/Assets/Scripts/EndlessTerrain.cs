@@ -75,7 +75,8 @@ public class EndlessTerrain : MonoBehaviour {
 
 		MeshRenderer _meshRenderer;
 		MeshFilter _meshFilter;
-
+		MeshCollider _meshCollider;
+		
 		LODInfo[] _detailLevels;
 		LODMesh[] _lodMeshes;
 
@@ -85,19 +86,25 @@ public class EndlessTerrain : MonoBehaviour {
 
 		public TerrainChunk(Vector2 coord, int size, LODInfo[] detailLevels, Transform parent, Material material) {
 			this._detailLevels = detailLevels;
-
-			_position = coord * size;
+			
+			// En el momento de escalar la posición del chunk a coordenadas abosultas, el vértice extra de diferencia entre el número de vértices por lado
+			// y el número de subdividiones por lado hará que por se separen unos chunks de otros tantas unidades como diferencia haya entre vétices y subdiviones por lado
+			// multiplicado por el númeor de chunks que se hayan instanciado.
+			_position = coord * (size - 1);
 			_bounds = new Bounds(_position,Vector2.one * size);
 			Vector3 positionV3 = new Vector3(_position.x,0,_position.y);
 
 			_meshObject = new GameObject("Terrain Chunk");
 			_meshRenderer = _meshObject.AddComponent<MeshRenderer>();
 			_meshFilter = _meshObject.AddComponent<MeshFilter>();
+			_meshCollider = _meshObject.AddComponent<MeshCollider>();
 			_meshRenderer.material = material;
 
 			_meshObject.transform.position = positionV3 * Scale;
 			_meshObject.transform.parent = parent;
 			_meshObject.transform.localScale = Vector3.one * Scale;
+			// _meshObject.tag = "Ground";
+			
 			SetVisible(false);
 
 			_lodMeshes = new LODMesh[detailLevels.Length];
@@ -141,6 +148,7 @@ public class EndlessTerrain : MonoBehaviour {
 						if (lodMesh.hasMesh) {
 							_previousLODIndex = lodIndex;
 							_meshFilter.mesh = lodMesh.mesh;
+							_meshCollider.sharedMesh = lodMesh.mesh;
 						} else if (!lodMesh.hasRequestedMesh) {
 							lodMesh.RequestMesh (_mapData);
 						}

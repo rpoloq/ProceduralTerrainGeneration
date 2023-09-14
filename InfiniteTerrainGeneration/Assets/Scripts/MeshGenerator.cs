@@ -18,9 +18,11 @@ public static class MeshGenerator {
 		int vertexIndex = 0;
 
 		for (int y = 0; y < size; y += meshSimplificationIncrement) {
-			for (int x = 0; x < size; x += meshSimplificationIncrement) {
+			for (int x = 0; x < size; x += meshSimplificationIncrement)
+			{
 				int index = y * size + x;
-				meshData.vertices[vertexIndex] = new Vector3(topLeftX + x, /*sizeCurve.Evaluate(*/heightMap[index]/*)*/ * parameters.meshHeightMultiplier, topLeftZ - y);
+				float height = heightMap[index] < parameters.waterLevel ?  parameters.waterLevel : heightMap[index];
+				meshData.vertices[vertexIndex] = new Vector3(topLeftX + x, /*sizeCurve.Evaluate(*/height/*)*/ * parameters.meshHeightMultiplier, topLeftZ - y);
 				meshData.uvs[vertexIndex] = new Vector2(x / (float)size, y / (float)size);
 
 				if (x < size - 1 && y < size - 1) {

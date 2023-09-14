@@ -9,8 +9,13 @@ using Unity.Mathematics;
 public struct MapDataGeneratorJob : IJobParallelFor
 {
     [NativeDisableParallelForRestriction] private NativeArray<float> _heightMap;
+    public NativeArray<float> HeightMap
+    {
+        get { return _heightMap; }
+        set { _heightMap = value; }
+    }
+    
     [NativeDisableParallelForRestriction] private NativeArray<Color> _colMap;
-    // private readonly NativeArray<TerrainType> _regions;
     private readonly HeightMapSettings _heightMapSettings;
     private readonly int _mapChunkSize;
     private readonly float2 _centre;
@@ -33,15 +38,6 @@ public struct MapDataGeneratorJob : IJobParallelFor
 
         float currentHeight = Noise.GenerateNoiseValue(_centre + pos, _heightMapSettings);
 
-        // for (int i = 0; i < _regions.Length; i++)
-        // {
-        //     if (currentHeight >= _regions[i].height)
-        //     {
-        //         _colMap[threadIndex] = _regions[i].colour;
-        //         break;
-        //     }
-        // }
-        
         _colMap[threadIndex] = _colorGradient[Mathf.Clamp(Mathf.Abs(Mathf.RoundToInt(currentHeight * 100)), 0, 99)];
 
         _heightMap[threadIndex] = currentHeight;

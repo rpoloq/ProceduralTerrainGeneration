@@ -30,9 +30,9 @@ public struct MeshDataGeneratorJob : IJobParallelFor
         int x = index % _size;
         int vertexIndex = y * _size + x;
 
-        float height = _heightMap[vertexIndex];
+        float height = _heightMap[vertexIndex] <= _meshSettings.waterLevel ? _meshSettings.waterLevel :  _heightMap[vertexIndex];
         // float curveHeight = meshHeightCurve.Evaluate(height) * meshHeightMultiplier;
-
+        
         _vertices[index] = new Vector3(x - _size * 0.5f, height * _meshSettings.meshHeightMultiplier, _size * 0.5f - y);
         _uvs[index] = new Vector2(x / (float)_size, y / (float)_size);
 

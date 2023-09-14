@@ -11,6 +11,9 @@ public struct ConfigSettings
     
     [Header("Heightmap")]
     public HeightMapSettings heightMapSettings;
+    
+    [Header("Erosion")]
+    public ErosionSettings erosionSettings;
 
     [Header("Mesh")]
     public MeshSettings meshSettings;
@@ -26,14 +29,13 @@ public struct HeightMapSettings {
     public float lacunarity;
     public uint seed;
     public Vector2 offset;
-    // public TerrainType[] regions;
-    // public NativeArray<TerrainType> regions;
 }
 
 [System.Serializable]
 public struct MeshSettings {
     public float meshHeightMultiplier;
-    // public AnimationCurve meshHeightCurve;
+    [Range(0,1)]
+    public float waterLevel;
     [Range(0,6)]
     public int editorPreviewLOD;
 }
@@ -45,3 +47,14 @@ public struct EditorPreviewSettings
     public DrawMode drawMode;
     public bool autoUpdate;
 }
+
+
+[System.Serializable]
+public struct ErosionSettings
+{
+    public bool activateErosion;
+    public Erosion.ErosionType erosionType;
+    public int erosionIterations;
+    public float talusAngle;
+}
+

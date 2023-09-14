@@ -14,6 +14,7 @@ public class MapGenerator : MonoBehaviour {
 	public ConfigSettings configSettings;
 	public Gradient colorGradient;
 	
+	
 	public void DrawMapInEditor() {
 		MapData mapData = GenerateMapData(Vector2.zero);
 
@@ -35,42 +36,23 @@ public class MapGenerator : MonoBehaviour {
 	}
 
 	public void RequestMeshData(MapData mapData, int lod, Action<MeshData> callback) {
-		MeshData meshData = MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize);
-		// MeshData meshData = GenerateMeshDataWithJobs(mapData, configSettings.meshSettings, MapChunkSize);
+		// MeshData meshData = MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize);
+		MeshData meshData = GenerateMeshDataWithJobs(mapData, configSettings.meshSettings, MapChunkSize);
 		callback(meshData);
 	}
 
 	MapData GenerateMapData(Vector2 centre) {
 		float[] noiseMap = Noise.GenerateNoiseMap (MapChunkSize, configSettings.heightMapSettings, new float2(centre.x, centre.y));
 
-		// var regions = configSettings.heightMapSettings.regions;
 		Color[] colourMap = new Color[MapChunkSize * MapChunkSize];
-		// for (int y = 0; y < mapChunkSize; y++) {
-		// 	for (int x = 0; x < mapChunkSize; x++) {
-		// 		float currentHeight = noiseMap[y * mapChunkSize + x];
-		// 		for (int i = 0; i < regions.Length; i++) {
-		// 			if (currentHeight >= regions[i].height) {
-		// 				colourMap[y * mapChunkSize + x] = regions[i].colour;
-		// 			} else {
-		// 				break;
-		// 			}
-		// 		}
-		// 	}
-		// }
-		
-		Color[] gradientColorArray = new Color[100];
 
-		for (int i = 0; i < 100; i++)
-		{
-			gradientColorArray[i] = colorGradient.Evaluate(i / 100f);
-		}
 		
 		for (int y = 0; y < MapChunkSize; y++)
 		{
 			for (int x = 0; x < MapChunkSize; x++)
 			{
 				int index = y * MapChunkSize + x;
-				colourMap[index] = gradientColorArray[Mathf.Clamp(Mathf.Abs(Mathf.RoundToInt(noiseMap[index] * 100)), 0, 99)];
+				colourMap[index] = colorGradient.Evaluate(noiseMap[index]);
 			}
 		}
 
@@ -90,13 +72,42 @@ public class MapGenerator : MonoBehaviour {
 		MapDataGeneratorJob mapDataGeneratorJob = new MapDataGeneratorJob(configSettings.heightMapSettings, MapChunkSize, new float2(centre.x, centre.y), gradientColorArray);
 		mapDataGeneratorJob.Schedule(MapChunkSize * MapChunkSize, 64).Complete();
 		
+		if (configSettings.erosionSettings.activateErosion)
+		{
+			if (configSettings.erosionSettings.activateErosion)
+			{
+				for (int i = 0; i < configSettings.erosionSettings.erosionIterations; i++)
+				{
+					NativeArray<float> erodedHeightMap = ApplyErosion(mapDataGeneratorJob);
+					erodedHeightMap.Dispose();
+				}
+				
+			}
+		}
+		
 		MapData mapData = mapDataGeneratorJob.ReturnMapData();
 		mapDataGeneratorJob.Dispose();
 		gradientColorArray.Dispose();
+
 		
 		return mapData;
 	}
-	
+
+	private NativeArray<float> ApplyErosion(MapDataGeneratorJob mapDataGeneratorJob)
+	{
+		// Crea una NativeArray para el mapa de altura erosionado
+		NativeArray<float> erodedHeightMap = new NativeArray<float>(mapDataGeneratorJob.HeightMap, Allocator.TempJob);
+
+		// Crea un ErosionJob y ejecútalo
+		ErosionJob erosionJob = new ErosionJob(mapDataGeneratorJob.HeightMap, erodedHeightMap, configSettings.erosionSettings, MapChunkSize);
+		erosionJob.Schedule(MapChunkSize * MapChunkSize, 64).Complete();
+
+		// Actualiza el mapa de altura con el mapa erosionado
+		erodedHeightMap.CopyTo(mapDataGeneratorJob.HeightMap);
+		
+		return erodedHeightMap;
+	}
+
 	MeshData GenerateMeshDataWithJobs(MapData mapData, MeshSettings meshSettings, int size) {
 
 		NativeArray<Vector3> vertices = new NativeArray<Vector3>(size * size, Allocator.TempJob);
@@ -126,6 +137,9 @@ public class MapGenerator : MonoBehaviour {
 		if (configSettings.heightMapSettings.octaves < 0) {
 			configSettings.heightMapSettings.octaves = 0;
 		}
+		if (configSettings.erosionSettings.talusAngle > 0) {
+			configSettings.erosionSettings.talusAngle *= Mathf.PI / 180f;
+		}
 	}
 
 	struct MapThreadInfo<T> {
@@ -139,14 +153,6 @@ public class MapGenerator : MonoBehaviour {
 		}
 
 	}
-
-}
-
-[System.Serializable]
-public struct TerrainType {
-	public int typeIndex;
-	public float height;
-	public Color colour;
 }
 
 public struct MapData {
