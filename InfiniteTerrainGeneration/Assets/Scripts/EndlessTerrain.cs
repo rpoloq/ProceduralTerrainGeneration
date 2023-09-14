@@ -62,7 +62,6 @@ public class EndlessTerrain : MonoBehaviour {
 				} else {
 					_terrainChunkDictionary.Add (viewedChunkCoord, new TerrainChunk (viewedChunkCoord, _chunkSize, detailLevels, transform, mapMaterial));
 				}
-
 			}
 		}
 	}

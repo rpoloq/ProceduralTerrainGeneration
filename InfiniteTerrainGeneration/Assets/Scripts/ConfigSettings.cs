@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [System.Serializable]
 public struct ConfigSettings
@@ -53,8 +54,36 @@ public struct EditorPreviewSettings
 public struct ErosionSettings
 {
     public bool activateErosion;
-    public Erosion.ErosionType erosionType;
-    public int erosionIterations;
-    public float talusAngle;
+    public Erosion.Type type;
+    [FormerlySerializedAs("iterations")] 
+    public int cicles;
+    public int borderSize;
+
+    [Header("Thermal Erosion Params")]
+    public ThermalSettings thermalSettings;
+    
+    [Header("Water Erosion Params")]
+    public WaterSettings waterSettings;
+
+    public struct ThermalSettings
+    {
+        public float talusAngle;
+    }
+    
+    public struct WaterSettings
+    {
+        public float erosionRate;
+        public float sedimentCapacityFactor;
+        public float minSedimentCapacity;
+    }
+    // Default values
+    //     activateErosion = false;
+    //     erosionType = Erosion.Type.Thermal;
+    //     erosionIterations = 0;
+    //     talusAngle = 90;
+    //     erosionRate = 0.01f;
+    //     sedimentCapacityFactor = 3.0f;
+    //     minSedimentCapacity = 0.01f;
+    //
 }
 

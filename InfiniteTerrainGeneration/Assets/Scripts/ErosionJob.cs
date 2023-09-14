@@ -24,11 +24,27 @@ public struct ErosionJob : IJobParallelFor
         int x = threadIndex % _mapChunkSize;
         int y = threadIndex / _mapChunkSize;
         int index = y * _mapChunkSize + x;
+        
+        if (_erosionSettings.type == Erosion.Type.Thermal)
+        {
+            _erodedHeightMap[index] = Erosion.ThermalErosionValue(x, y, _mapChunkSize, _erosionSettings, _heightMap);
+        } else if (_erosionSettings.type == Erosion.Type.Water)
+        {
+            // WaterErosion(x, y, new Erosion.WaterMapData());
+        }
+    }
 
-        float currentHeight = _heightMap[index];
-        float minHeight = currentHeight;
+    
+    
+    
+    private void WaterErosion(int x, int y, Erosion.WaterMapData waterMapData)
+    {
+        int index = y * _mapChunkSize + x;
+        float water = waterMapData.waterMap[index];
+        float sedimentCapacity = Mathf.Max((water - _erosionSettings.waterSettings.minSedimentCapacity) *
+                                           _erosionSettings.waterSettings.sedimentCapacityFactor, 0.0f);
+        float totalHeightDiff = 0.0f;
 
-        // Bucle para buscar el vecino más bajo
         for (int dy = -1; dy <= 1; dy++)
         {
             for (int dx = -1; dx <= 1; dx++)
@@ -40,27 +56,16 @@ public struct ErosionJob : IJobParallelFor
                 {
                     int neighborIndex = ny * _mapChunkSize + nx;
                     float neighborHeight = _heightMap[neighborIndex];
-
-                    if (neighborHeight < minHeight)
-                    {
-                        minHeight = neighborHeight;
-                    }
+                    float currentHeight = _heightMap[index];
+                    totalHeightDiff += currentHeight - neighborHeight;
                 }
             }
         }
 
-        // Calcula el ángulo de talud y aplica la erosión si es necesario
-        float heightDiff = currentHeight - minHeight;
-        float angle = Mathf.Atan(heightDiff);
+        float sedimentToTransport = Mathf.Max(totalHeightDiff * _erosionSettings.waterSettings.erosionRate, 0.0f);
 
-        if (angle > _erosionSettings.talusAngle)
-        {
-            float sediments = (angle - _erosionSettings.talusAngle) * 0.5f;
-            _erodedHeightMap[index] = currentHeight - sediments;
-        }
-        else
-        {
-            _erodedHeightMap[index] = currentHeight;
-        }
+        // Actualiza el _waterMap y _heightMap según corresponda
+        waterMapData.waterMap[index] -= sedimentToTransport;
+        // Actualiza el _heightMap según corresponda
     }
 }

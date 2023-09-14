@@ -4,59 +4,74 @@ using UnityEngine;
 
 public static class Erosion {
     
-    public enum ErosionType{Thermal, Water};    
+    public enum Type{Thermal, Water};    
     
-    public static void ApplyThermalErosion(ref NativeArray<float> heightMap, float talusAngle, int iterations) {
-        int mapSize = heightMap.Length;
-        int mapWidth = Mathf.RoundToInt(Mathf.Sqrt(mapSize));
+    public static float ThermalErosionValue(int x, int y, int mapChunkSize, ErosionSettings erosionSettings, NativeArray<float> heightMap)
+    {
+        float erodedValue = 0.0f;
         
-        // Se el ángulo de talud a radianes pasa a radianes
-        talusAngle *= (Mathf.PI / 180.0f);
+        int index = y * mapChunkSize + x;
         
-        // Bucle principal para cada iteración
-        for (int iteration = 0; iteration < iterations; iteration++) {
-            for (int y = 0; y < mapWidth; y++) {
-                for (int x = 0; x < mapWidth; x++) {
-                    int index = y * mapWidth + x;
+        // Verifica si el punto está dentro del área del borde
+        bool isInsideBorder = CheckIsInsideBorder(x, y, erosionSettings.borderSize, mapChunkSize);
+    
+        if (!isInsideBorder)
+        {
+            // Si está en el borde, no aplicar erosión, devolver la altura actual
+            erodedValue = heightMap[index];
+            return erodedValue;
+        }
+        
+        float currentHeight = heightMap[index];
+        float minHeight = currentHeight;
 
-                    // Calcula la diferencia de altura con los vecinos
-                    float currentHeight = heightMap[index];
-                    float minHeight = currentHeight;
-                    int minNeighborIndex = index;
+        // Bucle para buscar el vecino más bajo
+        for (int dy = -1; dy <= 1; dy++)
+        {
+            for (int dx = -1; dx <= 1; dx++)
+            {
+                int nx = x + dx;
+                int ny = y + dy;
 
-                    for (int dy = -1; dy <= 1; dy++) {
-                        for (int dx = -1; dx <= 1; dx++) {
-                            int nx = x + dx;
-                            int ny = y + dy;
+                if (nx >= 0 && nx < mapChunkSize && ny >= 0 && ny < mapChunkSize)
+                {
+                    int neighborIndex = ny * mapChunkSize + nx;
+                    float neighborHeight = heightMap[neighborIndex];
 
-                            if (nx >= 0 && nx < mapWidth && ny >= 0 && ny < mapWidth) {
-                                int neighborIndex = ny * mapWidth + nx;
-                                float neighborHeight = heightMap[neighborIndex];
-
-                                if (neighborHeight < minHeight) {
-                                    minHeight = neighborHeight;
-                                    minNeighborIndex = neighborIndex;
-                                }
-                            }
-                        }
-                    }
-
-                    // Calcula el ángulo de talud
-                    float heightDiff = currentHeight - minHeight;
-                    float angle = Mathf.Atan(heightDiff);
-
-                    // Si el ángulo de talud es mayor que el ángulo de talud máximo (talusAngle), erosiona
-                    if (angle > talusAngle) {
-                        float sediments = (angle - talusAngle) * 0.5f;
-                        heightMap[index] -= sediments;
-                        heightMap[minNeighborIndex] += sediments;
+                    if (neighborHeight < minHeight)
+                    {
+                        minHeight = neighborHeight;
                     }
                 }
             }
         }
+
+        // Calcula el ángulo de talud y aplica la erosión si es necesario
+        float heightDiff = currentHeight - minHeight;
+        float angle = Mathf.Atan(heightDiff);
+
+        if (angle > erosionSettings.thermalSettings.talusAngle)
+        {
+            float sediments = (angle - erosionSettings.thermalSettings.talusAngle) * 0.5f;
+            erodedValue = currentHeight - sediments;
+        }
+        else
+        {
+            erodedValue = currentHeight;
+        }
+
+        return erodedValue;
     }
-    
-    public static void ApplyWaterErosion(float[] heightMap, WaterMap waterMap) {
+
+    private static bool CheckIsInsideBorder(int x, int y, int borderSize, int mapChunkSize)
+    {
+        return x >= borderSize && 
+               x < mapChunkSize - borderSize &&
+               y >= borderSize && 
+               y < mapChunkSize - borderSize;
+    }
+
+    public static void WaterErosionValue(int x, int y, int mapChunkSize, ErosionSettings erosionSettings, NativeArray<float> heightMap) {
         int mapSize = heightMap.Length;
         int mapWidth = Mathf.RoundToInt(Mathf.Sqrt(mapSize));
 
@@ -66,12 +81,12 @@ public static class Erosion {
         float minSedimentCapacity = 0.01f;
 
         // Bucle principal para cada celda del mapa
-        for (int y = 0; y < mapWidth; y++) {
-            for (int x = 0; x < mapWidth; x++) {
+        for (y = 0; y < mapWidth; y++) {
+            for (x = 0; x < mapWidth; x++) {
                 int index = y * mapWidth + x;
 
                 // Calcula la cantidad de agua en esta celda
-                float water = waterMap.waterMap[index];
+                float water = 0.2f;
 
                 // Calcula la sedimentación máxima que puede llevar esta cantidad de agua
                 float sedimentCapacity = Mathf.Max((water - minSedimentCapacity) * sedimentCapacityFactor, 0.0f);
@@ -97,15 +112,13 @@ public static class Erosion {
                 float sedimentToTransport = Mathf.Max(totalHeightDiff * erosionRate, 0.0f);
 
                 // Actualiza la cantidad de agua y sedimentos en esta celda
-                waterMap.waterMap[index] -= sedimentToTransport;
-                waterMap.waterMap[index] += sedimentToTransport;
+                // waterMapData.waterMap[index] -= sedimentToTransport;
+                // waterMapData.waterMap[index] += sedimentToTransport;
             }
         }
-        
-
     }
     
-    public class WaterMap {
+    public struct WaterMapData {
         public float[] waterMap;
         public float waterAmount;
         public float evaporation;

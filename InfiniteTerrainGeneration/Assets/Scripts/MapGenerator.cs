@@ -31,13 +31,13 @@ public class MapGenerator : MonoBehaviour {
 
 	public void RequestMapData(Vector2 centre, Action<MapData> callback)
 	{
-		MapData mapData = GenerateMapDataWithJobs (centre);
+		MapData mapData = GenerateMapDataJob (centre);
 		callback(mapData);
 	}
 
 	public void RequestMeshData(MapData mapData, int lod, Action<MeshData> callback) {
 		// MeshData meshData = MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize);
-		MeshData meshData = GenerateMeshDataWithJobs(mapData, configSettings.meshSettings, MapChunkSize);
+		MeshData meshData = GenerateMeshDataJob(mapData, configSettings.meshSettings, MapChunkSize);
 		callback(meshData);
 	}
 
@@ -60,7 +60,7 @@ public class MapGenerator : MonoBehaviour {
 	}
 	
 	
-	MapData GenerateMapDataWithJobs(Vector2 centre) {
+	MapData GenerateMapDataJob(Vector2 centre) {
 		
 		NativeArray<Color> gradientColorArray = new NativeArray<Color>(100, Allocator.Persistent);
 
@@ -71,44 +71,39 @@ public class MapGenerator : MonoBehaviour {
 		
 		MapDataGeneratorJob mapDataGeneratorJob = new MapDataGeneratorJob(configSettings.heightMapSettings, MapChunkSize, new float2(centre.x, centre.y), gradientColorArray);
 		mapDataGeneratorJob.Schedule(MapChunkSize * MapChunkSize, 64).Complete();
-		
-		if (configSettings.erosionSettings.activateErosion)
-		{
-			if (configSettings.erosionSettings.activateErosion)
-			{
-				for (int i = 0; i < configSettings.erosionSettings.erosionIterations; i++)
-				{
-					NativeArray<float> erodedHeightMap = ApplyErosion(mapDataGeneratorJob);
-					erodedHeightMap.Dispose();
-				}
-				
-			}
-		}
-		
+
 		MapData mapData = mapDataGeneratorJob.ReturnMapData();
 		mapDataGeneratorJob.Dispose();
 		gradientColorArray.Dispose();
-
 		
+		if (configSettings.erosionSettings.activateErosion)
+		{
+			NativeArray<float> erodedHeightMap = new NativeArray<float>(mapData.heightMap, Allocator.TempJob);
+			for (int i = 0; i < configSettings.erosionSettings.cicles; i++)
+			{
+				erodedHeightMap = ApplyErosion(erodedHeightMap, configSettings.erosionSettings);
+			}
+			erodedHeightMap.CopyTo(mapData.heightMap);
+			erodedHeightMap.Dispose();
+		}
+
 		return mapData;
 	}
 
-	private NativeArray<float> ApplyErosion(MapDataGeneratorJob mapDataGeneratorJob)
+	NativeArray<float> ApplyErosion(NativeArray<float> heightMap, ErosionSettings erosionSettings)
 	{
-		// Crea una NativeArray para el mapa de altura erosionado
-		NativeArray<float> erodedHeightMap = new NativeArray<float>(mapDataGeneratorJob.HeightMap, Allocator.TempJob);
+		NativeArray<float> erodedHeightMap = new NativeArray<float>(heightMap, Allocator.TempJob);
 
-		// Crea un ErosionJob y ejecútalo
-		ErosionJob erosionJob = new ErosionJob(mapDataGeneratorJob.HeightMap, erodedHeightMap, configSettings.erosionSettings, MapChunkSize);
+		ErosionJob erosionJob = new ErosionJob(heightMap, erodedHeightMap, erosionSettings, MapChunkSize);
 		erosionJob.Schedule(MapChunkSize * MapChunkSize, 64).Complete();
 
-		// Actualiza el mapa de altura con el mapa erosionado
-		erodedHeightMap.CopyTo(mapDataGeneratorJob.HeightMap);
-		
-		return erodedHeightMap;
+		erodedHeightMap.CopyTo(heightMap);
+		erodedHeightMap.Dispose();
+
+		return heightMap;
 	}
 
-	MeshData GenerateMeshDataWithJobs(MapData mapData, MeshSettings meshSettings, int size) {
+	MeshData GenerateMeshDataJob(MapData mapData, MeshSettings meshSettings, int size) {
 
 		NativeArray<Vector3> vertices = new NativeArray<Vector3>(size * size, Allocator.TempJob);
 		NativeArray<Vector2> uvs = new NativeArray<Vector2>(size * size, Allocator.TempJob);
@@ -137,8 +132,8 @@ public class MapGenerator : MonoBehaviour {
 		if (configSettings.heightMapSettings.octaves < 0) {
 			configSettings.heightMapSettings.octaves = 0;
 		}
-		if (configSettings.erosionSettings.talusAngle > 0) {
-			configSettings.erosionSettings.talusAngle *= Mathf.PI / 180f;
+		if (configSettings.erosionSettings.thermalSettings.talusAngle > 0) {
+			configSettings.erosionSettings.thermalSettings.talusAngle *= Mathf.PI / 180f;
 		}
 	}
 

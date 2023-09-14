@@ -117,20 +117,19 @@ public static class Noise {
 			frequency *= parameters.lacunarity;
 		}
 
-		// if (parameters.normalizeMode == NormalizeMode.Local)
-		// {
-		// 	noiseHeight = Mathf.InverseLerp(-maxPossibleHeight, maxPossibleHeight, noiseHeight);
-		// }
-		// else
-		// {
-		// 	noiseHeight = (noiseHeight + maxPossibleHeight) / (2f * maxPossibleHeight);
-		// 	noiseHeight = Mathf.Clamp(noiseHeight, 0, 1);
-		// }
+		if (parameters.normalizeMode == NormalizeMode.Local)
+		{
+			noiseHeight = Mathf.InverseLerp(-maxPossibleHeight, maxPossibleHeight, noiseHeight);
+		}
+		else
+		{
+			float normalizedHeight = (noiseHeight + 1) / (maxPossibleHeight/0.9f);
+			noiseHeight = Mathf.Clamp(normalizedHeight,0, maxPossibleHeight);
+		}
 
 		octaveOffsets.Dispose();
 		
-		float normalizedHeight = (noiseHeight + 1) / (maxPossibleHeight/0.9f);
-		noiseHeight = Mathf.Clamp(normalizedHeight,0, maxPossibleHeight);
+		
 		
 		return noiseHeight;
 	}
