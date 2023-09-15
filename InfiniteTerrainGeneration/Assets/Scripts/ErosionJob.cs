@@ -10,12 +10,14 @@ public struct ErosionJob : IJobParallelFor
     [NativeDisableParallelForRestriction] private NativeArray<float> _erodedHeightMap;
     private readonly int _mapChunkSize;
     private readonly ErosionSettings _erosionSettings;
+    private readonly float _iterFraction;
 
-    public ErosionJob(NativeArray<float> heightMap, NativeArray<float> erodedHeightMap, ErosionSettings erosionSettings, int mapChunkSize)
+    public ErosionJob(NativeArray<float> heightMap, NativeArray<float> erodedHeightMap, ErosionSettings erosionSettings, int mapChunkSize, float iterFraction)
     {
         _heightMap = heightMap;
         _erodedHeightMap = erodedHeightMap;
         _mapChunkSize = mapChunkSize;
+        _iterFraction = iterFraction;
         _erosionSettings = erosionSettings;
     }
 
@@ -27,7 +29,7 @@ public struct ErosionJob : IJobParallelFor
         
         if (_erosionSettings.type == Erosion.Type.Thermal)
         {
-            _erodedHeightMap[index] = Erosion.ThermalErosionValue(x, y, _mapChunkSize, _erosionSettings, _heightMap);
+            _erodedHeightMap[index] = Erosion.ThermalErosionValue(x, y, _mapChunkSize, _erosionSettings, _heightMap, _iterFraction);
         } else if (_erosionSettings.type == Erosion.Type.Water)
         {
             // WaterErosion(x, y, new Erosion.WaterMapData());

@@ -8,15 +8,23 @@ using UnityEngine;
 public struct MeshDataGeneratorJob : IJobParallelFor
 {
     [ReadOnly] private int _size;
+    [ReadOnly] private int _meshSimpplificationIncrement;
     [ReadOnly] private MeshSettings _meshSettings;
     [ReadOnly] private NativeArray<float> _heightMap;
     [NativeDisableParallelForRestriction] private NativeArray<Vector3> _vertices;
     [NativeDisableParallelForRestriction] private NativeArray<Vector2> _uvs;
     [NativeDisableParallelForRestriction] private NativeArray<int> _triangles;
 
-    public MeshDataGeneratorJob(int size, MeshSettings meshSettings, NativeArray<float> heightMap, NativeArray<Vector3> vertices, NativeArray<Vector2> uvs, NativeArray<int> triangles)
+    public MeshDataGeneratorJob(int size,
+                                int meshSimplificationIncrement,
+                                MeshSettings meshSettings, 
+                                NativeArray<float> heightMap, 
+                                NativeArray<Vector3> vertices, 
+                                NativeArray<Vector2> uvs, 
+                                NativeArray<int> triangles)
     {
         _size = size;
+        _meshSimpplificationIncrement = meshSimplificationIncrement;
         _meshSettings = meshSettings;
         _heightMap = heightMap;
         _vertices = vertices;
@@ -26,13 +34,12 @@ public struct MeshDataGeneratorJob : IJobParallelFor
 
     public void Execute(int index)
     {
-        int y = index / _size;
-        int x = index % _size;
+        int y = index / _size  * _meshSimpplificationIncrement;
+        int x = index % _size  * _meshSimpplificationIncrement;
         int vertexIndex = y * _size + x;
 
         float height = _heightMap[vertexIndex] <= _meshSettings.waterLevel ? _meshSettings.waterLevel :  _heightMap[vertexIndex];
-        // float curveHeight = meshHeightCurve.Evaluate(height) * meshHeightMultiplier;
-        
+
         _vertices[index] = new Vector3(x - _size * 0.5f, height * _meshSettings.meshHeightMultiplier, _size * 0.5f - y);
         _uvs[index] = new Vector2(x / (float)_size, y / (float)_size);
 
@@ -42,7 +49,7 @@ public struct MeshDataGeneratorJob : IJobParallelFor
             int b = a + 1;
             int c = (y + 1) * _size + x;
             int d = c + 1;
-            
+
             _triangles[index * 6] = a;
             _triangles[index * 6 + 1] = b;
             _triangles[index * 6 + 2] = c;

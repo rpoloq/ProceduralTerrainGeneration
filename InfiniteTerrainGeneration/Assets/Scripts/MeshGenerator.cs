@@ -6,7 +6,6 @@ using Unity.Collections;
 public static class MeshGenerator {
 
 	public static MeshData GenerateTerrainMesh(float[] heightMap, MeshSettings parameters, int size) {
-		// AnimationCurve sizeCurve = new AnimationCurve(parameters.meshHeightCurve.keys);
 
 		float topLeftX = (size - 1) / -2f;
 		float topLeftZ = (size - 1) / 2f;
@@ -22,7 +21,7 @@ public static class MeshGenerator {
 			{
 				int index = y * size + x;
 				float height = heightMap[index] < parameters.waterLevel ?  parameters.waterLevel : heightMap[index];
-				meshData.vertices[vertexIndex] = new Vector3(topLeftX + x, /*sizeCurve.Evaluate(*/height/*)*/ * parameters.meshHeightMultiplier, topLeftZ - y);
+				meshData.vertices[vertexIndex] = new Vector3(topLeftX + x, height * parameters.meshHeightMultiplier, topLeftZ - y);
 				meshData.uvs[vertexIndex] = new Vector2(x / (float)size, y / (float)size);
 
 				if (x < size - 1 && y < size - 1) {

@@ -6,7 +6,7 @@ public static class Erosion {
     
     public enum Type{Thermal, Water};    
     
-    public static float ThermalErosionValue(int x, int y, int mapChunkSize, ErosionSettings erosionSettings, NativeArray<float> heightMap)
+    public static float ThermalErosionValue(int x, int y, int mapChunkSize, ErosionSettings erosionSettings, NativeArray<float> heightMap, float iterFraction)
     {
         float erodedValue = 0.0f;
         
@@ -14,13 +14,6 @@ public static class Erosion {
         
         // Verifica si el punto está dentro del área del borde
         bool isInsideBorder = CheckIsInsideBorder(x, y, erosionSettings.borderSize, mapChunkSize);
-    
-        if (!isInsideBorder)
-        {
-            // Si está en el borde, no aplicar erosión, devolver la altura actual
-            erodedValue = heightMap[index];
-            return erodedValue;
-        }
         
         float currentHeight = heightMap[index];
         float minHeight = currentHeight;
@@ -49,11 +42,21 @@ public static class Erosion {
         // Calcula el ángulo de talud y aplica la erosión si es necesario
         float heightDiff = currentHeight - minHeight;
         float angle = Mathf.Atan(heightDiff);
-
+        float borderMaxReduction = erosionSettings.borderMaxReduction;
+        float currentBorderReduction = borderMaxReduction * iterFraction;
+        
         if (angle > erosionSettings.thermalSettings.talusAngle)
         {
-            float sediments = (angle - erosionSettings.thermalSettings.talusAngle) * 0.5f;
-            erodedValue = currentHeight - sediments;
+            if (!isInsideBorder)
+            {
+                // Si está en el borde, no aplicar erosión, devolver la altura disminuída según la iteración actual
+                erodedValue = currentHeight - currentBorderReduction;
+            }
+            else
+            {
+                float sediments = (angle - erosionSettings.thermalSettings.talusAngle) * 0.5f;
+                erodedValue = currentHeight - sediments;
+            }
         }
         else
         {

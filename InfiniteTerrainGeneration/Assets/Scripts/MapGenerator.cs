@@ -13,8 +13,9 @@ public class MapGenerator : MonoBehaviour {
 	public const int MapChunkSize = 241;
 	public ConfigSettings configSettings;
 	public Gradient colorGradient;
-	
-	
+	private int _batchSize = 1024;
+
+
 	public void DrawMapInEditor() {
 		MapData mapData = GenerateMapData(Vector2.zero);
 
@@ -70,7 +71,7 @@ public class MapGenerator : MonoBehaviour {
 		}
 		
 		MapDataGeneratorJob mapDataGeneratorJob = new MapDataGeneratorJob(configSettings.heightMapSettings, MapChunkSize, new float2(centre.x, centre.y), gradientColorArray);
-		mapDataGeneratorJob.Schedule(MapChunkSize * MapChunkSize, 64).Complete();
+		mapDataGeneratorJob.Schedule(MapChunkSize * MapChunkSize, _batchSize).Complete();
 
 		MapData mapData = mapDataGeneratorJob.ReturnMapData();
 		mapDataGeneratorJob.Dispose();
@@ -79,9 +80,13 @@ public class MapGenerator : MonoBehaviour {
 		if (configSettings.erosionSettings.activateErosion)
 		{
 			NativeArray<float> erodedHeightMap = new NativeArray<float>(mapData.heightMap, Allocator.TempJob);
-			for (int i = 0; i < configSettings.erosionSettings.cicles; i++)
+			int cicles = configSettings.erosionSettings.cicles;
+			
+			for (int i = 0; i < cicles; i++)
 			{
-				erodedHeightMap = ApplyErosion(erodedHeightMap, configSettings.erosionSettings);
+				float iterFraction = (float)i / cicles;
+				
+				erodedHeightMap = ApplyErosion(erodedHeightMap, configSettings.erosionSettings,iterFraction);
 			}
 			erodedHeightMap.CopyTo(mapData.heightMap);
 			erodedHeightMap.Dispose();
@@ -90,12 +95,12 @@ public class MapGenerator : MonoBehaviour {
 		return mapData;
 	}
 
-	NativeArray<float> ApplyErosion(NativeArray<float> heightMap, ErosionSettings erosionSettings)
+	NativeArray<float> ApplyErosion(NativeArray<float> heightMap, ErosionSettings erosionSettings, float iterFraction)
 	{
 		NativeArray<float> erodedHeightMap = new NativeArray<float>(heightMap, Allocator.TempJob);
 
-		ErosionJob erosionJob = new ErosionJob(heightMap, erodedHeightMap, erosionSettings, MapChunkSize);
-		erosionJob.Schedule(MapChunkSize * MapChunkSize, 64).Complete();
+		ErosionJob erosionJob = new ErosionJob(heightMap, erodedHeightMap, erosionSettings, MapChunkSize, iterFraction);
+		erosionJob.Schedule(MapChunkSize * MapChunkSize, _batchSize).Complete();
 
 		erodedHeightMap.CopyTo(heightMap);
 		erodedHeightMap.Dispose();
@@ -105,24 +110,28 @@ public class MapGenerator : MonoBehaviour {
 
 	MeshData GenerateMeshDataJob(MapData mapData, MeshSettings meshSettings, int size) {
 
-		NativeArray<Vector3> vertices = new NativeArray<Vector3>(size * size, Allocator.TempJob);
-		NativeArray<Vector2> uvs = new NativeArray<Vector2>(size * size, Allocator.TempJob);
-		NativeArray<int> triangles = new NativeArray<int>((size - 1) * (size - 1) * 6, Allocator.TempJob);
-		NativeArray<float> heightMap = new NativeArray<float>(mapData.heightMap, Allocator.TempJob);
-
-		MeshDataGeneratorJob meshGenerationJob = new MeshDataGeneratorJob(size, meshSettings, heightMap, vertices, uvs, triangles);
-
-		meshGenerationJob.Schedule(size * size, 64).Complete(); // Schedule the Job with the desired batch size and wait to complete.
+		int meshSimplificationIncrement = (meshSettings.editorPreviewLOD == 0) ? 1 : meshSettings.editorPreviewLOD * 2;
+		int verticesPerLine = (size - 1) / meshSimplificationIncrement + 1;
 		
+		NativeArray<Vector3> vertices = new NativeArray<Vector3>(verticesPerLine * verticesPerLine, Allocator.TempJob);
+		NativeArray<Vector2> uvs = new NativeArray<Vector2>(verticesPerLine * verticesPerLine, Allocator.TempJob);
+		NativeArray<int> triangles = new NativeArray<int>((verticesPerLine - 1) * (verticesPerLine - 1) * 6, Allocator.TempJob);
+		NativeArray<float> heightMap = new NativeArray<float>(mapData.heightMap, Allocator.TempJob);
+		
+		MeshDataGeneratorJob meshGenerationJob = new MeshDataGeneratorJob(verticesPerLine, meshSimplificationIncrement, meshSettings, heightMap, vertices, uvs, triangles);
+
+		meshGenerationJob.Schedule(verticesPerLine * verticesPerLine, _batchSize).Complete(); // Schedule the Job with the desired batch size and wait to complete.
+
 		MeshData meshData = new MeshData(vertices.ToArray(), triangles.ToArray(), uvs.ToArray());
 
 		vertices.Dispose();
 		uvs.Dispose();
 		triangles.Dispose();
 		heightMap.Dispose();
-		
+
 		return meshData;
 	}
+
 	
 
 	void OnValidate() {

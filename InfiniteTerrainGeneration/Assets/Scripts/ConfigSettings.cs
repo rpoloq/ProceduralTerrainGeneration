@@ -58,6 +58,7 @@ public struct ErosionSettings
     [FormerlySerializedAs("iterations")] 
     public int cicles;
     public int borderSize;
+    public float borderMaxReduction;
 
     [Header("Thermal Erosion Params")]
     public ThermalSettings thermalSettings;
@@ -65,11 +66,13 @@ public struct ErosionSettings
     [Header("Water Erosion Params")]
     public WaterSettings waterSettings;
 
+    [System.Serializable]
     public struct ThermalSettings
     {
         public float talusAngle;
     }
     
+    [System.Serializable]
     public struct WaterSettings
     {
         public float erosionRate;
