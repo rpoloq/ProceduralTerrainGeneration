@@ -1,0 +1,145 @@
+\documentclass[book,spanish,a4paper,12pt]{tfg}
+\usepackage{graphicx}
+\usepackage[utf8
+]{inputenc}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[spanish]{babel}
+
+
+% Editar la titulación
+\titulacion{Máster en Computación Gráfica, Realidad Virtual y Simulación}
+
+% Editar el título
+\title{Herramienta de generación de terreno procedural para Unity}
+
+% Si es una alumna se debe usar
+% \authorlabel{Autora}
+\authorlabel{Autor}
+% Editar el nombre
+\author{Rafael Polope Contreras}
+
+
+% Si hay varios tutores:
+% \tutorlabel{Tutores}
+% \tutor{Nombre del tutor 1 \\[2mm] Nombre del turor2}
+% Si el tutor es masculino:
+\tutorlabel{Tutor}
+% \tutorlabel{Tutora}
+% Editar
+\tutor{Álvaro San Juan Cervera}
+
+% Editar: Poner mes y año de la convocatoria de lectura del TFM
+\convocatoria{Septiembre 2023}
+
+\begin{document}
+
+% NO QUITAR ESTOS ELEMENTOS
+\portada
+\cleardoublepage
+% \contraportada
+% \cleardoublepage
+% \declaracion
+% \cleardoublepage
+
+
+% Editar: Resumen en Español (obligatorio)
+\begin{resumen}
+  Este trabajo presenta una herramienta de generación de terrenos procedurales para videojuegos. Utiliza diferentes tipos de ruido para crear terrenos variados y realistas, aplicando algoritmos de erosión para mejorar la apariencia. Además, asigna colores según la altitud del terreno. La herramienta aprovecha la paralelización con Job System y utiliza Niveles de Detalle (LOD) para optimizar el rendimiento del juego.\\
+  \\
+  Uno de los objetivos principales del proyecto es crear terrenos continuos, abordando el problema de las inconsistencias entre las diferentes partes del terreno generado. Además, busca superar los desafíos de rendimiento en tiempo real en la generación de terreno.\\
+  \\
+  \textbf{Palabras Clave:} Generación Procedural, Ruido, Erosión, Colores por Altura, Job System, LOD.
+\end{resumen}
+
+\cleardoublepage
+
+\begin{resumen}
+  This work presents a procedural terrain generation tool for video games. It uses different types of noise to create diverse and realistic terrains, applying erosion algorithms to enhance their appearance. Additionally, it assigns colors based on the terrain's elevation. The tool leverages parallelization through Job System and utilizes Levels of Detail (LOD) techniques to optimize game performance.\\
+  \\
+  One of the primary goals of the project is to create seamless terrains, addressing the issue of inconsistencies between different terrain parts generated. Furthermore, it aims to overcome real-time performance challenges in terrain generation.\\
+  \\
+  \textbf{Keywords:} Procedural Generation, Noise, Erosion, Color by Height, Job System, LOD.
+\end{resumen}
+
+\cleardoublepage
+
+% Editar: Agradecimientos (opcional)\documentclass[10pt]{•}
+\begin{agradecimientos}
+  A Álvaro San Juan, mi tutor en este proyecto, por ofrecerme la oportunidad de desarrollar este proyecto final a pesar de las dificultades presentadas para llevarlo a cabo en último momento.\\
+\\
+  A todo el equipo de RRHH de U-TAD y de Lãberit, la empresa en la que he estado trabajando durante el curso de este Máster, por haber hecho lo posible para llevar a cabo las prácticas de manera tan entregada y cercana.\\
+\\
+  A mi familia por soportarme este año especialmente duro, tanto para ellos como para mí, y a mis amigos por tener paciencia y entender el esfuerzo que me ha supuesto la decisión de llevar a cabo este máster y haber estado tan ausente.\\
+
+\end{agradecimientos}
+\cleardoublepage
+
+\tableofcontents
+
+\pagestyle{tfg}
+\justify
+
+% Las figuras se buscan en el directorio figs
+
+% Cada capítulo está en su propio fichero tex. Ver el directorio tex.
+
+% La bibliografía está dentro del directorio bib
+
+\renewcommand{\thechapter}{I} % Puedes usar "I" en lugar de "0" si prefieres números romanos
+
+% Prefacio
+\chapter*{\centering I. GUÍA DE LA MEMORIA}
+\input{tex/guia_memoria.tex}
+
+\chapter*{\centering II. MEMORIA}
+
+\addcontentsline{toc}{chapter}{I. GUÍA DE LA MEMORIA}
+\addcontentsline{toc}{chapter}{II. MEMORIA}
+
+\renewcommand{\thechapter}{\arabic{chapter}}
+
+\chapter{Introducción}
+\input{tex/introduccion.tex}
+
+\chapter{Planteamiento del problema}
+\input{tex/planteamiento_problema.tex}
+
+\chapter{Objetivos}
+\input{tex/objetivos.tex}
+
+\chapter{Estado del arte}
+\input{tex/estado_arte.tex}
+
+\chapter{Desarrollo de la solucion}
+\input{tex/desarrollo.tex}
+% \chapter{Análisis}
+% \input{tex/analisis.tex}
+
+% \chapter{Diseño}
+% \input{tex/diseno.tex}
+
+% \chapter{Implementación y pruebas}
+% \input{tex/implementacion_pruebas.tex}
+
+
+\chapter{Conclusiones}
+\input{tex/conclusiones.tex}
+
+
+\pagestyle{appendix}
+
+\appendix
+\chapter{Apéndice}
+\input{tex/apendice.tex}
+
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{unsrt}
+\bibliography{bib/bibliografia}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
