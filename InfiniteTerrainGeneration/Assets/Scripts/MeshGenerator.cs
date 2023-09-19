@@ -5,12 +5,12 @@ using Unity.Collections;
 
 public static class MeshGenerator {
 
-	public static MeshData GenerateTerrainMesh(float[] heightMap, MeshSettings parameters, int size) {
+	public static MeshData GenerateTerrainMesh(float[] heightMap, MeshSettings parameters, int size, int levelOfDetail) {
 
 		float topLeftX = (size - 1) / -2f;
 		float topLeftZ = (size - 1) / 2f;
 
-		int meshSimplificationIncrement = (parameters.editorPreviewLOD == 0) ? 1 : parameters.editorPreviewLOD * 2;
+		int meshSimplificationIncrement = (levelOfDetail == 0) ? 1 : levelOfDetail * 2;
 		int verticesPerLine = (size - 1) / meshSimplificationIncrement + 1;
 
 		MeshData meshData = new MeshData(verticesPerLine, verticesPerLine);

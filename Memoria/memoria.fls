@@ -358,9 +358,12 @@ INPUT .\tex\estado_arte.tex
 INPUT tex\estado_arte.tex
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
-INPUT .\tex\desarrollo.tex
-INPUT .\tex\desarrollo.tex
-INPUT tex\desarrollo.tex
+INPUT .\tex\analisis.tex
+INPUT .\tex\analisis.tex
+INPUT tex\analisis.tex
+INPUT .\tex\diseno.tex
+INPUT .\tex\diseno.tex
+INPUT tex\diseno.tex
 INPUT .\tex\conclusiones.tex
 INPUT .\tex\conclusiones.tex
 INPUT tex\conclusiones.tex

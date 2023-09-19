@@ -22,7 +22,7 @@ public struct ConfigSettings
 
 [System.Serializable]
 public struct HeightMapSettings {
-    public Noise.NormalizeMode normalizeMode;
+    public Noise.Type noiseType;
     public float noiseScale;
     public int octaves;
     [Range(0,1)]
@@ -54,39 +54,11 @@ public struct EditorPreviewSettings
 public struct ErosionSettings
 {
     public bool activateErosion;
-    public Erosion.Type type;
     [FormerlySerializedAs("iterations")] 
     public int cicles;
     public int borderSize;
     public float borderMaxReduction;
-
-    [Header("Thermal Erosion Params")]
-    public ThermalSettings thermalSettings;
-    
-    [Header("Water Erosion Params")]
-    public WaterSettings waterSettings;
-
-    [System.Serializable]
-    public struct ThermalSettings
-    {
-        public float talusAngle;
-    }
-    
-    [System.Serializable]
-    public struct WaterSettings
-    {
-        public float erosionRate;
-        public float sedimentCapacityFactor;
-        public float minSedimentCapacity;
-    }
-    // Default values
-    //     activateErosion = false;
-    //     erosionType = Erosion.Type.Thermal;
-    //     erosionIterations = 0;
-    //     talusAngle = 90;
-    //     erosionRate = 0.01f;
-    //     sedimentCapacityFactor = 3.0f;
-    //     minSedimentCapacity = 0.01f;
-    //
+    public float talusAngle;
+        
 }
 

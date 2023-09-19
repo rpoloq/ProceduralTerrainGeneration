@@ -10,14 +10,14 @@ using UnityEngine.Serialization;
 
 public class MapGenerator : MonoBehaviour {
 
-	public const int MapChunkSize = 241;
+	public const int MapChunkSize = 121;
 	public ConfigSettings configSettings;
 	public Gradient colorGradient;
 	private int _batchSize = 1024;
 
 
 	public void DrawMapInEditor() {
-		MapData mapData = GenerateMapData(Vector2.zero);
+		MapData mapData = GenerateMapDataJob(Vector2.zero);
 
 		MapDisplay display = FindObjectOfType<MapDisplay> ();
 		if (configSettings.editorPreviewSettings.drawMode == EditorPreviewSettings.DrawMode.NoiseMap) {
@@ -25,7 +25,7 @@ public class MapGenerator : MonoBehaviour {
 		} else if (configSettings.editorPreviewSettings.drawMode == EditorPreviewSettings.DrawMode.ColourMap) {
 			display.DrawTexture (TextureGenerator.TextureFromColourMap (mapData.colourMap, MapChunkSize, MapChunkSize));
 		} else if (configSettings.editorPreviewSettings.drawMode == EditorPreviewSettings.DrawMode.Mesh) {
-			display.DrawMesh (MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize), 
+			display.DrawMesh (MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize, configSettings.meshSettings.editorPreviewLOD), 
 				TextureGenerator.TextureFromColourMap (mapData.colourMap, MapChunkSize, MapChunkSize));
 		}
 	}
@@ -36,9 +36,19 @@ public class MapGenerator : MonoBehaviour {
 		callback(mapData);
 	}
 
-	public void RequestMeshData(MapData mapData, int lod, Action<MeshData> callback) {
-		// MeshData meshData = MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize);
-		MeshData meshData = GenerateMeshDataJob(mapData, configSettings.meshSettings, MapChunkSize);
+	public void RequestMeshData(MapData mapData, int lod, Action<MeshData> callback)
+	{
+		MeshData meshData;
+
+		if (lod == 1)
+		{
+			meshData = GenerateMeshDataJob(mapData, configSettings.meshSettings, MapChunkSize,lod);
+		}
+		else
+		{
+			meshData = MeshGenerator.GenerateTerrainMesh (mapData.heightMap, configSettings.meshSettings, MapChunkSize, lod);
+		}
+		
 		callback(meshData);
 	}
 
@@ -63,12 +73,7 @@ public class MapGenerator : MonoBehaviour {
 	
 	MapData GenerateMapDataJob(Vector2 centre) {
 		
-		NativeArray<Color> gradientColorArray = new NativeArray<Color>(100, Allocator.Persistent);
-
-		for (int i = 0; i < 100; i++)
-		{
-			gradientColorArray[i] = colorGradient.Evaluate(i / 100f);
-		}
+		NativeArray<Color> gradientColorArray = CreateGradientColor();
 		
 		MapDataGeneratorJob mapDataGeneratorJob = new MapDataGeneratorJob(configSettings.heightMapSettings, MapChunkSize, new float2(centre.x, centre.y), gradientColorArray);
 		mapDataGeneratorJob.Schedule(MapChunkSize * MapChunkSize, _batchSize).Complete();
@@ -80,14 +85,9 @@ public class MapGenerator : MonoBehaviour {
 		if (configSettings.erosionSettings.activateErosion)
 		{
 			NativeArray<float> erodedHeightMap = new NativeArray<float>(mapData.heightMap, Allocator.TempJob);
-			int cicles = configSettings.erosionSettings.cicles;
+
+			erodedHeightMap = ApplyErosion(erodedHeightMap);
 			
-			for (int i = 0; i < cicles; i++)
-			{
-				float iterFraction = (float)i / cicles;
-				
-				erodedHeightMap = ApplyErosion(erodedHeightMap, configSettings.erosionSettings,iterFraction);
-			}
 			erodedHeightMap.CopyTo(mapData.heightMap);
 			erodedHeightMap.Dispose();
 		}
@@ -95,42 +95,52 @@ public class MapGenerator : MonoBehaviour {
 		return mapData;
 	}
 
-	NativeArray<float> ApplyErosion(NativeArray<float> heightMap, ErosionSettings erosionSettings, float iterFraction)
+	private NativeArray<Color> CreateGradientColor()
 	{
-		NativeArray<float> erodedHeightMap = new NativeArray<float>(heightMap, Allocator.TempJob);
+		var gradientColorArray = new NativeArray<Color>(100, Allocator.Persistent);
 
-		ErosionJob erosionJob = new ErosionJob(heightMap, erodedHeightMap, erosionSettings, MapChunkSize, iterFraction);
-		erosionJob.Schedule(MapChunkSize * MapChunkSize, _batchSize).Complete();
+		for (int i = 0; i < 100; i++)
+		{
+			gradientColorArray[i] = colorGradient.Evaluate(i / 100f);
+		}
 
-		erodedHeightMap.CopyTo(heightMap);
-		erodedHeightMap.Dispose();
+		return gradientColorArray;
+	}
 
+	NativeArray<float> ApplyErosion(NativeArray<float> heightMap)
+	{
+		int cicles = configSettings.erosionSettings.cicles;
+		for (int i = 0; i < cicles; i++)
+		{
+			float iterFraction = (float)i / cicles;
+				
+			ErosionJob erosionJob = new ErosionJob(heightMap, configSettings.erosionSettings, MapChunkSize, iterFraction);
+			erosionJob.Schedule(MapChunkSize * MapChunkSize, _batchSize).Complete();
+			erosionJob.GetErodedHeightMap().CopyTo(heightMap);
+			erosionJob.Dispose();
+		}
 		return heightMap;
 	}
-
-	MeshData GenerateMeshDataJob(MapData mapData, MeshSettings meshSettings, int size) {
-
-		int meshSimplificationIncrement = (meshSettings.editorPreviewLOD == 0) ? 1 : meshSettings.editorPreviewLOD * 2;
-		int verticesPerLine = (size - 1) / meshSimplificationIncrement + 1;
-		
-		NativeArray<Vector3> vertices = new NativeArray<Vector3>(verticesPerLine * verticesPerLine, Allocator.TempJob);
-		NativeArray<Vector2> uvs = new NativeArray<Vector2>(verticesPerLine * verticesPerLine, Allocator.TempJob);
-		NativeArray<int> triangles = new NativeArray<int>((verticesPerLine - 1) * (verticesPerLine - 1) * 6, Allocator.TempJob);
-		NativeArray<float> heightMap = new NativeArray<float>(mapData.heightMap, Allocator.TempJob);
-		
-		MeshDataGeneratorJob meshGenerationJob = new MeshDataGeneratorJob(verticesPerLine, meshSimplificationIncrement, meshSettings, heightMap, vertices, uvs, triangles);
-
-		meshGenerationJob.Schedule(verticesPerLine * verticesPerLine, _batchSize).Complete(); // Schedule the Job with the desired batch size and wait to complete.
-
-		MeshData meshData = new MeshData(vertices.ToArray(), triangles.ToArray(), uvs.ToArray());
-
-		vertices.Dispose();
-		uvs.Dispose();
-		triangles.Dispose();
-		heightMap.Dispose();
-
-		return meshData;
-	}
+	MeshData GenerateMeshDataJob(MapData mapData, MeshSettings meshSettings, int size, int levelOfDetail) {
+    
+        NativeArray<Vector3> vertices = new NativeArray<Vector3>(size * size, Allocator.TempJob);
+        NativeArray<Vector2> uvs = new NativeArray<Vector2>(size * size, Allocator.TempJob);
+        NativeArray<int> triangles = new NativeArray<int>((size - 1) * (size - 1) * 6, Allocator.TempJob);
+        NativeArray<float> heightMap = new NativeArray<float>(mapData.heightMap, Allocator.TempJob);
+    
+        MeshDataGeneratorJob meshGenerationJob = new MeshDataGeneratorJob(size, meshSimplificationIncrement: 1, meshSettings, heightMap, vertices, uvs, triangles);
+    
+        meshGenerationJob.Schedule(vertices.Length, 1440).Complete();
+    
+        MeshData meshData = new MeshData(vertices.ToArray(), triangles.ToArray(), uvs.ToArray());
+    
+        vertices.Dispose();
+        uvs.Dispose();
+        triangles.Dispose();
+        heightMap.Dispose();
+    
+        return meshData;
+    }
 
 	
 
@@ -141,21 +151,9 @@ public class MapGenerator : MonoBehaviour {
 		if (configSettings.heightMapSettings.octaves < 0) {
 			configSettings.heightMapSettings.octaves = 0;
 		}
-		if (configSettings.erosionSettings.thermalSettings.talusAngle > 0) {
-			configSettings.erosionSettings.thermalSettings.talusAngle *= Mathf.PI / 180f;
+		if (configSettings.erosionSettings.talusAngle > 0) {
+			configSettings.erosionSettings.talusAngle *= Mathf.PI / 180f;
 		}
-	}
-
-	struct MapThreadInfo<T> {
-		public readonly Action<T> callback;
-		public readonly T parameter;
-
-		public MapThreadInfo (Action<T> callback, T parameter)
-		{
-			this.callback = callback;
-			this.parameter = parameter;
-		}
-
 	}
 }
 

@@ -6,11 +6,12 @@ using Unity.Mathematics;
 
 public static class Noise {
 
-	public enum NormalizeMode {Local, Global};
-
+	public enum Type {Perlin, Simplex, Voronoi};
+	
+	
 	public static float[] GenerateNoiseMap(int mapSize, HeightMapSettings parameters, float2 centre) {
 	    float[] noiseMap = new float[mapSize * mapSize];
-
+		
 	    System.Random prng = new System.Random((int)parameters.seed);
 	    Vector2[] octaveOffsets = new Vector2[parameters.octaves];
 
@@ -48,7 +49,9 @@ public static class Noise {
 	                float sampleX = (x - halfWidth + octaveOffsets[i].x) / parameters.noiseScale * frequency;
 	                float sampleY = (y - halfHeight + octaveOffsets[i].y) / parameters.noiseScale * frequency;
 
-	                float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
+	                // float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
+	                float perlinValue = SampleNoiseValue(new float2(sampleX, sampleY), parameters.noiseType);
+	                
 	                noiseHeight += perlinValue * amplitude;
 
 	                amplitude *= parameters.persistance;
@@ -66,12 +69,9 @@ public static class Noise {
 
 	    for (int y = 0; y < mapSize; y++) {
 	        for (int x = 0; x < mapSize; x++) {
-	            if (parameters.normalizeMode == NormalizeMode.Local) {
-	                noiseMap[y * mapSize + x] = Mathf.InverseLerp(minLocalNoiseHeight, maxLocalNoiseHeight, noiseMap[y * mapSize + x]);
-	            } else {
-	                float normalizedHeight = (noiseMap[y * mapSize + x] + 1) / (maxPossibleHeight / 0.9f);
-	                noiseMap[y * mapSize + x] = Mathf.Clamp(normalizedHeight, 0, int.MaxValue);
-	            }
+	            float normalizedHeight = (noiseMap[y * mapSize + x] + 1) / (maxPossibleHeight / 0.9f);
+	            noiseMap[y * mapSize + x] = Mathf.Clamp(normalizedHeight, 0, int.MaxValue);
+	            
 	        }
 	    }
 
@@ -110,28 +110,41 @@ public static class Noise {
 			float sampleX = (position.x + octaveOffsets[i].x) / parameters.noiseScale * frequency;
 			float sampleY = (position.y + octaveOffsets[i].y) / parameters.noiseScale * frequency;
 
-			float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
+			// float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
+			float perlinValue = SampleNoiseValue(new float2(sampleX, sampleY), parameters.noiseType);
 			noiseHeight += perlinValue * amplitude;
 
 			amplitude *= parameters.persistance;
 			frequency *= parameters.lacunarity;
 		}
 
-		if (parameters.normalizeMode == NormalizeMode.Local)
-		{
-			noiseHeight = Mathf.InverseLerp(-maxPossibleHeight, maxPossibleHeight, noiseHeight);
-		}
-		else
-		{
-			float normalizedHeight = (noiseHeight + 1) / (maxPossibleHeight/0.9f);
-			noiseHeight = Mathf.Clamp(normalizedHeight,0, maxPossibleHeight);
-		}
+		float normalizedHeight = (noiseHeight + 1) / (maxPossibleHeight/0.9f);
+		noiseHeight = Mathf.Clamp(normalizedHeight,0, maxPossibleHeight);
 
 		octaveOffsets.Dispose();
 		
-		
-		
 		return noiseHeight;
+	}
+
+	private static float SampleNoiseValue(float2 sample, Type type)
+	{
+		float noiseValue = 0.0f;
+		switch (type)
+		{
+			case Type.Perlin:
+				noiseValue = Mathf.PerlinNoise(sample.x, sample.y) * 2 - 1;
+				break;
+			case Type.Simplex:
+				noiseValue = noise.snoise(sample) * 2 - 1;
+				break;
+			case Type.Voronoi:
+				float2 cellularResult = noise.cellular(sample);
+				float distanceToClosest = math.sqrt(cellularResult.x * cellularResult.x + cellularResult.y * cellularResult.y);
+				noiseValue = distanceToClosest/1.45f - 0.1f;
+				break;
+		}
+
+		return noiseValue;
 	}
 
 }

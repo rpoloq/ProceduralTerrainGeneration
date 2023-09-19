@@ -1,60 +1,97 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool _isJumping = false;
+    public float forwardSpeed = 10f;
+    public float rotationSpeed = 30f;
+    public float sprintDuration = 5f;
+    public ParticleSystem exhaustParticles;
+    public float normalParticleSpeed = 5f;
+    public float sprintParticleSpeed = 10f;
 
-    private bool _isRotating = false;
-    private Quaternion _initialRotation;
-    private float _airTimeStart;
-    public float rotationDuration = 1.0f; // Duración de la rotación en segundos
+    private Rigidbody _rb;
+    private Transform _transform;
+    private bool _isSprinting = false;
+    private float _sprintTimer = 0f;
+    private float _currentSpeed = 0f;
+
+    private void Start()
+    {
+        InitializeComponents();
+    }
 
     private void Update()
     {
-        // Detectar si el jugador está en el aire
-        if (!_isJumping && !Physics.Raycast(transform.position, Vector3.down, 1.0f))
-        {
-            _isJumping = true;
-        }
-
-        // Rotación de 360 grados en el aire
-        if (_isJumping && Input.GetKeyDown(KeyCode.G) && !_isRotating)
-        {
-            StartCoroutine(Rotate360());
-        }
+        HandleRotation();
+        HandleMovement();
+        HandleSprint();
     }
 
-    private IEnumerator Rotate360()
+    private void InitializeComponents()
     {
-        _isRotating = true;
-        _initialRotation = transform.rotation;
-        _airTimeStart = Time.time;
-
-        while (Time.time - _airTimeStart < rotationDuration)
-        {
-            float rotationProgress = (Time.time - _airTimeStart) / rotationDuration;
-            transform.rotation = Quaternion.Slerp(_initialRotation, Quaternion.Euler(0, 360, 0), rotationProgress);
-            yield return null;
-        }
-
-        transform.rotation = _initialRotation;
-        _isRotating = false;
+        _rb = GetComponent<Rigidbody>();
+        _transform = transform;
+        _currentSpeed = forwardSpeed;
+        _transform.position += new Vector3(0, 30, 0);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void HandleRotation()
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            _isJumping = false;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float ascentInput = Input.GetKey(KeyCode.Q) ? 1f : 0f; // Presiona 'Q' para ascender.
+        float descentInput = Input.GetKey(KeyCode.E) ? 1f : 0f; // Presiona 'E' para descender.
+        float verticalInput = ascentInput - descentInput;
 
-            // Si el jugador toca el suelo, reiniciar la rotación
-            if (_isRotating)
+        // Rotación suave en función de las teclas A, D, Q y E.
+        float rotateHorizontal = horizontalInput * rotationSpeed * Time.deltaTime;
+        float rotateVertical = verticalInput * rotationSpeed * Time.deltaTime;
+
+        _transform.Rotate(Vector3.up, rotateHorizontal);
+        _transform.Rotate(Vector3.right, rotateVertical);
+    }
+
+    private void HandleMovement()
+    {
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 forwardVelocity = _transform.forward * _currentSpeed * verticalInput;
+        
+        _rb.velocity = forwardVelocity;
+    }
+
+    private void HandleSprint()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !_isSprinting)
+        {
+            StartSprint();
+        }
+
+        if (_isSprinting)
+        {
+            _sprintTimer += Time.deltaTime;
+            if (_sprintTimer >= sprintDuration)
             {
-                StopCoroutine(Rotate360());
-                transform.rotation = _initialRotation;
-                _isRotating = false;
+                StopSprint();
             }
         }
+    }
+
+    private void StartSprint()
+    {
+        _isSprinting = true;
+        exhaustParticles.Play();
+        _currentSpeed *= 2;
+        var mainModule = exhaustParticles.main;
+        mainModule.startSpeed = sprintParticleSpeed;
+    }
+
+    private void StopSprint()
+    {
+        _isSprinting = false;
+        exhaustParticles.Stop();
+        _currentSpeed = forwardSpeed;
+        var mainModule = exhaustParticles.main;
+        mainModule.startSpeed = normalParticleSpeed;
+        _sprintTimer = 0f;
     }
 }
