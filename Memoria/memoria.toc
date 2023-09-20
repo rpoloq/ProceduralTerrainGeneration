@@ -38,57 +38,71 @@
 \contentsline {section}{\numberline {4.7}Desafíos y Tendencias Futuras}{38}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Desarrollo de la solucion}{41}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Análisis}{41}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Definición de Objetivos}{41}{subsection.5.1.1}%
-\contentsline {subsubsection}{Objetivos Generales}{41}{section*.4}%
-\contentsline {subsubsection}{Objetivos Específicos}{41}{section*.5}%
-\contentsline {subsection}{\numberline {5.1.2}Requisitos del Sistema}{41}{subsection.5.1.2}%
-\contentsline {subsubsection}{Requisitos Funcionales}{41}{section*.6}%
-\contentsline {subsubsection}{Requisitos No Funcionales}{41}{section*.7}%
-\contentsline {subsection}{\numberline {5.1.3}Arquitectura del Sistema}{41}{subsection.5.1.3}%
-\contentsline {subsubsection}{Visión General}{41}{section*.8}%
-\contentsline {subsubsection}{Componentes del Sistema}{41}{section*.9}%
-\contentsline {subsubsection}{Diagramas de Arquitectura}{42}{section*.10}%
-\contentsline {subsection}{\numberline {5.1.4}Tecnologías y Herramientas Utilizadas}{42}{subsection.5.1.4}%
-\contentsline {subsubsection}{Elección de Tecnologías}{42}{section*.11}%
-\contentsline {subsubsection}{Lenguajes de Programación}{42}{section*.12}%
-\contentsline {subsubsection}{Herramientas de Desarrollo}{42}{section*.13}%
-\contentsline {subsection}{\numberline {5.1.5}Desafíos y Decisiones de Diseño}{42}{subsection.5.1.5}%
-\contentsline {subsubsection}{Desafíos Técnicos}{42}{section*.14}%
-\contentsline {subsubsection}{Decisiones de Diseño}{42}{section*.15}%
-\contentsline {subsubsection}{Alternativas Consideradas}{42}{section*.16}%
-\contentsline {subsection}{\numberline {5.1.6}Planificación del Desarrollo}{42}{subsection.5.1.6}%
-\contentsline {subsubsection}{Metodología de Desarrollo}{42}{section*.17}%
-\contentsline {subsubsection}{Gestión de Tiempo}{42}{section*.18}%
-\contentsline {subsubsection}{Recursos Necesarios}{43}{section*.19}%
-\contentsline {section}{\numberline {5.2}Diseño}{43}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Diseño de la Arquitectura}{43}{subsection.5.2.1}%
-\contentsline {subsubsection}{Diseño de la Arquitectura del Software}{43}{section*.20}%
-\contentsline {subsubsection}{Diseño de la Interfaz de Usuario (UI)}{43}{section*.21}%
-\contentsline {subsubsection}{Diagramas de Clases}{43}{section*.22}%
-\contentsline {subsection}{\numberline {5.2.2}Diseño Detallado}{43}{subsection.5.2.2}%
-\contentsline {subsubsection}{Diagramas de Secuencia}{43}{section*.23}%
-\contentsline {subsubsection}{Diagramas de Actividad}{43}{section*.24}%
-\contentsline {subsubsection}{Diagramas de Estado}{43}{section*.25}%
-\contentsline {subsubsection}{Diseño de Base de Datos}{43}{section*.26}%
-\contentsline {subsection}{\numberline {5.2.3}Decisiones de Diseño}{44}{subsection.5.2.3}%
-\contentsline {subsubsection}{Decisiones de Diseño Clave}{44}{section*.27}%
-\contentsline {subsubsection}{Consideraciones de Rendimiento}{44}{section*.28}%
-\contentsline {subsubsection}{Seguridad y Privacidad}{44}{section*.29}%
-\contentsline {subsection}{\numberline {5.2.4}Prototipado}{44}{subsection.5.2.4}%
-\contentsline {subsubsection}{Prototipos de Interfaz}{44}{section*.30}%
-\contentsline {subsubsection}{Pruebas de Concepto}{44}{section*.31}%
-\contentsline {subsection}{\numberline {5.2.5}Planificación de Desarrollo}{44}{subsection.5.2.5}%
-\contentsline {subsubsection}{Cronograma de Desarrollo}{44}{section*.32}%
-\contentsline {subsubsection}{Asignación de Recursos}{44}{section*.33}%
-\contentsline {subsubsection}{Plan de Pruebas}{44}{section*.34}%
-\contentsline {subsubsection}{Control de Cambios}{44}{section*.35}%
-\contentsline {subsection}{\numberline {5.2.6}Consideraciones Éticas y Legales}{45}{subsection.5.2.6}%
-\contentsline {subsubsection}{Ética en el Diseño}{45}{section*.36}%
-\contentsline {subsubsection}{Consideraciones Legales}{45}{section*.37}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{47}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Revisión de costes}{47}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Conclusiones}{47}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Trabajo futuro}{47}{section.6.3}%
-\contentsline {chapter}{\numberline {A}Apéndice}{49}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Ejemplos del lenguaje de marcado Latex}{49}{section.Alph1.1}%
-\contentsline {chapter}{Bibliografía}{50}{lstnumber.-2.4}%
+\contentsline {subsection}{\numberline {5.1.1}Objetivos de Implementación}{41}{subsection.5.1.1}%
+\contentsline {subsubsection}{1. Diseño de Algoritmos de Generación}{41}{section*.4}%
+\contentsline {subsubsection}{2. Optimización del Rendimiento}{41}{section*.5}%
+\contentsline {subsubsection}{3. Pruebas y Validación}{41}{section*.6}%
+\contentsline {subsubsection}{4. Mejoras en Realismo y Diferenciación de Alturas}{42}{section*.7}%
+\contentsline {subsection}{\numberline {5.1.2}Requisitos del Sistema}{42}{subsection.5.1.2}%
+\contentsline {subsubsection}{Requisitos Funcionales}{42}{section*.8}%
+\contentsline {subsubsection}{Requisitos No Funcionales}{43}{section*.9}%
+\contentsline {subsection}{\numberline {5.1.3}Arquitectura del Sistema}{43}{subsection.5.1.3}%
+\contentsline {subsubsection}{Visión General}{43}{section*.10}%
+\contentsline {subsubsection}{Componentes del Sistema}{43}{section*.11}%
+\contentsline {subsubsection}{Diagramas de Arquitectura}{44}{section*.12}%
+\contentsline {subsubsection}{Diagrama de Casos de Uso}{44}{section*.13}%
+\contentsline {subsection}{\numberline {5.1.4}Tecnologías y Herramientas Utilizadas}{45}{subsection.5.1.4}%
+\contentsline {subsubsection}{Elección de Tecnologías}{45}{section*.14}%
+\contentsline {subsubsection}{Lenguajes de Programación}{46}{section*.15}%
+\contentsline {subsection}{\numberline {5.1.5}Herramientas de Desarrollo}{46}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}Desafíos y Decisiones de Diseño}{47}{subsection.5.1.6}%
+\contentsline {subsubsection}{Desafíos Técnicos}{47}{section*.16}%
+\contentsline {subsubsection}{Decisiones de Diseño}{47}{section*.17}%
+\contentsline {subsubsection}{Alternativas Consideradas}{48}{section*.18}%
+\contentsline {subsection}{\numberline {5.1.7}Planificación del Desarrollo}{48}{subsection.5.1.7}%
+\contentsline {subsubsection}{Metodología de Desarrollo}{48}{section*.19}%
+\contentsline {subsubsection}{Gestión de Tiempo}{48}{section*.20}%
+\contentsline {subsubsection}{Recursos Necesarios}{48}{section*.21}%
+\contentsline {section}{\numberline {5.2}Diseño}{49}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Diseño de la Arquitectura}{49}{subsection.5.2.1}%
+\contentsline {subsubsection}{Diseño de la Arquitectura del Software}{49}{section*.22}%
+\contentsline {subsubsection}{Diagramas de Clases}{49}{section*.23}%
+\contentsline {subsection}{\numberline {5.2.2}Diseño Detallado}{49}{subsection.5.2.2}%
+\contentsline {subsubsection}{Diagramas de Secuencia}{49}{section*.24}%
+\contentsline {subsubsection}{Diagramas de Flujo}{49}{section*.25}%
+\contentsline {subsection}{\numberline {5.2.3}Decisiones de Diseño}{49}{subsection.5.2.3}%
+\contentsline {subsubsection}{Decisiones de Diseño Clave}{49}{section*.26}%
+\contentsline {subsubsection}{Consideraciones de Rendimiento}{49}{section*.27}%
+\contentsline {subsection}{\numberline {5.2.4}Planificación de Desarrollo}{50}{subsection.5.2.4}%
+\contentsline {subsubsection}{Cronograma de Desarrollo}{50}{section*.28}%
+\contentsline {subsubsection}{Asignación de Recursos}{50}{section*.29}%
+\contentsline {subsubsection}{Control de Cambios}{50}{section*.30}%
+\contentsline {subsection}{\numberline {5.2.5}Viabilidad}{50}{subsection.5.2.5}%
+\contentsline {subsubsection}{Viabilidad técnica}{50}{section*.31}%
+\contentsline {subsubsection}{Viabilidad Legales}{50}{section*.32}%
+\contentsline {section}{\numberline {5.3}Implementación}{50}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Entorno de Desarrollo}{50}{subsection.5.3.1}%
+\contentsline {subsubsection}{Herramientas de Desarrollo}{50}{section*.33}%
+\contentsline {subsubsection}{Lenguajes de Programación}{50}{section*.34}%
+\contentsline {subsubsection}{Frameworks y Bibliotecas}{50}{section*.35}%
+\contentsline {subsection}{\numberline {5.3.2}Estructura del Código Fuente}{51}{subsection.5.3.2}%
+\contentsline {subsubsection}{Organización de Directorios}{51}{section*.36}%
+\contentsline {subsubsection}{Módulos y Componentes Principales}{51}{section*.37}%
+\contentsline {subsubsection}{Flujo de Datos}{51}{section*.38}%
+\contentsline {subsection}{\numberline {5.3.3}Algoritmos y Técnicas}{51}{subsection.5.3.3}%
+\contentsline {subsubsection}{Descripción de Algoritmos Clave}{51}{section*.39}%
+\contentsline {subsubsection}{Técnicas de Optimización}{51}{section*.40}%
+\contentsline {subsection}{\numberline {5.3.4}Desarrollo de Características}{51}{subsection.5.3.4}%
+\contentsline {subsubsection}{Implementación de Funcionalidades}{51}{section*.41}%
+\contentsline {subsubsection}{Integración de Componentes}{51}{section*.42}%
+\contentsline {subsection}{\numberline {5.3.5}Pruebas y Depuración}{51}{subsection.5.3.5}%
+\contentsline {subsubsection}{Pruebas Unitarias}{51}{section*.43}%
+\contentsline {subsubsection}{Pruebas de Integración}{52}{section*.44}%
+\contentsline {subsubsection}{Depuración y Solución de Problemas}{52}{section*.45}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{53}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Revisión de costes}{53}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Conclusiones}{53}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Trabajo futuro}{53}{section.6.3}%
+\contentsline {chapter}{\numberline {A}Apéndice}{55}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Ejemplos del lenguaje de marcado Latex}{55}{section.Alph1.1}%
+\contentsline {chapter}{Bibliografía}{56}{lstnumber.-2.4}%

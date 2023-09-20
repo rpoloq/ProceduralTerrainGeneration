@@ -2,64 +2,252 @@
 % Las secciones presentadas son orientativas y no representan
 % necesariamente la organización que debe tener este capítulo.
 
+
+% \subsubsection{2. Desarrollo de la Interfaz de Usuario}
+
+% La interfaz de usuario desempeña un papel crucial en la usabilidad de la herramienta. Los objetivos relacionados con la interfaz de usuario incluyen:
+
+% \begin{itemize}
+%     \item Diseñar una interfaz de usuario intuitiva y fácil de usar para permitir a los usuarios configurar los parámetros de generación.
+%     \item Implementar una interfaz de usuario que refleje de manera efectiva las opciones disponibles para la generación de terrenos.
+% \end{itemize}
+
 \section{Análisis}
 
-\subsection{Definición de Objetivos}
+\subsection{Objetivos de Implementación}
 
-\subsubsection{Objetivos Generales}
-Describe en detalle los objetivos generales que buscas alcanzar con tu proyecto.
+Los objetivos de implementación se centran en las metas técnicas y funcionales que se buscan alcanzar en el desarrollo de la herramienta de generación procedural de terrenos en Unity. Estos objetivos se dividen en los siguientes aspectos clave:
 
-\subsubsection{Objetivos Específicos}
-Enumera y explica los objetivos específicos que contribuyen a la consecución de los objetivos generales. Deben ser medibles y alcanzables.
+\subsubsection{1. Diseño de Algoritmos de Generación}
+
+El objetivo principal en esta fase de implementación es diseñar algoritmos de generación de terrenos que sean eficientes y capaces de producir resultados convincentes. Esto incluye:
+
+\begin{itemize}
+    \item Investigar y seleccionar algoritmos de generación de terrenos adecuados para el proyecto.
+    \item Diseñar algoritmos que permitan la creación de terrenos realistas y variados.
+\end{itemize}
+
+\subsubsection{2. Optimización del Rendimiento}
+
+Para garantizar que la herramienta funcione de manera eficiente en diversas plataformas y escenarios de desarrollo, se establecen los siguientes objetivos:
+
+\begin{itemize}
+    \item Optimizar el rendimiento de los algoritmos de generación para maximizar los fotogramas por segundo.
+    \item Implementar estrategias de cálculo paralelo utilizando el sistema de trabajos (Job System) de Unity para acelerar la generación de terrenos.
+\end{itemize}
+
+\subsubsection{3. Pruebas y Validación}
+
+La validación de la herramienta es fundamental para garantizar su funcionamiento correcto. Los objetivos relacionados con las pruebas son:
+
+\begin{itemize}
+    \item Detectar posibles errores y problemas de rendimiento. Como la consistencia entre chunks vecinos dando lugar a terrenos conitnuos y la generación del terreno continua sin bajadas de fps notables.
+    \item Validar que la herramienta genera terrenos realistas acorde a los parámetros con los que se configura.
+    \item Comprobar que los resultados son visualmente integrables en juegos o proyectos desarrollados en Unity y que permite crear un terreno explorable.
+\end{itemize}
+
+\subsubsection{4. Mejoras en Realismo y Diferenciación de Alturas}
+
+Además de los objetivos anteriores, se busca mejorar el realismo de los terrenos generados mediante la implementación de algoritmos de erosión. Los objetivos adicionales incluyen:
+
+\begin{itemize}
+    \item Investigar y aplicar algoritmos de erosión para simular procesos geológicos en los terrenos generados.
+    \item Evaluar cómo los algoritmos de erosión mejoran la apariencia y autenticidad de los terrenos.
+    \item Implementar la diferenciación de alturas en los terrenos mediante la asignación de colores según la elevación para una representación visual más rica y comprensible.
+\end{itemize}
 
 \subsection{Requisitos del Sistema}
 
 \subsubsection{Requisitos Funcionales}
-Enumera y describe los requisitos funcionales del sistema, es decir, las funciones y características que debe tener.
+
+\begin{enumerate}
+    \item \textbf{Generación de Terrenos:} El sistema debe ser capaz de generar terrenos de manera procedural en tiempo real, permitiendo a los usuarios especificar parámetros como tamaño, altura, erosión y demás configuraciones de terreno.
+    
+    \item \textbf{Continuidad del terreno:} El terreno no debe presentar discontinuidades y debe generar extensiones de terreno sin que haya una transción notable de uno a otro.
+    
+    \item \textbf{Algoritmos de Generación Configurables:} Los algoritmos de generación utilizados deben ser configurables, lo que permitirá a los usuarios ajustar los detalles de la generación según sus necesidades.
+    
+    \item \textbf{Optimización del Rendimiento:} El sistema debe estar optimizado para garantizar que la generación de terrenos sea eficiente en términos de uso de recursos y tiempos de carga.
+    
+    \item \textbf{Erosión Simulada:} Se deben implementar algoritmos de erosión para simular procesos geológicos y mejorar la apariencia de los terrenos generados.
+    
+    \item \textbf{Diferenciación de Alturas:} El sistema debe asignar colores a diferentes elevaciones del terreno para facilitar la visualización y comprensión de las características del terreno.
+\end{enumerate}
 
 \subsubsection{Requisitos No Funcionales}
-Detalla los requisitos no funcionales, como el rendimiento, la seguridad y la usabilidad.
+
+\begin{enumerate}
+    \item \textbf{Rendimiento:} El sistema debe ser capaz de generar terrenos en tiempo real sin experimentar retrasos notables en la ejecución.
+    
+    \item \textbf{Compatibilidad con Unity:} La herramienta debe integrarse perfectamente con el motor Unity, aprovechando sus capacidades y recursos.
+    
+    \item \textbf{Portabilidad:} El sistema debe ser compatible con múltiples plataformas y versiones de Unity, lo que permite a los desarrolladores utilizarlo en diversos proyectos.
+    
+    \item \textbf{Usabilidad:} El sistema debe ser intuititvo, con parámetros nombrados de manera que no cause confución en el usurio y expresen de manera clara su función.
+    
+    \item \textbf{Realismo Visual:} El sistema debe ser capaz de generar terrenos con realismo visual, incluyendo detalles naturales como montañas, valles.
+    
+    \item \textbf{Diferenciación de Alturas:} La herramienta debe permitir la diferenciación de alturas en el terreno mediante la asignación de colores o texturas específicas para representar diferentes elevaciones, facilitando la visualización y comprensión del terreno generado.
+
+\end{enumerate}
 
 \subsection{Arquitectura del Sistema}
 
 \subsubsection{Visión General}
-Proporciona una visión general de la arquitectura del sistema.
+La arquitectura del sistema se basa en un enfoque modular que consta de varios componentes interconectados. El sistema se ha diseñado para ser altamente flexible y escalable, permitiendo la generación procedural de terrenos de manera eficiente. La arquitectura se centra en la generación de terrenos y su visualización en tiempo real.
 
 \subsubsection{Componentes del Sistema}
-Describe los componentes clave del sistema y su función.
+Los componentes clave del sistema incluyen:
+
+\begin{itemize}
+    \item \textbf{MapGenerator:} Responsable de crear el terreno proceduralmente. Utiliza algoritmos de generación de ruido y permite la visualización en el editor de Unity.
+     
+    \item \textbf{MapDataGeneratorJob:} Se encarga de la generación de datos del terreno, como el mapa de altura y el mapa de colores, utilizando el Unity Job System.
+
+    \item \textbf{Noise:} Contiene métodos para generar ruido Perlin, Simplex y Voronoi, que se utilizan en la generación del terreno.
+            
+    \item \textbf{ErosionJob:} Responsable de tratar cada índice del mapa de alturas generado con MapGenerator mediante  algoritmos de erosión para mejorar la apariencia del terreno, creando características como ríos y cañones.
+    
+    \item \textbf{MeshDataGeneratorJob:} Genera los datos de la malla del terreno, permitiendo la creación de mallas detalladas y eficientes en cuanto a rendimiento.
+    
+    \item \textbf{EndlessTerrain:} Controla la generación continua y la representación de terrenos, generando nuevos trozos de terreno y manejando la gestión de los mismos para lograr un mundo de juego sin fin.
+    
+    \item \textbf{TextureGenerator:} Se encarga de generar las texturas del terreno en función del mapa de altura y el gradiente de colores.
+
+    \item \textbf{ConfigSettings:} Almacena las configuraciones del sistema, incluyendo parámetros de generación de terrenos, configuraciones de malla y opciones de visualización.
+\end{itemize}
+
+Esta arquitectura modular y bien definida permite una generación procedural de terrenos flexible y eficaz en Unity.
 
 \subsubsection{Diagramas de Arquitectura}
-Incluye diagramas que muestren la estructura y las relaciones entre los componentes.
+A continuación, se presentan diagramas de arquitectura que muestran la estructura y las relaciones entre los componentes del sistema:
+
+\subsubsection{Diagrama de Casos de Uso}
+
+Para comprender mejor las interacciones entre los usuarios y el sistema, se han creado diagramas de casos de uso. Estos diagramas describen cómo los usuarios interactúan con el sistema y qué funcionalidades están disponibles para ellos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/UseCases.png}
+    \caption{Diagrama de Casos de Uso del Proyecto.}
+\end{figure}
+
+
+El diagrama de secuencia detallará las interacciones entre los componentes del sistema, incluidos el \texttt{MapGenerator}, el \texttt{MeshGenerator}, el \texttt{EndlessTerrain}, y otros, durante la generación y visualización del terreno.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/Diagrama de secuencia.png}
+    \caption{Diagrama de Secuencia de Generación de Terreno.}
+\end{figure}
+
 
 \subsection{Tecnologías y Herramientas Utilizadas}
 
 \subsubsection{Elección de Tecnologías}
-Explica por qué elegiste las tecnologías específicas para tu proyecto.
+La elección de las tecnologías específicas para este proyecto se basó en los siguientes criterios:
+
+\begin{itemize}
+    \item \textbf{Unity 3D:} Se eligió Unity como motor de desarrollo debido a su versatilidad y capacidad para crear aplicaciones interactivas en 3D. Unity proporciona una amplia gama de herramientas y recursos que facilitan el desarrollo de juegos y simulaciones.
+    
+    
+    \item \textbf{Unity Job System:} Para optimizar el rendimiento en la generación de terrenos, se utiliza el Unity Job System, que permite la paralelización de tareas en múltiples núcleos de CPU.
+    
+    \item \textbf{Burst Compiler:} La herramienta Burst Compiler se utiliza para compilar el código C \# en código nativo altamente optimizado, mejorando aún más el rendimiento de la generación de terrenos.
+    
+    \item \textbf{Perlin Noise y Simplex Noise:} Se implementan algoritmos de ruido Perlin y Simplex para la generación de terrenos. Estos algoritmos proporcionan resultados realistas y variados.
+    
+    \item \textbf{Herramientas de Diseño 3D:} Se utilizan herramientas de diseño 3D, como Blender y Substance Painter, para crear modelos y texturas que se aplicarán al terreno.
+\end{itemize}
+
+Estas tecnologías se eligieron cuidadosamente para garantizar un rendimiento óptimo y una alta calidad en la generación de terrenos en tiempo real.
 
 \subsubsection{Lenguajes de Programación}
-Enumera los lenguajes de programación que utilizaste y su propósito en el proyecto.
+\begin{itemize}
+    \item \textbf{C\#:} Este proyecto está programado enteramente utilizando C\# como lenguaje de programación. C\# es el lenguaje que utilizan los componentes Scripts de Unity por lo que está altamente integrado con el motor, y es un lenguaje orientado a objetos que ofrece un alto rendimiento y facilidad de uso.
+    
+\end{itemize}
 
-\subsubsection{Herramientas de Desarrollo}
-Enumera las herramientas de desarrollo, como IDEs, que fueron fundamentales para tu proyecto.
+\subsection{Herramientas de Desarrollo}
+
+Durante el desarrollo de este proyecto, se utilizaron diversas herramientas y software que desempeñaron un papel fundamental en la planificación, implementación y gestión del trabajo. A continuación, se detallan las principales herramientas de desarrollo utilizadas:
+
+\begin{itemize}
+    \item \textbf{IDE Principal:} JetBrains Rider fue el IDE principal utilizado para el desarrollo en C\#. Rider proporcionó un entorno de desarrollo integrado eficiente y potente para la escritura de código, depuración y pruebas del proyecto.
+    
+    \item \textbf{Diagrama de Clases (Visual Studio):} Visual Studio se utilizó específicamente para la creación de diagramas de clases, lo que permitió una representación visual clara de la estructura del proyecto y las relaciones entre las clases.
+    
+    \item \textbf{Diagramas (VS Code con el Plugin draw.io):} Visual Studio Code, junto con el plugin draw.io, se utilizó para crear varios tipos de diagramas, incluidos los diagramas de casos de uso y diagramas de actividad. Estas representaciones gráficas ayudaron a comprender y comunicar el flujo de trabajo del sistema.
+    
+    \item \textbf{Memoria en LaTeX:} La documentación y memoria del proyecto se crearon utilizando LaTeX, con el editor VS Code.
+    
+    \item \textbf{Control de Versiones (Git y GitHub):} Git se utilizó para el control de versiones del código fuente del proyecto. GitHub se empleó como plataforma de alojamiento para el repositorio de Git, lo que facilitó la colaboración en equipo y el seguimiento de cambios.
+    
+    \item \textbf{Gestión de Tareas (Trello):} Trello se utilizó para la gestión de tareas y la planificación del proyecto. La herramienta permitió organizar y priorizar tareas, así como realizar un seguimiento del progreso de cada elemento del proyecto.
+    
+    \item \textbf{Burst Compiler:} El Burst Compiler se utilizó para compilar el código C\# en código nativo altamente optimizado, lo que contribuyó significativamente a mejorar el rendimiento en la generación de terrenos.
+\end{itemize}
+
+Estas herramientas desempeñaron un papel esencial en la realización exitosa del proyecto, proporcionando las capacidades necesarias para el desarrollo, la documentación, la colaboración en equipo y la optimización de rendimiento.
 
 \subsection{Desafíos y Decisiones de Diseño}
 
 \subsubsection{Desafíos Técnicos}
-Describe los desafíos técnicos específicos que enfrentaste durante el diseño y desarrollo.
+Durante el diseño y desarrollo del proyecto, se enfrentaron varios desafíos técnicos significativos. Algunos de los desafíos más destacados incluyeron:
+
+\begin{itemize}
+    \item \textbf{Optimización de Rendimiento:} Lograr un rendimiento óptimo en la generación procedural de terrenos en tiempo real fue uno de los principales desafíos técnicos. Se implementó el Unity Job System y el Burst Compiler para abordar este desafío.
+    
+    \item \textbf{Generación Realista:} La generación de terrenos realistas y variados implicó la implementación de algoritmos de ruido Perlin, Simplex y Voronoi, así como la configuración adecuada de parámetros como escalas y octavas.
+    
+    \item \textbf{Erosión y Características Naturales:} Incorporar algoritmos de erosión para simular características naturales como ríos y cañones fue un desafío adicional.
+    
+    \item \textbf{Continuidad del terreno:} La continuidad del terreno nuevo que se genera, sin notar la transición entre partes de terreno generadas e integradas al terreno que ya había supuso otro tema técnico que hubo que resolver.
+    
+    \item \textbf{Corrección de borde en erosión:} Dado que a eorisón se reliza teneindo en cuenta las alturas de cada fragmetnosde terreno y equilibrándolas, porduce incosistencias con las partes de terreno. Resolver esto fue otro desafío.
+\end{itemize}
 
 \subsubsection{Decisiones de Diseño}
-Explica las decisiones de diseño clave que tomaste y cómo influyeron en la arquitectura y funcionalidad del proyecto.
+Las decisiones de diseño desempeñaron un papel fundamental en la arquitectura y funcionalidad del proyecto. Algunas de las decisiones clave incluyeron:
+
+\begin{itemize}
+    \item \textbf{Uso del Unity Job System:} Se decidió utilizar el Unity Job System para la paralelización de tareas y optimizar la generación de terrenos, lo que resultó en un rendimiento mejorado.
+    
+    \item \textbf{Selección de Algoritmos de Ruido:} La elección de implementar algoritmos de ruido Perlin y Simplex permitió generar terrenos realistas y variados con una apariencia natural.
+    
+    \item \textbf{Erosión para Características Naturales:} La incorporación de algoritmos de erosión en el diseño permitió crear características naturales como ríos y cañones, mejorando la apariencia general del terreno.
+    
+    \item \textbf{Elección de nave como explorador} La elección de elección de una nave como explorador de terreno se debió a que las irregularidades del terreno para terrenos escarpados podrían complicar la exploración, además de que con un sobrevuelo se pdoría ver mejor el rendimiento de la generació.
+\end{itemize}
 
 \subsubsection{Alternativas Consideradas}
-Menciona las alternativas de diseño que evaluaste antes de tomar decisiones finales.
+Antes de tomar las decisiones de diseño finales, se consideraron varias alternativas, incluyendo:
+
+\begin{itemize}
+    \item \textbf{Otras Tecnologías de Generación de Terrenos:} Se evaluaron diferentes tecnologías y enfoques para la generación de terrenos, como el uso de mapas de altura pregenerados versus generación procedural en tiempo real.
+    
+    \item \textbf{Métodos de Optimización:} Se exploraron diversas técnicas de optimización además del Unity Job System, como el uso de GPU para cálculos intensivos o la paralelización mediante threads manual.
+    
+    \item \textbf{Otros Algoritmos de Ruido:} Se investigaron algoritmos de ruido alternativos además de Perlin y Simplex para determinar cuáles producirían los resultados deseados y técnicas de generación, como el algoritmo diamante-cuadrado. Pero se optó por el ruido debido a que facilitaba la consistencia entre lso bordes de partes de terreno nuevas generadas
+\end{itemize}
 
 \subsection{Planificación del Desarrollo}
 
 \subsubsection{Metodología de Desarrollo}
-Si utilizaste una metodología específica, como Agile o Scrum, descríbela y cómo la aplicaste.
+El proyecto siguió una metodología de desarrollo ágil, lo que permitió una adaptación flexible a medida que se abordaban desafíos técnicos y se tomaban decisiones de diseño. Se realizaron reuniones periódicas de revisión y planificación para ajustar el enfoque según fuera necesario. Cada día se fueron subiendo incrementos de desarrollo al repositorio remoto, gestioando un control de cuáles habían sido las mejroas subidas, cuál era el estado del proyecto y cuáles debían ser los siguientes objetivos.
 
 \subsubsection{Gestión de Tiempo}
-Explica cómo planificaste y gestionaste el tiempo durante el desarrollo del proyecto.
+La gestión del tiempo se realizó mediante una planificación detallada en Trello. Creando pilas de tareas "por hacer", "en desarrollo", "termiandas" y "mejorables".
 
 \subsubsection{Recursos Necesarios}
-Enumera los recursos necesarios para llevar a cabo el desarrollo, como personal, hardware y software.
+Los recursos necesarios para llevar a cabo el desarrollo incluyeron:
+
+\begin{itemize}
+    \item Personal de Desarrollo: Para este proyecto el personal fue una única persona que ocupó todos los roles del desarrollo y un product owner que especificaba los requisitos que debía cumplir el proyecto.
+    
+    \item Hardware: Se utilizó un equipo portátil con procesador i5-11400H con 2.7GHz, 16 GB de RAM, 1TB de memoria en disco y tarjeta gráfica NVidia 3060 con 6GB de RAM. El equipo contaba con windows 10 Home como sistema operativo. 
+    
+    \item Software: Se requirieron herramientas como Unity3D, JetBrains Rider, Visual Studio, VS Code con el plugin draw.io, LaTeX y el Burst Compiler para el desarrollo y la documentación del proyecto.
+\end{itemize}
+
+La gestión eficaz de estos recursos fue fundamental para el éxito del proyecto.

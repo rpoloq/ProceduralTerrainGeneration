@@ -358,12 +358,37 @@ INPUT .\tex\estado_arte.tex
 INPUT tex\estado_arte.tex
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
+INPUT .\tex\desarrollo.tex
+INPUT .\tex\desarrollo.tex
+INPUT tex\desarrollo.tex
 INPUT .\tex\analisis.tex
 INPUT .\tex\analisis.tex
 INPUT tex\analisis.tex
+INPUT .\img\UseCases.png
+INPUT .\img\UseCases.png
+INPUT .\img\UseCases.png
+INPUT .\img\UseCases.png
+INPUT .\img\UseCases.png
+INPUT .\img\UseCases.png
+INPUT .\img\UseCases.png
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1200.tfm
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT .\tex\diseno.tex
 INPUT .\tex\diseno.tex
 INPUT tex\diseno.tex
+INPUT .\tex\implementacion_pruebas.tex
+INPUT .\tex\implementacion_pruebas.tex
+INPUT tex\implementacion_pruebas.tex
 INPUT .\tex\conclusiones.tex
 INPUT .\tex\conclusiones.tex
 INPUT tex\conclusiones.tex
@@ -372,7 +397,6 @@ INPUT .\tex\apendice.tex
 INPUT tex\apendice.tex
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0800.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1000.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -383,10 +407,6 @@ INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfon
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0700.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1200.tfm
 INPUT .\figs\diagrama.pdf
 INPUT .\figs\diagrama.pdf
 INPUT .\figs\diagrama.pdf
@@ -411,14 +431,14 @@ INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi6
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
+INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
+INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
+INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
