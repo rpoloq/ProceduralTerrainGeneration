@@ -49,7 +49,6 @@ public static class Noise {
 	                float sampleX = (x - halfWidth + octaveOffsets[i].x) / parameters.noiseScale * frequency;
 	                float sampleY = (y - halfHeight + octaveOffsets[i].y) / parameters.noiseScale * frequency;
 
-	                // float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
 	                float perlinValue = SampleNoiseValue(new float2(sampleX, sampleY), parameters.noiseType);
 	                
 	                noiseHeight += perlinValue * amplitude;
@@ -80,7 +79,6 @@ public static class Noise {
 	public static float GenerateNoiseValue(float2 position, HeightMapSettings parameters)
 	{
 		var random = new Unity.Mathematics.Random(parameters.seed);
-		// System.Random prng = new System.Random(parameters.seed);
 		NativeArray<Vector2> octaveOffsets = new NativeArray<Vector2>(parameters.octaves, Allocator.Temp);
 
 		float maxPossibleHeight = 0;
@@ -110,7 +108,6 @@ public static class Noise {
 			float sampleX = (position.x + octaveOffsets[i].x) / parameters.noiseScale * frequency;
 			float sampleY = (position.y + octaveOffsets[i].y) / parameters.noiseScale * frequency;
 
-			// float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
 			float perlinValue = SampleNoiseValue(new float2(sampleX, sampleY), parameters.noiseType);
 			noiseHeight += perlinValue * amplitude;
 

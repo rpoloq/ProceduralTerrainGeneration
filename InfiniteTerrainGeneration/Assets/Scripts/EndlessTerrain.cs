@@ -86,9 +86,6 @@ public class EndlessTerrain : MonoBehaviour {
 		public TerrainChunk(Vector2 coord, int size, LODInfo[] detailLevels, Transform parent, Material material) {
 			this._detailLevels = detailLevels;
 			
-			// En el momento de escalar la posición del chunk a coordenadas abosultas, el vértice extra de diferencia entre el número de vértices por lado
-			// y el número de subdividiones por lado hará que por se separen unos chunks de otros tantas unidades como diferencia haya entre vétices y subdiviones por lado
-			// multiplicado por el númeor de chunks que se hayan instanciado.
 			_position = coord * (size - 1);
 			_bounds = new Bounds(_position,Vector2.one * size);
 			Vector3 positionV3 = new Vector3(_position.x,0,_position.y);

@@ -36,11 +36,11 @@ public struct MapDataGeneratorJob : IJobParallelFor
         int y = threadIndex / _mapChunkSize;
         float2 pos = new float2(x, -y);
 
-        float currentHeight = Noise.GenerateNoiseValue(_centre + pos, _heightMapSettings);
+        float height = Noise.GenerateNoiseValue(_centre + pos, _heightMapSettings);
 
-        _colMap[threadIndex] = _colorGradient[Mathf.Clamp(Mathf.Abs(Mathf.RoundToInt(currentHeight * 100)), 0, 99)];
+        _colMap[threadIndex] = _colorGradient[Mathf.Clamp(Mathf.Abs(Mathf.RoundToInt(height * 100)), 0, 99)];
 
-        _heightMap[threadIndex] = currentHeight;
+        _heightMap[threadIndex] = height;
     }
 
     public MapData ReturnMapData() => new MapData(_heightMap, _colMap);

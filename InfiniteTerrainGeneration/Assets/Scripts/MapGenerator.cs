@@ -40,7 +40,7 @@ public class MapGenerator : MonoBehaviour {
 	{
 		MeshData meshData;
 
-		if (lod == 1)
+		if (lod < 1)
 		{
 			meshData = GenerateMeshDataJob(mapData, configSettings.meshSettings, MapChunkSize,lod);
 		}
@@ -75,7 +75,8 @@ public class MapGenerator : MonoBehaviour {
 		
 		NativeArray<Color> gradientColorArray = CreateGradientColor();
 		
-		MapDataGeneratorJob mapDataGeneratorJob = new MapDataGeneratorJob(configSettings.heightMapSettings, MapChunkSize, new float2(centre.x, centre.y), gradientColorArray);
+		MapDataGeneratorJob mapDataGeneratorJob = new MapDataGeneratorJob(configSettings.heightMapSettings, MapChunkSize, 
+			new float2(centre.x, centre.y), gradientColorArray);
 		mapDataGeneratorJob.Schedule(MapChunkSize * MapChunkSize, _batchSize).Complete();
 
 		MapData mapData = mapDataGeneratorJob.ReturnMapData();

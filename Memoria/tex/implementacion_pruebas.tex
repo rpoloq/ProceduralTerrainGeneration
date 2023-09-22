@@ -656,7 +656,7 @@ La generación de texturas del terreno se encarga de convertir el mapa de colore
     \includegraphics[width=0.85\textwidth]{img/codes/TextureColor.png}
     \caption{Implementación del método de generación de texturas.}
     \end{figure}
-
+    \newpage
     \item \texttt{Uso en la Clase TerrainChunk}:En la clase \texttt{TerrainChunk}, específicamente en el método \texttt{OnMapDataReceived}, se utiliza la clase \texttt{TextureGenerator} para crear una textura a partir del mapa de colores (\texttt{colourMap}) contenido en el objeto \texttt{MapData} recibido. Luego, esta textura se asigna al material del terreno para su visualización en el objeto \texttt{\_meshRenderer}. A continuación se muestra el fragmento relevante de código:
     \begin{figure}[h]
         \centering

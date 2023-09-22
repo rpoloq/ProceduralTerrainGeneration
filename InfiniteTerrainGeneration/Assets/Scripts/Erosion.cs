@@ -10,13 +10,11 @@ public static class Erosion {
         
         int index = y * mapChunkSize + x;
         
-        // Verifica si el punto está dentro del área del borde
         bool isInsideBorder = InsideBorder(x, y, erosionSettings.borderSize, mapChunkSize);
         
         float currentHeight = heightMap[index];
         float minHeight = currentHeight;
 
-        // Bucle para buscar el vecino más bajo
         for (int dy = -1; dy <= 1; dy++)
         {
             for (int dx = -1; dx <= 1; dx++)
@@ -37,7 +35,6 @@ public static class Erosion {
             }
         }
 
-        // Calcula el ángulo de talud y aplica la erosión si es necesario
         float heightDiff = currentHeight - minHeight;
         float angle = Mathf.Atan(heightDiff);
         float borderMaxReduction = erosionSettings.borderMaxReduction;
@@ -47,7 +44,6 @@ public static class Erosion {
         {
             if (!isInsideBorder)
             {
-                // Si está en el borde, no aplicar erosión, devolver la altura disminuída según la iteración actual
                 erodedValue = currentHeight - currentBorderReduction;
             }
             else
@@ -71,6 +67,4 @@ public static class Erosion {
                y >= borderSize && 
                y < mapChunkSize - borderSize;
     }
-
-    
 }
