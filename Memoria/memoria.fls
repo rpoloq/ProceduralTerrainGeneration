@@ -379,17 +379,13 @@ INPUT .\img\UseCases.png
 INPUT .\img\UseCases.png
 INPUT .\img\UseCases.png
 INPUT .\img\UseCases.png
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1200.tfm
-INPUT .\img\Diagrama de secuencia.png
-INPUT .\img\Diagrama de secuencia.png
-INPUT .\img\Diagrama de secuencia.png
-INPUT .\img\Diagrama de secuencia.png
-INPUT .\img\Diagrama de secuencia.png
-INPUT .\img\Diagrama de secuencia.png
-INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\FlowDiagramgeneracionInfinita.png
+INPUT .\img\FlowDiagramgeneracionInfinita.png
+INPUT .\img\FlowDiagramgeneracionInfinita.png
+INPUT .\img\FlowDiagramgeneracionInfinita.png
+INPUT .\img\FlowDiagramgeneracionInfinita.png
+INPUT .\img\FlowDiagramgeneracionInfinita.png
+INPUT .\img\FlowDiagramgeneracionInfinita.png
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT .\tex\diseno.tex
 INPUT .\tex\diseno.tex
@@ -401,6 +397,13 @@ INPUT .\img\diagrama de clases.png
 INPUT .\img\diagrama de clases.png
 INPUT .\img\diagrama de clases.png
 INPUT .\img\diagrama de clases.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
+INPUT .\img\Diagrama de secuencia.png
 INPUT .\img\FlowDiagramEndlessTerrain.png
 INPUT .\img\FlowDiagramEndlessTerrain.png
 INPUT .\img\FlowDiagramEndlessTerrain.png
@@ -411,6 +414,10 @@ INPUT .\img\FlowDiagramEndlessTerrain.png
 INPUT .\tex\implementacion_pruebas.tex
 INPUT .\tex\implementacion_pruebas.tex
 INPUT tex\implementacion_pruebas.tex
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1200.tfm
 INPUT .\img\codes\EndlessTerrain-start.png
 INPUT .\img\codes\EndlessTerrain-start.png
 INPUT .\img\codes\EndlessTerrain-start.png
@@ -851,10 +858,10 @@ INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi6
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
+INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
+INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
