@@ -55,6 +55,7 @@
 \RequirePackage{ragged2e}
 
 \usepackage[utf8]{inputenc} %Codificacion de entrada
+\usepackage{hyperref}
 
 % Ruta donde buscar las figuras
 \graphicspath{{figs/}}

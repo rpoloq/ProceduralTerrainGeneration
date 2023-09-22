@@ -54,55 +54,61 @@
 \contentsline {subsection}{\numberline {5.1.4}Tecnologías y Herramientas Utilizadas}{45}{subsection.5.1.4}%
 \contentsline {subsubsection}{Elección de Tecnologías}{45}{section*.14}%
 \contentsline {subsubsection}{Lenguajes de Programación}{46}{section*.15}%
-\contentsline {subsection}{\numberline {5.1.5}Herramientas de Desarrollo}{46}{subsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.1.6}Desafíos y Decisiones de Diseño}{47}{subsection.5.1.6}%
-\contentsline {subsubsection}{Desafíos Técnicos}{47}{section*.16}%
-\contentsline {subsubsection}{Decisiones de Diseño}{47}{section*.17}%
-\contentsline {subsubsection}{Alternativas Consideradas}{48}{section*.18}%
-\contentsline {subsection}{\numberline {5.1.7}Planificación del Desarrollo}{48}{subsection.5.1.7}%
-\contentsline {subsubsection}{Metodología de Desarrollo}{48}{section*.19}%
-\contentsline {subsubsection}{Gestión de Tiempo}{48}{section*.20}%
-\contentsline {subsubsection}{Recursos Necesarios}{48}{section*.21}%
-\contentsline {section}{\numberline {5.2}Diseño}{49}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Diseño de la Arquitectura}{49}{subsection.5.2.1}%
-\contentsline {subsubsection}{Diseño de la Arquitectura del Software}{49}{section*.22}%
-\contentsline {subsubsection}{Diagramas de Clases}{49}{section*.23}%
-\contentsline {subsection}{\numberline {5.2.2}Diseño Detallado}{49}{subsection.5.2.2}%
-\contentsline {subsubsection}{Diagramas de Secuencia}{49}{section*.24}%
-\contentsline {subsubsection}{Diagramas de Flujo}{49}{section*.25}%
-\contentsline {subsection}{\numberline {5.2.3}Decisiones de Diseño}{49}{subsection.5.2.3}%
-\contentsline {subsubsection}{Decisiones de Diseño Clave}{49}{section*.26}%
-\contentsline {subsubsection}{Consideraciones de Rendimiento}{49}{section*.27}%
-\contentsline {subsection}{\numberline {5.2.4}Planificación de Desarrollo}{50}{subsection.5.2.4}%
-\contentsline {subsubsection}{Cronograma de Desarrollo}{50}{section*.28}%
-\contentsline {subsubsection}{Asignación de Recursos}{50}{section*.29}%
-\contentsline {subsubsection}{Control de Cambios}{50}{section*.30}%
-\contentsline {subsection}{\numberline {5.2.5}Viabilidad}{50}{subsection.5.2.5}%
-\contentsline {subsubsection}{Viabilidad técnica}{50}{section*.31}%
-\contentsline {subsubsection}{Viabilidad Legales}{50}{section*.32}%
-\contentsline {section}{\numberline {5.3}Implementación}{50}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Entorno de Desarrollo}{50}{subsection.5.3.1}%
-\contentsline {subsubsection}{Herramientas de Desarrollo}{50}{section*.33}%
-\contentsline {subsubsection}{Lenguajes de Programación}{50}{section*.34}%
-\contentsline {subsubsection}{Frameworks y Bibliotecas}{50}{section*.35}%
-\contentsline {subsection}{\numberline {5.3.2}Estructura del Código Fuente}{51}{subsection.5.3.2}%
-\contentsline {subsubsection}{Organización de Directorios}{51}{section*.36}%
-\contentsline {subsubsection}{Módulos y Componentes Principales}{51}{section*.37}%
-\contentsline {subsubsection}{Flujo de Datos}{51}{section*.38}%
-\contentsline {subsection}{\numberline {5.3.3}Algoritmos y Técnicas}{51}{subsection.5.3.3}%
-\contentsline {subsubsection}{Descripción de Algoritmos Clave}{51}{section*.39}%
-\contentsline {subsubsection}{Técnicas de Optimización}{51}{section*.40}%
-\contentsline {subsection}{\numberline {5.3.4}Desarrollo de Características}{51}{subsection.5.3.4}%
-\contentsline {subsubsection}{Implementación de Funcionalidades}{51}{section*.41}%
-\contentsline {subsubsection}{Integración de Componentes}{51}{section*.42}%
-\contentsline {subsection}{\numberline {5.3.5}Pruebas y Depuración}{51}{subsection.5.3.5}%
-\contentsline {subsubsection}{Pruebas Unitarias}{51}{section*.43}%
-\contentsline {subsubsection}{Pruebas de Integración}{52}{section*.44}%
-\contentsline {subsubsection}{Depuración y Solución de Problemas}{52}{section*.45}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{53}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Revisión de costes}{53}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Conclusiones}{53}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Trabajo futuro}{53}{section.6.3}%
-\contentsline {chapter}{\numberline {A}Apéndice}{55}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Ejemplos del lenguaje de marcado Latex}{55}{section.Alph1.1}%
-\contentsline {chapter}{Bibliografía}{56}{lstnumber.-2.4}%
+\contentsline {subsubsection}{Herramientas de Desarrollo}{46}{section*.16}%
+\contentsline {subsubsection}{Alternativas Consideradas}{47}{section*.17}%
+\contentsline {subsection}{\numberline {5.1.5}Planificación del Desarrollo}{47}{subsection.5.1.5}%
+\contentsline {subsubsection}{Metodología de Desarrollo}{47}{section*.18}%
+\contentsline {subsubsection}{Gestión de Tiempo}{47}{section*.19}%
+\contentsline {subsubsection}{Recursos Necesarios}{48}{section*.20}%
+\contentsline {section}{\numberline {5.2}Diseño}{48}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Diseño de las clases de la Arquitectura}{48}{subsection.5.2.1}%
+\contentsline {subsubsection}{Generación de alutras}{48}{section*.21}%
+\contentsline {subsubsection}{Generación y gestión del Terreno}{49}{section*.22}%
+\contentsline {subsubsection}{Representación del Terreno}{50}{section*.23}%
+\contentsline {subsection}{\numberline {5.2.2}Diseño de la Arquitectura del Software}{50}{subsection.5.2.2}%
+\contentsline {subsubsection}{Diagrama de Clases}{50}{section*.24}%
+\contentsline {subsection}{\numberline {5.2.3}Diseño Detallado}{51}{subsection.5.2.3}%
+\contentsline {subsubsection}{Diagramas de Flujo}{51}{section*.25}%
+\contentsline {subsection}{\numberline {5.2.4}Desafíos y Decisiones de Diseño}{52}{subsection.5.2.4}%
+\contentsline {subsubsection}{Desafíos Técnicos}{52}{section*.26}%
+\contentsline {subsubsection}{Decisiones de Diseño}{53}{section*.27}%
+\contentsline {subsubsection}{Consideraciones de Rendimiento}{54}{section*.28}%
+\contentsline {section}{\numberline {5.3}Implementación}{54}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Implementación de la Arquitectura}{54}{subsection.5.3.1}%
+\contentsline {subsubsection}{Scripts y Componentes Clave}{55}{section*.29}%
+\contentsline {subsection}{\numberline {5.3.2}Implementación de los Algoritmos}{64}{subsection.5.3.2}%
+\contentsline {subsubsection}{Generación Infinita de Chunks de Terreno}{64}{section*.30}%
+\contentsline {subsubsection}{Implementación de Niveles de Detalle (LOD)}{66}{section*.31}%
+\contentsline {subsubsection}{Generación de Valores de Ruido}{67}{section*.32}%
+\contentsline {paragraph}{Parámetros de Ruido}{67}{section*.33}%
+\contentsline {paragraph}{Generación de Valores de Ruido}{68}{section*.34}%
+\contentsline {paragraph}{Tipo de Ruido}{69}{section*.35}%
+\contentsline {subsubsection}{Generación del Mapa de Altura}{69}{section*.36}%
+\contentsline {subsubsection}{Generación de las Mallas del Terreno}{71}{section*.37}%
+\contentsline {subsubsection}{Aplicación de Algoritmos de Erosión}{72}{section*.38}%
+\contentsline {subsubsection}{Generación de Texturas del Terreno}{74}{section*.39}%
+\contentsline {subsubsection}{Generación de texturas}{74}{section*.40}%
+\contentsline {chapter}{\numberline {6}Análisis de Resultados}{77}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Generación de Terrenos}{77}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Mapas de Altura Generados}{77}{subsection.6.1.1}%
+\contentsline {subsubsection}{Escala de Ruido}{77}{section*.41}%
+\contentsline {subsubsection}{Número de Octavas}{77}{section*.42}%
+\contentsline {subsubsection}{Tipo de Ruido}{78}{section*.43}%
+\contentsline {subsubsection}{Variación de Semilla de Ruido}{79}{section*.44}%
+\contentsline {subsubsection}{Visualización de Cambios}{79}{section*.45}%
+\contentsline {subsubsection}{Comprobaciones y Conclusiones}{79}{section*.46}%
+\contentsline {subsection}{\numberline {6.1.2}Efectos de Erosión}{80}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Rendimiento}{80}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Tiempo de Generación de Terreno}{80}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Optimización de Malla}{80}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Visualización}{80}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Representación Gráfica}{80}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Comparación de LOD}{81}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Conclusión del Análisis}{81}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{83}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Revisión de costes}{83}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Conclusiones}{83}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Trabajo futuro}{83}{section.7.3}%
+\contentsline {chapter}{\numberline {A}Apéndice}{85}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Cronograma de fases del desarrollo}{85}{section.Alph1.1}%
+\contentsline {chapter}{Bibliografía}{85}{figure.Alph1.1}%

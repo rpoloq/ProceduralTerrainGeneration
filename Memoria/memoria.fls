@@ -386,53 +386,200 @@ INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\e
 INPUT .\tex\diseno.tex
 INPUT .\tex\diseno.tex
 INPUT tex\diseno.tex
+INPUT .\img\diagrama de clases.png
+INPUT .\img\diagrama de clases.png
+INPUT .\img\diagrama de clases.png
+INPUT .\img\diagrama de clases.png
+INPUT .\img\diagrama de clases.png
+INPUT .\img\diagrama de clases.png
+INPUT .\img\diagrama de clases.png
+INPUT .\img\FlowDiagramEndlessTerrain.png
+INPUT .\img\FlowDiagramEndlessTerrain.png
+INPUT .\img\FlowDiagramEndlessTerrain.png
+INPUT .\img\FlowDiagramEndlessTerrain.png
+INPUT .\img\FlowDiagramEndlessTerrain.png
+INPUT .\img\FlowDiagramEndlessTerrain.png
+INPUT .\img\FlowDiagramEndlessTerrain.png
 INPUT .\tex\implementacion_pruebas.tex
 INPUT .\tex\implementacion_pruebas.tex
 INPUT tex\implementacion_pruebas.tex
+INPUT .\img\codes\EndlessTerrain-start.png
+INPUT .\img\codes\EndlessTerrain-start.png
+INPUT .\img\codes\EndlessTerrain-start.png
+INPUT .\img\codes\EndlessTerrain-start.png
+INPUT .\img\codes\EndlessTerrain-start.png
+INPUT .\img\codes\EndlessTerrain-start.png
+INPUT .\img\codes\EndlessTerrain-start.png
+INPUT .\img\codes\EndlessTerrain-updateVisibleChunks.png
+INPUT .\img\codes\EndlessTerrain-updateVisibleChunks.png
+INPUT .\img\codes\EndlessTerrain-updateVisibleChunks.png
+INPUT .\img\codes\EndlessTerrain-updateVisibleChunks.png
+INPUT .\img\codes\EndlessTerrain-updateVisibleChunks.png
+INPUT .\img\codes\EndlessTerrain-updateVisibleChunks.png
+INPUT .\img\codes\EndlessTerrain-updateVisibleChunks.png
+INPUT .\img\codes\LOD-parametros.png
+INPUT .\img\codes\LOD-parametros.png
+INPUT .\img\codes\LOD-parametros.png
+INPUT .\img\codes\LOD-parametros.png
+INPUT .\img\codes\LOD-parametros.png
+INPUT .\img\codes\LOD-parametros.png
+INPUT .\img\codes\LOD-parametros.png
+INPUT .\img\codes\LOD-bucle.png
+INPUT .\img\codes\LOD-bucle.png
+INPUT .\img\codes\LOD-bucle.png
+INPUT .\img\codes\LOD-bucle.png
+INPUT .\img\codes\LOD-bucle.png
+INPUT .\img\codes\LOD-bucle.png
+INPUT .\img\codes\LOD-bucle.png
+INPUT .\img\codes\octavas.png
+INPUT .\img\codes\octavas.png
+INPUT .\img\codes\octavas.png
+INPUT .\img\codes\octavas.png
+INPUT .\img\codes\octavas.png
+INPUT .\img\codes\octavas.png
+INPUT .\img\codes\octavas.png
+INPUT .\img\codes\GeneraciónRuido.png
+INPUT .\img\codes\GeneraciónRuido.png
+INPUT .\img\codes\GeneraciónRuido.png
+INPUT .\img\codes\GeneraciónRuido.png
+INPUT .\img\codes\GeneraciónRuido.png
+INPUT .\img\codes\GeneraciónRuido.png
+INPUT .\img\codes\GeneraciónRuido.png
+INPUT .\img\codes\normalizacion.png
+INPUT .\img\codes\normalizacion.png
+INPUT .\img\codes\normalizacion.png
+INPUT .\img\codes\normalizacion.png
+INPUT .\img\codes\normalizacion.png
+INPUT .\img\codes\normalizacion.png
+INPUT .\img\codes\normalizacion.png
+INPUT .\img\codes\TiposRuido.png
+INPUT .\img\codes\TiposRuido.png
+INPUT .\img\codes\TiposRuido.png
+INPUT .\img\codes\TiposRuido.png
+INPUT .\img\codes\TiposRuido.png
+INPUT .\img\codes\TiposRuido.png
+INPUT .\img\codes\TiposRuido.png
+INPUT .\img\codes\MapGenerator-GenerateMapData.png
+INPUT .\img\codes\MapGenerator-GenerateMapData.png
+INPUT .\img\codes\MapGenerator-GenerateMapData.png
+INPUT .\img\codes\MapGenerator-GenerateMapData.png
+INPUT .\img\codes\MapGenerator-GenerateMapData.png
+INPUT .\img\codes\MapGenerator-GenerateMapData.png
+INPUT .\img\codes\MapGenerator-GenerateMapData.png
+INPUT .\img\codes\GenracionAlturaYColores.png
+INPUT .\img\codes\GenracionAlturaYColores.png
+INPUT .\img\codes\GenracionAlturaYColores.png
+INPUT .\img\codes\GenracionAlturaYColores.png
+INPUT .\img\codes\GenracionAlturaYColores.png
+INPUT .\img\codes\GenracionAlturaYColores.png
+INPUT .\img\codes\GenracionAlturaYColores.png
+INPUT .\img\codes\MapDataReturn.png
+INPUT .\img\codes\MapDataReturn.png
+INPUT .\img\codes\MapDataReturn.png
+INPUT .\img\codes\MapDataReturn.png
+INPUT .\img\codes\MapDataReturn.png
+INPUT .\img\codes\MapDataReturn.png
+INPUT .\img\codes\MapDataReturn.png
+INPUT .\img\codes\GenerateMeshData.png
+INPUT .\img\codes\GenerateMeshData.png
+INPUT .\img\codes\GenerateMeshData.png
+INPUT .\img\codes\GenerateMeshData.png
+INPUT .\img\codes\GenerateMeshData.png
+INPUT .\img\codes\GenerateMeshData.png
+INPUT .\img\codes\GenerateMeshData.png
+INPUT .\img\codes\CalculoVerticesYUVs.png
+INPUT .\img\codes\CalculoVerticesYUVs.png
+INPUT .\img\codes\CalculoVerticesYUVs.png
+INPUT .\img\codes\CalculoVerticesYUVs.png
+INPUT .\img\codes\CalculoVerticesYUVs.png
+INPUT .\img\codes\CalculoVerticesYUVs.png
+INPUT .\img\codes\CalculoVerticesYUVs.png
+INPUT .\img\codes\CalculoTriangulos.png
+INPUT .\img\codes\CalculoTriangulos.png
+INPUT .\img\codes\CalculoTriangulos.png
+INPUT .\img\codes\CalculoTriangulos.png
+INPUT .\img\codes\CalculoTriangulos.png
+INPUT .\img\codes\CalculoTriangulos.png
+INPUT .\img\codes\CalculoTriangulos.png
+INPUT .\img\codes\CreacionMeshData.png
+INPUT .\img\codes\CreacionMeshData.png
+INPUT .\img\codes\CreacionMeshData.png
+INPUT .\img\codes\CreacionMeshData.png
+INPUT .\img\codes\CreacionMeshData.png
+INPUT .\img\codes\CreacionMeshData.png
+INPUT .\img\codes\CreacionMeshData.png
+INPUT .\img\codes\ApplyErosionCall.png
+INPUT .\img\codes\ApplyErosionCall.png
+INPUT .\img\codes\ApplyErosionCall.png
+INPUT .\img\codes\ApplyErosionCall.png
+INPUT .\img\codes\ApplyErosionCall.png
+INPUT .\img\codes\ApplyErosionCall.png
+INPUT .\img\codes\ApplyErosionCall.png
+INPUT .\img\codes\ApplyErosionFunction.png
+INPUT .\img\codes\ApplyErosionFunction.png
+INPUT .\img\codes\ApplyErosionFunction.png
+INPUT .\img\codes\ApplyErosionFunction.png
+INPUT .\img\codes\ApplyErosionFunction.png
+INPUT .\img\codes\ApplyErosionFunction.png
+INPUT .\img\codes\ApplyErosionFunction.png
+INPUT .\img\codes\ExecuteErosionJob.png
+INPUT .\img\codes\ExecuteErosionJob.png
+INPUT .\img\codes\ExecuteErosionJob.png
+INPUT .\img\codes\ExecuteErosionJob.png
+INPUT .\img\codes\ExecuteErosionJob.png
+INPUT .\img\codes\ExecuteErosionJob.png
+INPUT .\img\codes\ExecuteErosionJob.png
+INPUT .\img\codes\TextureColor.png
+INPUT .\img\codes\TextureColor.png
+INPUT .\img\codes\TextureColor.png
+INPUT .\img\codes\TextureColor.png
+INPUT .\img\codes\TextureColor.png
+INPUT .\img\codes\TextureColor.png
+INPUT .\img\codes\TextureColor.png
+INPUT .\img\codes\TexturizacionDeChunk.png
+INPUT .\img\codes\TexturizacionDeChunk.png
+INPUT .\img\codes\TexturizacionDeChunk.png
+INPUT .\img\codes\TexturizacionDeChunk.png
+INPUT .\img\codes\TexturizacionDeChunk.png
+INPUT .\img\codes\TexturizacionDeChunk.png
+INPUT .\img\codes\TexturizacionDeChunk.png
+INPUT .\tex\Resultados.tex
+INPUT .\tex\Resultados.tex
+INPUT tex\Resultados.tex
+INPUT .\img\codes\LowNoiseScale.png
+INPUT .\img\codes\LowNoiseScale.png
+INPUT .\img\codes\LowNoiseScale.png
+INPUT .\img\codes\LowNoiseScale.png
+INPUT .\img\codes\LowNoiseScale.png
+INPUT .\img\codes\LowNoiseScale.png
+INPUT .\img\codes\LowNoiseScale.png
+INPUT .\img\codes\HightNoiseScale.png
+INPUT .\img\codes\HightNoiseScale.png
+INPUT .\img\codes\HightNoiseScale.png
+INPUT .\img\codes\HightNoiseScale.png
+INPUT .\img\codes\HightNoiseScale.png
+INPUT .\img\codes\HightNoiseScale.png
+INPUT .\img\codes\HightNoiseScale.png
 INPUT .\tex\conclusiones.tex
 INPUT .\tex\conclusiones.tex
 INPUT tex\conclusiones.tex
 INPUT .\tex\apendice.tex
 INPUT .\tex\apendice.tex
 INPUT tex\apendice.tex
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0800.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1000.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0700.tfm
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT .\figs\diagrama.pdf
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1095.tfm
+INPUT .\img\planificación gantt.png
+INPUT .\img\planificación gantt.png
+INPUT .\img\planificación gantt.png
+INPUT .\img\planificación gantt.png
+INPUT .\img\planificación gantt.png
+INPUT .\img\planificación gantt.png
+INPUT .\img\planificación gantt.png
 INPUT .\memoria.bbl
 INPUT .\memoria.bbl
 INPUT memoria.bbl
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT memoria.aux
 INPUT .\memoria.out
 INPUT .\memoria.out
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
@@ -457,11 +604,3 @@ INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi6
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1440.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk
 INPUT C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
