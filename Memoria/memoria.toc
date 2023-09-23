@@ -108,9 +108,8 @@
 \contentsline {subsubsection}{Algoritmo Voronoi:}{83}{section*.87}%
 \contentsline {subsection}{\numberline {6.2.2}Comparación de LOD}{84}{subsection.6.2.2}%
 \contentsline {chapter}{\numberline {7}Conclusiones}{85}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Revisión de costes}{85}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Conclusiones}{85}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Trabajo futuro}{85}{section.7.3}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{85}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{85}{section.7.2}%
 \contentsline {chapter}{\numberline {A}Apéndice}{87}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Cronograma de fases del desarrollo}{87}{section.Alph1.1}%
 \contentsline {chapter}{Bibliografía}{87}{figure.caption.91}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.18)  23 SEP 2023 01:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.18)  23 SEP 2023 02:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -722,7 +722,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<figs/universidad-camilo-jose-cela.jpg, id=269, 1302.8675pt x 414.54875pt>
+<figs/universidad-camilo-jose-cela.jpg, id=265, 1302.8675pt x 414.54875pt>
 File: figs/universidad-camilo-jose-cela.jpg Graphic file (type jpg)
 <use figs/universidad-camilo-jose-cela.jpg>
 Package pdftex.def Info: figs/universidad-camilo-jose-cela.jpg  used on input line 40.
@@ -735,7 +735,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
  (C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figs/utad.png, id=270, 323.2075pt x 156.585pt>
+<figs/utad.png, id=266, 323.2075pt x 156.585pt>
 File: figs/utad.png Graphic file (type png)
 <use figs/utad.png>
 Package pdftex.def Info: figs/utad.png  used on input line 40.
@@ -910,6 +910,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [31]
 
+LaTeX Warning: Citation `FractalBrownianoMotion' on page 32 undefined on input line 163.
+
+
+LaTeX Warning: Citation `TecnicasMultifractales' on page 32 undefined on input line 165.
+
+
+LaTeX Warning: Citation `ModeladoGeologico' on page 32 undefined on input line 181.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -917,6 +926,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [32]
+
+LaTeX Warning: Citation `GeneracionMultiBioma' on page 33 undefined on input line 193.
+
+
+LaTeX Warning: Citation `ErosionBasadaGrafos' on page 33 undefined on input line 195.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -942,6 +957,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [35]
 
+LaTeX Warning: Citation `GeologicalModeling' on page 36 undefined on input line 278.
+
+
+LaTeX Warning: Citation `HydrologicalModeling' on page 36 undefined on input line 280.
+
+
+LaTeX Warning: Citation `EnvironmentalModeling' on page 36 undefined on input line 282.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -950,6 +974,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [36]
 
+LaTeX Warning: Citation `DataCompression' on page 37 undefined on input line 284.
+
+
+LaTeX Warning: Citation `VRPlanetaryTerrains' on page 37 undefined on input line 294.
+
+
+LaTeX Warning: Citation `ARInteractiveTerrain' on page 37 undefined on input line 296.
+
+
+LaTeX Warning: Citation `VR3DReconstructedSpace' on page 37 undefined on input line 298.
+
+
+LaTeX Warning: Citation `VRSceneGeneration' on page 37 undefined on input line 300.
+
+
+LaTeX Warning: Citation `VRWalkingEnvironments' on page 37 undefined on input line 302.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -957,6 +999,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [37]
+
+LaTeX Warning: Citation `BalancedGameplay' on page 38 undefined on input line 326.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1001,7 +1046,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [43]
-<img/UseCases.png, id=700, 175.25475pt x 253.54726pt>
+<img/UseCases.png, id=665, 175.25475pt x 253.54726pt>
 File: img/UseCases.png Graphic file (type png)
 <use img/UseCases.png>
 Package pdftex.def Info: img/UseCases.png  used on input line 127.
@@ -1015,7 +1060,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [44 <./img/UseCases.png>]
-<img/FlowDiagramgeneracionInfinita.png, id=710, 427.5975pt x 834.11626pt>
+<img/FlowDiagramgeneracionInfinita.png, id=675, 427.5975pt x 834.11626pt>
 File: img/FlowDiagramgeneracionInfinita.png Graphic file (type png)
 <use img/FlowDiagramgeneracionInfinita.png>
 Package pdftex.def Info: img/FlowDiagramgeneracionInfinita.png  used on input line 138.
@@ -1072,7 +1117,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [50]
-<img/diagrama de clases.png, id=750, 654.64575pt x 489.027pt>
+<img/diagrama de clases.png, id=715, 654.64575pt x 489.027pt>
 File: img/diagrama de clases.png Graphic file (type png)
 <use img/diagrama de clases.png>
 Package pdftex.def Info: img/diagrama de clases.png  used on input line 96.
@@ -1086,7 +1131,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [51 <./img/diagrama de clases.png>]
-<img/Diagrama de secuencia.png, id=758, 804.00375pt x 677.53125pt>
+<img/Diagrama de secuencia.png, id=723, 804.00375pt x 677.53125pt>
 File: img/Diagrama de secuencia.png Graphic file (type png)
 <use img/Diagrama de secuencia.png>
 Package pdftex.def Info: img/Diagrama de secuencia.png  used on input line 106.
@@ -1100,7 +1145,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [52 <./img/Diagrama de secuencia.png>]
-<img/FlowDiagramEndlessTerrain.png, id=766, 548.0475pt x 1042.89626pt>
+<img/FlowDiagramEndlessTerrain.png, id=731, 548.0475pt x 1042.89626pt>
 File: img/FlowDiagramEndlessTerrain.png Graphic file (type png)
 <use img/FlowDiagramEndlessTerrain.png>
 Package pdftex.def Info: img/FlowDiagramEndlessTerrain.png  used on input line 118.
@@ -1392,7 +1437,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [64]
-<img/codes/EndlessTerrain-start.png, id=840, 393.26926pt x 155.3805pt>
+<img/codes/EndlessTerrain-start.png, id=805, 393.26926pt x 155.3805pt>
 File: img/codes/EndlessTerrain-start.png Graphic file (type png)
 <use img/codes/EndlessTerrain-start.png>
 Package pdftex.def Info: img/codes/EndlessTerrain-start.png  used on input line 412.
@@ -1431,12 +1476,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [66 <./img/codes/EndlessTerrain-start.png>]
-<img/codes/EndlessTerrain-updateVisibleChunks.png, id=859, 732.93825pt x 346.896pt>
+<img/codes/EndlessTerrain-updateVisibleChunks.png, id=824, 732.93825pt x 346.896pt>
 File: img/codes/EndlessTerrain-updateVisibleChunks.png Graphic file (type png)
 <use img/codes/EndlessTerrain-updateVisibleChunks.png>
 Package pdftex.def Info: img/codes/EndlessTerrain-updateVisibleChunks.png  used on input line 435.
 (pdftex.def)             Requested size: 455.24411pt x 215.47028pt.
-<img/codes/LOD-parametros.png, id=860, 649.67719pt x 66.2475pt>
+<img/codes/LOD-parametros.png, id=825, 649.67719pt x 66.2475pt>
 File: img/codes/LOD-parametros.png Graphic file (type png)
 <use img/codes/LOD-parametros.png>
 Package pdftex.def Info: img/codes/LOD-parametros.png  used on input line 449.
@@ -1450,7 +1495,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [67 <./img/codes/EndlessTerrain-updateVisibleChunks.png> <./img/codes/LOD-parametros.png>]
-<img/codes/LOD-bucle.png, id=871, 985.43156pt x 350.81062pt>
+<img/codes/LOD-bucle.png, id=836, 985.43156pt x 350.81062pt>
 File: img/codes/LOD-bucle.png Graphic file (type png)
 <use img/codes/LOD-bucle.png>
 Package pdftex.def Info: img/codes/LOD-bucle.png  used on input line 462.
@@ -1470,17 +1515,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [68 <./img/codes/LOD-bucle.png>]
-<img/codes/octavas.png, id=880, 632.3625pt x 293.59688pt>
+<img/codes/octavas.png, id=845, 632.3625pt x 293.59688pt>
 File: img/codes/octavas.png Graphic file (type png)
 <use img/codes/octavas.png>
 Package pdftex.def Info: img/codes/octavas.png  used on input line 491.
 (pdftex.def)             Requested size: 409.71692pt x 190.22643pt.
-<img/codes/GeneraciónRuido.png, id=881, 584.93532pt x 196.48407pt>
+<img/codes/GeneraciónRuido.png, id=846, 584.93532pt x 196.48407pt>
 File: img/codes/GeneraciónRuido.png Graphic file (type png)
 <use img/codes/GeneraciónRuido.png>
 Package pdftex.def Info: img/codes/GeneraciónRuido.png  used on input line 498.
 (pdftex.def)             Requested size: 409.71692pt x 137.63084pt.
-<img/codes/normalizacion.png, id=882, 467.49657pt x 49.68562pt>
+<img/codes/normalizacion.png, id=847, 467.49657pt x 49.68562pt>
 File: img/codes/normalizacion.png Graphic file (type png)
 <use img/codes/normalizacion.png>
 Package pdftex.def Info: img/codes/normalizacion.png  used on input line 504.
@@ -1497,12 +1542,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [69 <./img/codes/octavas.png> <./img/codes/GeneraciónRuido.png>]
-<img/codes/TiposRuido.png, id=896, 767.11594pt x 349.305pt>
+<img/codes/TiposRuido.png, id=861, 767.11594pt x 349.305pt>
 File: img/codes/TiposRuido.png Graphic file (type png)
 <use img/codes/TiposRuido.png>
 Package pdftex.def Info: img/codes/TiposRuido.png  used on input line 523.
 (pdftex.def)             Requested size: 455.24411pt x 207.29805pt.
-<img/codes/MapGenerator-GenerateMapData.png, id=897, 908.64468pt x 238.64156pt>
+<img/codes/MapGenerator-GenerateMapData.png, id=862, 908.64468pt x 238.64156pt>
 File: img/codes/MapGenerator-GenerateMapData.png Graphic file (type png)
 <use img/codes/MapGenerator-GenerateMapData.png>
 Package pdftex.def Info: img/codes/MapGenerator-GenerateMapData.png  used on input line 536.
@@ -1519,12 +1564,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [70 <./img/codes/normalizacion.png> <./img/codes/TiposRuido.png>]
-<img/codes/GenracionAlturaYColores.png, id=907, 727.518pt x 215.00325pt>
+<img/codes/GenracionAlturaYColores.png, id=872, 727.518pt x 215.00325pt>
 File: img/codes/GenracionAlturaYColores.png Graphic file (type png)
 <use img/codes/GenracionAlturaYColores.png>
 Package pdftex.def Info: img/codes/GenracionAlturaYColores.png  used on input line 549.
 (pdftex.def)             Requested size: 409.71692pt x 121.08337pt.
-<img/codes/MapDataReturn.png, id=908, 415.5525pt x 51.19125pt>
+<img/codes/MapDataReturn.png, id=873, 415.5525pt x 51.19125pt>
 File: img/codes/MapDataReturn.png Graphic file (type png)
 <use img/codes/MapDataReturn.png>
 Package pdftex.def Info: img/codes/MapDataReturn.png  used on input line 557.
@@ -1538,17 +1583,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [71 <./img/codes/MapGenerator-GenerateMapData.png> <./img/codes/GenracionAlturaYColores.png> <./img/codes/MapDataReturn.png>]
-<img/codes/GenerateMeshData.png, id=920, 977.15062pt x 378.66469pt>
+<img/codes/GenerateMeshData.png, id=885, 977.15062pt x 378.66469pt>
 File: img/codes/GenerateMeshData.png Graphic file (type png)
 <use img/codes/GenerateMeshData.png>
 Package pdftex.def Info: img/codes/GenerateMeshData.png  used on input line 575.
 (pdftex.def)             Requested size: 455.24411pt x 176.41815pt.
-<img/codes/CalculoVerticesYUVs.png, id=921, 765.45975pt x 171.64125pt>
+<img/codes/CalculoVerticesYUVs.png, id=886, 765.45975pt x 171.64125pt>
 File: img/codes/CalculoVerticesYUVs.png Graphic file (type png)
 <use img/codes/CalculoVerticesYUVs.png>
 Package pdftex.def Info: img/codes/CalculoVerticesYUVs.png  used on input line 588.
 (pdftex.def)             Requested size: 455.24411pt x 102.08195pt.
-<img/codes/CalculoTriangulos.png, id=922, 242.70676pt x 230.0595pt>
+<img/codes/CalculoTriangulos.png, id=887, 242.70676pt x 230.0595pt>
 File: img/codes/CalculoTriangulos.png Graphic file (type png)
 <use img/codes/CalculoTriangulos.png>
 Package pdftex.def Info: img/codes/CalculoTriangulos.png  used on input line 595.
@@ -1557,7 +1602,7 @@ Package pdftex.def Info: img/codes/CalculoTriangulos.png  used on input line 595
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/codes/CreacionMeshData.png, id=923, 666.69075pt x 136.71075pt>
+<img/codes/CreacionMeshData.png, id=888, 666.69075pt x 136.71075pt>
 File: img/codes/CreacionMeshData.png Graphic file (type png)
 <use img/codes/CreacionMeshData.png>
 Package pdftex.def Info: img/codes/CreacionMeshData.png  used on input line 601.
@@ -1570,7 +1615,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [72 <./img/codes/GenerateMeshData.png> <./img/codes/CalculoVerticesYUVs.png>]
-<img/codes/ApplyErosionCall.png, id=932, 736.25063pt x 393.72093pt>
+<img/codes/ApplyErosionCall.png, id=897, 736.25063pt x 393.72093pt>
 File: img/codes/ApplyErosionCall.png Graphic file (type png)
 <use img/codes/ApplyErosionCall.png>
 Package pdftex.def Info: img/codes/ApplyErosionCall.png  used on input line 618.
@@ -1579,7 +1624,7 @@ Package pdftex.def Info: img/codes/ApplyErosionCall.png  used on input line 618.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/codes/ApplyErosionFunction.png, id=933, 718.93594pt x 235.63031pt>
+<img/codes/ApplyErosionFunction.png, id=898, 718.93594pt x 235.63031pt>
 File: img/codes/ApplyErosionFunction.png Graphic file (type png)
 <use img/codes/ApplyErosionFunction.png>
 Package pdftex.def Info: img/codes/ApplyErosionFunction.png  used on input line 624.
@@ -1595,7 +1640,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [73 <./img/codes/CalculoTriangulos.png> <./img/codes/CreacionMeshData.png>]
-<img/codes/ExecuteErosionJob.png, id=944, 754.61925pt x 148.75575pt>
+<img/codes/ExecuteErosionJob.png, id=909, 754.61925pt x 148.75575pt>
 File: img/codes/ExecuteErosionJob.png Graphic file (type png)
 <use img/codes/ExecuteErosionJob.png>
 Package pdftex.def Info: img/codes/ExecuteErosionJob.png  used on input line 640.
@@ -1612,7 +1657,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [74 <./img/codes/ApplyErosionCall.png> <./img/codes/ApplyErosionFunction.png>]
-<img/codes/TextureColor.png, id=953, 574.39594pt x 200.24812pt>
+<img/codes/TextureColor.png, id=918, 574.39594pt x 200.24812pt>
 File: img/codes/TextureColor.png Graphic file (type png)
 <use img/codes/TextureColor.png>
 Package pdftex.def Info: img/codes/TextureColor.png  used on input line 656.
@@ -1626,7 +1671,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [75 <./img/codes/ExecuteErosionJob.png> <./img/codes/TextureColor.png>]
-<img/codes/TexturizacionDeChunk.png, id=965, 883.80188pt x 217.5628pt>
+<img/codes/TexturizacionDeChunk.png, id=930, 883.80188pt x 217.5628pt>
 File: img/codes/TexturizacionDeChunk.png Graphic file (type png)
 <use img/codes/TexturizacionDeChunk.png>
 Package pdftex.def Info: img/codes/TexturizacionDeChunk.png  used on input line 663.
@@ -1642,17 +1687,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [76 <./img/codes/TexturizacionDeChunk.png>]
 Cap\'{\i }tulo 6.
 (tex/Resultados.tex
-<img/codes/LowNoiseScale.png, id=973, 323.40825pt x 326.4195pt>
+<img/codes/LowNoiseScale.png, id=938, 323.40825pt x 326.4195pt>
 File: img/codes/LowNoiseScale.png Graphic file (type png)
 <use img/codes/LowNoiseScale.png>
 Package pdftex.def Info: img/codes/LowNoiseScale.png  used on input line 18.
 (pdftex.def)             Requested size: 136.57462pt x 137.84236pt.
-<img/codes/MediumNoiseScale.png, id=974, 323.40825pt x 323.40825pt>
+<img/codes/MediumNoiseScale.png, id=939, 323.40825pt x 323.40825pt>
 File: img/codes/MediumNoiseScale.png Graphic file (type png)
 <use img/codes/MediumNoiseScale.png>
 Package pdftex.def Info: img/codes/MediumNoiseScale.png  used on input line 24.
 (pdftex.def)             Requested size: 136.57462pt x 136.57074pt.
-<img/codes/HightNoiseScale.png, id=975, 323.40825pt x 322.806pt>
+<img/codes/HightNoiseScale.png, id=940, 323.40825pt x 322.806pt>
 File: img/codes/HightNoiseScale.png Graphic file (type png)
 <use img/codes/HightNoiseScale.png>
 Package pdftex.def Info: img/codes/HightNoiseScale.png  used on input line 30.
@@ -1664,12 +1709,12 @@ File: img/codes/MediumNoiseScale.png Graphic file (type png)
 <use img/codes/MediumNoiseScale.png>
 Package pdftex.def Info: img/codes/MediumNoiseScale.png  used on input line 47.
 (pdftex.def)             Requested size: 136.57462pt x 136.57074pt.
-<img/codes/MediumOctaves.png, id=986, 322.806pt x 323.40825pt>
+<img/codes/MediumOctaves.png, id=951, 322.806pt x 323.40825pt>
 File: img/codes/MediumOctaves.png Graphic file (type png)
 <use img/codes/MediumOctaves.png>
 Package pdftex.def Info: img/codes/MediumOctaves.png  used on input line 53.
 (pdftex.def)             Requested size: 136.57462pt x 136.83229pt.
-<img/codes/HeightOctaves.png, id=987, 323.40825pt x 323.40825pt>
+<img/codes/HeightOctaves.png, id=952, 323.40825pt x 323.40825pt>
 File: img/codes/HeightOctaves.png Graphic file (type png)
 <use img/codes/HeightOctaves.png>
 Package pdftex.def Info: img/codes/HeightOctaves.png  used on input line 59.
@@ -1678,12 +1723,12 @@ File: img/codes/MediumNoiseScale.png Graphic file (type png)
 <use img/codes/MediumNoiseScale.png>
 Package pdftex.def Info: img/codes/MediumNoiseScale.png  used on input line 84.
 (pdftex.def)             Requested size: 136.57462pt x 136.57074pt.
-<img/codes/Simplex.png, id=988, 323.40825pt x 323.40825pt>
+<img/codes/Simplex.png, id=953, 323.40825pt x 323.40825pt>
 File: img/codes/Simplex.png Graphic file (type png)
 <use img/codes/Simplex.png>
 Package pdftex.def Info: img/codes/Simplex.png  used on input line 90.
 (pdftex.def)             Requested size: 136.57462pt x 136.57074pt.
-<img/codes/Voronoi.png, id=989, 354.123pt x 353.52075pt>
+<img/codes/Voronoi.png, id=954, 354.123pt x 353.52075pt>
 File: img/codes/Voronoi.png Graphic file (type png)
 <use img/codes/Voronoi.png>
 Package pdftex.def Info: img/codes/Voronoi.png  used on input line 96.
@@ -1701,52 +1746,52 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [78 <./img/codes/MediumOctaves.png> <./img/codes/HeightOctaves.png>]
-<img/codes/Perlin123.png, id=999, 353.52075pt x 353.52075pt>
+<img/codes/Perlin123.png, id=964, 353.52075pt x 353.52075pt>
 File: img/codes/Perlin123.png Graphic file (type png)
 <use img/codes/Perlin123.png>
 Package pdftex.def Info: img/codes/Perlin123.png  used on input line 115.
 (pdftex.def)             Requested size: 136.57462pt x 136.57251pt.
-<img/codes/Simplex123.png, id=1000, 353.52075pt x 353.52075pt>
+<img/codes/Simplex123.png, id=965, 353.52075pt x 353.52075pt>
 File: img/codes/Simplex123.png Graphic file (type png)
 <use img/codes/Simplex123.png>
 Package pdftex.def Info: img/codes/Simplex123.png  used on input line 121.
 (pdftex.def)             Requested size: 136.57462pt x 136.57251pt.
-<img/codes/Voronoi123.png, id=1001, 353.52075pt x 354.123pt>
+<img/codes/Voronoi123.png, id=966, 353.52075pt x 354.123pt>
 File: img/codes/Voronoi123.png Graphic file (type png)
 <use img/codes/Voronoi123.png>
 Package pdftex.def Info: img/codes/Voronoi123.png  used on input line 127.
 (pdftex.def)             Requested size: 136.57462pt x 136.80516pt.
-<img/codes/Perlin456.png, id=1002, 355.3275pt x 355.92975pt>
+<img/codes/Perlin456.png, id=967, 355.3275pt x 355.92975pt>
 File: img/codes/Perlin456.png Graphic file (type png)
 <use img/codes/Perlin456.png>
 Package pdftex.def Info: img/codes/Perlin456.png  used on input line 137.
 (pdftex.def)             Requested size: 136.57462pt x 136.80798pt.
-<img/codes/Simplex456.png, id=1003, 354.123pt x 355.3275pt>
+<img/codes/Simplex456.png, id=968, 354.123pt x 355.3275pt>
 File: img/codes/Simplex456.png Graphic file (type png)
 <use img/codes/Simplex456.png>
 Package pdftex.def Info: img/codes/Simplex456.png  used on input line 143.
 (pdftex.def)             Requested size: 136.57462pt x 137.04277pt.
-<img/codes/Voronoi456.png, id=1004, 353.52075pt x 354.123pt>
+<img/codes/Voronoi456.png, id=969, 353.52075pt x 354.123pt>
 File: img/codes/Voronoi456.png Graphic file (type png)
 <use img/codes/Voronoi456.png>
 Package pdftex.def Info: img/codes/Voronoi456.png  used on input line 149.
 (pdftex.def)             Requested size: 136.57462pt x 136.80516pt.
-<img/0ciclos.png, id=1005, 784.73175pt x 510.708pt>
+<img/0ciclos.png, id=970, 784.73175pt x 510.708pt>
 File: img/0ciclos.png Graphic file (type png)
 <use img/0ciclos.png>
 Package pdftex.def Info: img/0ciclos.png  used on input line 163.
 (pdftex.def)             Requested size: 182.09486pt x 118.5046pt.
-<img/3ciclos.png, id=1006, 808.82175pt x 515.526pt>
+<img/3ciclos.png, id=971, 808.82175pt x 515.526pt>
 File: img/3ciclos.png Graphic file (type png)
 <use img/3ciclos.png>
 Package pdftex.def Info: img/3ciclos.png  used on input line 169.
 (pdftex.def)             Requested size: 182.09486pt x 116.05914pt.
-<img/7ciclos.png, id=1007, 792.561pt x 514.92375pt>
+<img/7ciclos.png, id=972, 792.561pt x 514.92375pt>
 File: img/7ciclos.png Graphic file (type png)
 <use img/7ciclos.png>
 Package pdftex.def Info: img/7ciclos.png  used on input line 177.
 (pdftex.def)             Requested size: 182.09486pt x 118.30424pt.
-<img/12ciclos.png, id=1008, 787.743pt x 516.12825pt>
+<img/12ciclos.png, id=973, 787.743pt x 516.12825pt>
 File: img/12ciclos.png Graphic file (type png)
 <use img/12ciclos.png>
 Package pdftex.def Info: img/12ciclos.png  used on input line 183.
@@ -1768,42 +1813,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [80 <./img/codes/Perlin456.png> <./img/codes/Simplex456.png> <./img/codes/Voronoi456.png> <./img/0ciclos.png> <./img/3ciclos.png> <./img/7ciclos.png> <./img/12ciclos.png>]
-<img/talud0.png, id=1036, 621.07031pt x 361.35pt>
+<img/talud0.png, id=1001, 621.07031pt x 361.35pt>
 File: img/talud0.png Graphic file (type png)
 <use img/talud0.png>
 Package pdftex.def Info: img/talud0.png  used on input line 198.
 (pdftex.def)             Requested size: 204.85846pt x 119.19072pt.
-<img/talud30.png, id=1037, 627.84563pt x 374.90062pt>
+<img/talud30.png, id=1002, 627.84563pt x 374.90062pt>
 File: img/talud30.png Graphic file (type png)
 <use img/talud30.png>
 Package pdftex.def Info: img/talud30.png  used on input line 204.
 (pdftex.def)             Requested size: 204.85846pt x 122.32178pt.
-<img/talud60.png, id=1038, 612.78937pt x 377.15906pt>
+<img/talud60.png, id=1003, 612.78937pt x 377.15906pt>
 File: img/talud60.png Graphic file (type png)
 <use img/talud60.png>
 Package pdftex.def Info: img/talud60.png  used on input line 212.
 (pdftex.def)             Requested size: 204.85846pt x 126.08577pt.
-<img/talud90.png, id=1039, 627.84563pt x 386.19281pt>
+<img/talud90.png, id=1004, 627.84563pt x 386.19281pt>
 File: img/talud90.png Graphic file (type png)
 <use img/talud90.png>
 Package pdftex.def Info: img/talud90.png  used on input line 218.
 (pdftex.def)             Requested size: 204.85846pt x 126.00616pt.
-<img/hightbordersize-hightborderred.png, id=1040, 275.52937pt x 247.67531pt>
+<img/hightbordersize-hightborderred.png, id=1005, 275.52937pt x 247.67531pt>
 File: img/hightbordersize-hightborderred.png Graphic file (type png)
 <use img/hightbordersize-hightborderred.png>
 Package pdftex.def Info: img/hightbordersize-hightborderred.png  used on input line 231.
 (pdftex.def)             Requested size: 182.09486pt x 163.69295pt.
-<img/hightbordersize-lowborderred.png, id=1041, 354.57469pt x 274.02374pt>
+<img/hightbordersize-lowborderred.png, id=1006, 354.57469pt x 274.02374pt>
 File: img/hightbordersize-lowborderred.png Graphic file (type png)
 <use img/hightbordersize-lowborderred.png>
 Package pdftex.def Info: img/hightbordersize-lowborderred.png  used on input line 237.
 (pdftex.def)             Requested size: 182.09486pt x 140.72867pt.
-<img/lowbordersize-hightborderred.png, id=1042, 392.96812pt x 285.31593pt>
+<img/lowbordersize-hightborderred.png, id=1007, 392.96812pt x 285.31593pt>
 File: img/lowbordersize-hightborderred.png Graphic file (type png)
 <use img/lowbordersize-hightborderred.png>
 Package pdftex.def Info: img/lowbordersize-hightborderred.png  used on input line 245.
 (pdftex.def)             Requested size: 182.09486pt x 132.21341pt.
-<img/lowbordersize-lowborderred.png, id=1043, 526.96875pt x 316.18124pt>
+<img/lowbordersize-lowborderred.png, id=1008, 526.96875pt x 316.18124pt>
 File: img/lowbordersize-lowborderred.png Graphic file (type png)
 <use img/lowbordersize-lowborderred.png>
 Package pdftex.def Info: img/lowbordersize-lowborderred.png  used on input line 251.
@@ -1821,12 +1866,12 @@ File: img/codes/Perlin123.png Graphic file (type png)
 <use img/codes/Perlin123.png>
 Package pdftex.def Info: img/codes/Perlin123.png  used on input line 271.
 (pdftex.def)             Requested size: 136.57251pt x 113.80862pt.
-<img/codes/PerlinColores.png, id=1055, 230.66174pt x 233.07076pt>
+<img/codes/PerlinColores.png, id=1020, 230.66174pt x 233.07076pt>
 File: img/codes/PerlinColores.png Graphic file (type png)
 <use img/codes/PerlinColores.png>
 Package pdftex.def Info: img/codes/PerlinColores.png  used on input line 277.
 (pdftex.def)             Requested size: 136.57494pt x 113.81445pt.
-<img/codes/Perlin3D.png, id=1056, 693.792pt x 467.94826pt>
+<img/codes/Perlin3D.png, id=1021, 693.792pt x 467.94826pt>
 File: img/codes/Perlin3D.png Graphic file (type png)
 <use img/codes/Perlin3D.png>
 Package pdftex.def Info: img/codes/Perlin3D.png  used on input line 283.
@@ -1852,12 +1897,12 @@ File: img/codes/Simplex123.png Graphic file (type png)
 <use img/codes/Simplex123.png>
 Package pdftex.def Info: img/codes/Simplex123.png  used on input line 295.
 (pdftex.def)             Requested size: 136.57251pt x 113.80862pt.
-<img/codes/SimplexColors.png, id=1066, 244.5135pt x 242.70676pt>
+<img/codes/SimplexColors.png, id=1031, 244.5135pt x 242.70676pt>
 File: img/codes/SimplexColors.png Graphic file (type png)
 <use img/codes/SimplexColors.png>
 Package pdftex.def Info: img/codes/SimplexColors.png  used on input line 301.
 (pdftex.def)             Requested size: 136.57964pt x 113.80923pt.
-<img/codes/Simples3D.png, id=1067, 760.0395pt x 468.5505pt>
+<img/codes/Simples3D.png, id=1032, 760.0395pt x 468.5505pt>
 File: img/codes/Simples3D.png Graphic file (type png)
 <use img/codes/Simples3D.png>
 Package pdftex.def Info: img/codes/Simples3D.png  used on input line 307.
@@ -1871,12 +1916,12 @@ File: img/codes/Voronoi123.png Graphic file (type png)
 <use img/codes/Voronoi123.png>
 Package pdftex.def Info: img/codes/Voronoi123.png  used on input line 318.
 (pdftex.def)             Requested size: 136.57251pt x 113.80798pt.
-<img/codes/VoronoiColores.png, id=1068, 212.59425pt x 215.00325pt>
+<img/codes/VoronoiColores.png, id=1033, 212.59425pt x 215.00325pt>
 File: img/codes/VoronoiColores.png Graphic file (type png)
 <use img/codes/VoronoiColores.png>
 Package pdftex.def Info: img/codes/VoronoiColores.png  used on input line 324.
 (pdftex.def)             Requested size: 136.5821pt x 113.8101pt.
-<img/codes/Voronoi3D.png, id=1069, 560.69475pt x 314.3745pt>
+<img/codes/Voronoi3D.png, id=1034, 560.69475pt x 314.3745pt>
 File: img/codes/Voronoi3D.png Graphic file (type png)
 <use img/codes/Voronoi3D.png>
 Package pdftex.def Info: img/codes/Voronoi3D.png  used on input line 330.
@@ -1889,27 +1934,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [83 <./img/codes/PerlinColores.png> <./img/codes/Perlin3D.png> <./img/codes/SimplexColors.png> <./img/codes/Simples3D.png> <./img/codes/VoronoiColores.png> <./img/codes/Voronoi3D.png>]
-<img/codes/FlyViewLOD.png, id=1086, 560.0925pt x 515.526pt>
+<img/codes/FlyViewLOD.png, id=1051, 560.0925pt x 515.526pt>
 File: img/codes/FlyViewLOD.png Graphic file (type png)
 <use img/codes/FlyViewLOD.png>
 Package pdftex.def Info: img/codes/FlyViewLOD.png  used on input line 348.
 (pdftex.def)             Requested size: 204.85846pt x 188.55481pt.
-<img/codes/3LOD.png, id=1087, 366.168pt x 404.712pt>
+<img/codes/3LOD.png, id=1052, 366.168pt x 404.712pt>
 File: img/codes/3LOD.png Graphic file (type png)
 <use img/codes/3LOD.png>
 Package pdftex.def Info: img/codes/3LOD.png  used on input line 354.
 (pdftex.def)             Requested size: 204.85846pt x 226.42722pt.
-<img/codes/LOD0.png, id=1088, 564.30824pt x 317.988pt>
+<img/codes/LOD0.png, id=1053, 564.30824pt x 317.988pt>
 File: img/codes/LOD0.png Graphic file (type png)
 <use img/codes/LOD0.png>
 Package pdftex.def Info: img/codes/LOD0.png  used on input line 363.
 (pdftex.def)             Requested size: 136.57462pt x 76.95915pt.
-<img/codes/LOD1.png, id=1089, 537.207pt x 317.988pt>
+<img/codes/LOD1.png, id=1054, 537.207pt x 317.988pt>
 File: img/codes/LOD1.png Graphic file (type png)
 <use img/codes/LOD1.png>
 Package pdftex.def Info: img/codes/LOD1.png  used on input line 369.
 (pdftex.def)             Requested size: 136.57462pt x 80.84082pt.
-<img/codes/LOD2.png, id=1090, 528.17325pt x 317.988pt>
+<img/codes/LOD2.png, id=1055, 528.17325pt x 317.988pt>
 File: img/codes/LOD2.png Graphic file (type png)
 <use img/codes/LOD2.png>
 Package pdftex.def Info: img/codes/LOD2.png  used on input line 375.
@@ -1924,9 +1969,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [84 <./img/codes/FlyViewLOD.png> <./img/codes/3LOD.png> <./img/codes/LOD0.png> <./img/codes/LOD1.png> <./img/codes/LOD2.png>]
 Cap\'{\i }tulo 7.
-(tex/conclusiones.tex) [85
+(tex/conclusiones.tex [85
 
-]
+])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1934,17 +1979,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[86
-
-]
+[86]
 Ap\'{e}ndice A.
 (tex/apendice.tex
-<img/planificación gantt.png, id=1111, 729.32475pt x 466.74374pt>
+<img/planificación gantt.png, id=1088, 729.32475pt x 466.74374pt>
 File: img/planificación gantt.png Graphic file (type png)
 <use img/planificación gantt.png>
 Package pdftex.def Info: img/planificación gantt.png  used on input line 7.
 (pdftex.def)             Requested size: 455.24411pt x 291.34378pt.
-) (memoria.bbl [87 <./img/planificación gantt.png>]
+) (memoria.bbl [87
+
+ <./img/planificación gantt.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1955,6 +2000,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [88
 
 ] [89]
+Underfull \hbox (badness 2401) in paragraph at lines 116--119
+[]\T1/cmr/m/n/12 Erosion and other al-go-rithms in chunk-based te-rrain.  [][]$\T1/cmr/m/n/8 https : / / www . reddit . com / r /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
+[]\T1/cmr/m/n/12 Procedural ge-ne-ra-tion: An over-view.  [][]$\T1/cmr/m/n/8 https : / / kentpawson123 . medium . com /
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1962,7 +2016,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[90])
+[90]
+Underfull \hbox (badness 10000) in paragraph at lines 194--197
+[]\T1/cmr/m/n/12 Procedurally ge-ne-ra-ted ani-ma-ted films.  [][]$\T1/cmr/m/n/8 https : / / blenderartists . org / t /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--222
+[]\T1/cmr/m/n/12 Striking a ba-lan-ce bet-ween rea-lism and va-riety in pro-ce-du-ral te-rrain.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--222
+[][]$\T1/cmr/m/n/8 https : / / www . researchgate . net / publication / 285878527 _ Procedural _ content _ generation _ goals _ challenges _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--232
+[]\T1/cmr/m/n/12 Integration of pro-ce-du-ral te-rrain ge-ne-ra-tion with other ga-me sys-tems.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--232
+[][]$\T1/cmr/m/n/8 https : / / previewagrolink . escape . ppg . br / trackid ? FileName = Challenges + In + Procedural + Terrain + Generation .
+ []
+
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1978,21 +2057,25 @@ LaTeX Info: Redefining \% on input line 23.
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 1317A327362D9DBA3A6220D0C20DBE1E;15440.
+(rerunfilecheck)             Checksum: 2C3BFC8B5EBDF1335AAE45EC730A7142;15263.
  ) 
 Here is how much of TeX's memory you used:
- 27219 strings out of 475247
- 504726 string characters out of 5754924
- 1932801 words of memory out of 5000000
- 47897 multiletter control sequences out of 15000+600000
- 575648 words of font info for 73 fonts, out of 8000000 for 9000
+ 27204 strings out of 475247
+ 504149 string characters out of 5754924
+ 1937801 words of memory out of 5000000
+ 47884 multiletter control sequences out of 15000+600000
+ 576293 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,103p,1413b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1440.pk> <C:\Users\Rafa Polope\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk>
-Output written on memoria.pdf (91 pages, 7915113 bytes).
+Output written on memoria.pdf (91 pages, 7940739 bytes).
 PDF statistics:
- 1794 PDF objects out of 2073 (max. 8388607)
- 361 named destinations out of 1000 (max. 500000)
- 861 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1872 PDF objects out of 2073 (max. 8388607)
+ 357 named destinations out of 1000 (max. 500000)
+ 853 words of extra memory for PDF output out of 10000 (max. 10000000)
 

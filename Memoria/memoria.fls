@@ -850,6 +850,9 @@ INPUT .\img\planificación gantt.png
 INPUT .\memoria.bbl
 INPUT .\memoria.bbl
 INPUT memoria.bbl
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Users\Rafa Polope\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT memoria.aux
 INPUT .\memoria.out
