@@ -244,7 +244,7 @@ Se presentan y explican los scripts y componentes clave que forman parte de la a
     La clase \texttt{MeshGenerator} es esencial para la generación de mallas de terreno y su adaptación a diferentes niveles de detalle (LOD) en el sistema de generación de terreno en Unity.\\
     \\
 
-    \item \textbf{struct MeshData}: Esta estructura almacena los datos de una malla de terreno, incluyendo los vértices, triángulos, coordenadas UV y un índice de triángulo actual.
+    \item \textbf{MeshData}: Esta estructura almacena los datos de una malla de terreno, incluyendo los vértices, triángulos, coordenadas UV y un índice de triángulo actual.
 
     \texttt{Atributos:}
 
@@ -498,6 +498,7 @@ El algoritmo de generación de ruido comienza con la inicialización de los par�
         \includegraphics[width=0.9\textwidth]{img/codes/GeneraciónRuido.png}
         \caption{Generación de valores de ruido basado en parámeteros.}
     \end{figure}
+    \item \textbf{Nótese cómo en el bucle de generación se multiplican los valores frecuencia y amplitud por la lacunaridad y la Persistencia respectivamente de manera que se aplican estos parámetrod en cada octava}
     \item \textbf{Normalización}: Los valores de ruido generados no están en el rango deseado. Se realiza una normalización para ajustar estos valores al rango [0, 1], que es más adecuado para representar alturas.
     \begin{figure}[h]
         \centering
@@ -665,6 +666,20 @@ La generación de texturas del terreno se encarga de convertir el mapa de colore
     \end{figure}
     
 \end{enumerate}
+
+\subsection{Elección de Estructuras de Datos y Tipos}
+
+En esta sección se explicará por qué se han utilizado las estructuras de datos empleadas para la implementación de los trabajos y qué sentido tienen, dado que la elección de las estructuras viene en buena parte marcada por necesidades de implementación y optimización del rendimiento.
+
+\subsubsection{Uso de structs en Jobs:}
+El sistema de trabajos de Unity requiere que los trabajos sean tipos "no administrados", por lo que no pueden contener referencias a objetos. Las clases en C\# pueden contener referencias a otros objetos, lo que las hace más complejas y difíciles de optimizar. Esto se debe a que Job System está diseñado para funcionar con Burst Compiler, un compilador que optimiza el código generando código de máquina altamente optimizado que puede ejecutarse más rápido que el código C\# normal. Burst Compiler funciona mejor con tipos de datos simples que se pueden optimizar fácilmente, como las structs, por lo tanto, el uso de clases en el Job System de Unity puede provocar problemas de rendimiento, y es por esto que es preferible usar structs en lugar de clases, razón por la cual se han utilizado para el proyecto.
+
+\subsubsection{NativeArrays:} 
+El uso de NativeArrays en lugar de arrays de C\# se debe a que Burst Compiler está preparado para trabajar con estructuras de datos que permiten una optimización del código al pasarlo a lenguaje máquina. Los NativeArrays, a diferencia de los arrays normales, tienen una gestión de memoria eficiente, con posiciones contiguas donde almacenar los datos, de manera que no se produce fragmentación como sí podría ocurrir en los arrays de C\#. También almacenan los datos en zonas diferentes de la memoria que facilitan el acceso de manera más rápida y contribuyen a la eficiencia. Además, están preparados para que haya un acceso concurrente seguro de varios hilos a los datos que almacenan, por lo que permiten un manejo transparente al desarrollador de la concurrencia.
+
+\subsubsection{Elección del tipo de Job:}
+El tipo de job que se ha utilizado para el procesamiento de los vértices es IJobParallelFor, el cual divide el procesamiento de un número de posiciones de un array que se le pasa como parámetro en el método Schedule entre varios hilos, de manera óptima al ser un tipo de dato predefinido para ello. Dado que el tratamiento de los mapas de alturas y la creación de la malla es iterativo en su versión secuencial, el tener que paralelizar los bucles es una tarea que se realiza de manera óptima al usar un IJobParallelFor.
+
 
 % Esta parte del código toma los datos de color del terreno, los convierte en una textura y luego asigna esa textura al material del terreno, lo que permite visualizar el terreno de manera adecuada en la escena de Unity.
 

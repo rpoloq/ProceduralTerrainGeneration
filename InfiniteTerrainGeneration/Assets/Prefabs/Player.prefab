@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 367802792346514713}
   - component: {fileID: 1592993553510908647}
   - component: {fileID: 5042148382614934100}
-  - component: {fileID: 6085657278655211910}
   - component: {fileID: 1231712931305528261}
   - component: {fileID: 7203172533713450985}
   m_Layer: 0
@@ -157,26 +156,6 @@ MonoBehaviour:
   exhaustParticles: {fileID: 6872090755869360267}
   normalParticleSpeed: 5
   sprintParticleSpeed: 10
---- !u!114 &6085657278655211910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440216023653428857}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e33a5ecebbcce44b14253059eb5ad1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  sprintSpeed: 100
-  rotationSpeed: 20
-  sprintDuration: 5
-  friction: 10
-  gravity: 3
-  flightElevation: 40
-  exhaustParticles: {fileID: 6872090755869360267}
 --- !u!136 &1231712931305528261
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -230,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5773597102642131376}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -2.48}
+  m_LocalPosition: {x: 0, y: 0.13, z: -2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -320,7 +299,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.15
+      scalar: 0.02
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -489,7 +468,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -805,7 +784,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 500
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -866,8 +845,8 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 8
-    angle: 4.74
-    length: 5
+    angle: 1.88
+    length: 0.46
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2

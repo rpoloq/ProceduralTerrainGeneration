@@ -83,11 +83,6 @@ François Labelle.
 \newblock Voronoi diagrams and delaunay triangulations.
 \newblock {\em University of Ottawa}, 2016.
 
-\bibitem{worleynoise}
-Steve Worley.
-\newblock A cellular texture basis function.
-\newblock {\em Proceedings of SIGGRAPH '96}, 1996.
-
 \bibitem{fbm}
 Ken Musgrave, Darwyn Peachey, Jim Perlin, and Ken Perlin.
 \newblock {\em Texturing and Modeling, Third Edition: A Procedural Approach}.

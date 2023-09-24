@@ -10,10 +10,10 @@ using UnityEngine.Serialization;
 
 public class MapGenerator : MonoBehaviour {
 
-	public const int MapChunkSize = 121;
+	public const int MapChunkSize = 37;
 	public ConfigSettings configSettings;
 	public Gradient colorGradient;
-	private int _batchSize = 1024;
+	private int _batchSize = 32;
 
 
 	public void DrawMapInEditor() {

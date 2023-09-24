@@ -68,6 +68,55 @@ La variación en los valores de ruido es menos pronunciada, lo que resulta en me
 Con más octavas, el patrón de ruido o textura es mucho más detallado y complejo. Los cambios entre valores de ruido son abruptos y pueden formar estructuras más intrincadas.
 La variación en los valores de ruido es más amplia, lo que resulta en un mayor contraste en la textura generada. Generar ruido con más octavas suele ser más lento debido a la mayor cantidad de cálculos involucrados.
 
+\subsubsection{Lacunaridad y perisistencia}
+
+La lacunaridad y la persistencia son dos propiedades relacionadas con las octavas y que afectan a la apariencia, detalle y rugosidad del mapa que se genera.
+
+\textbf{Lacunaridad: } Afecta a la frecuencia de cada octava que conforma el valor de ruido. Cuanto mayor es la lacunaridad, la frecuencia de las octavas aumenta, lo que da como resultado una superficie más irtregular, con más detalles. A continuación vemos imágenes de difernetes valores lacunaridad. 
+\begin{figure}[ht]
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/LowLacunarity.png}
+        \caption{Lacunaridad = 1 }
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/MediumLacunarity.png}
+        \caption{Lacunaridad = 2 }
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/HightLacunarity.png}
+        \caption{Lacunaridad = 4 }
+    \end{subfigure}
+    \caption{Comparación entre valores de lacunaridad bajo, medio y alto.}
+\end{figure}
+
+\textbf{Persistencia: } La persistancia es un parámetro que afecta a cómo influyen las amplitudes de las diferentes octavas. Cuanto mayor sea el número de octava, menor es la aportación de su amplitud a la amplitud total. La persistenica es un factor que atenúa la amplitud de cada octava, por tanto cuanto mayor sea su valor menor será la amplitud de cada octava.
+\begin{figure}[ht]
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/LowPers.png}
+        \caption{Lacunaridad = 0 }
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/MediumPers.png}
+        \caption{Lacunaridad = 0,5 }
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/HeightPers.png}
+        \caption{Lacunaridad = 1 }
+    \end{subfigure}
+    \caption{Comparación entre valores de persistencia bajo, medio y alto.}
+\end{figure}
+
+
 \subsubsection{Tipo de Ruido}
 
 El tipo de ruido seleccionado también tiene un impacto significativo en la apariencia del terreno. Se han generado mapas de altura utilizando diferentes tipos de ruido:

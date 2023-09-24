@@ -119,41 +119,36 @@ En resumen, el futuro de la generación procedural de terrenos en gráficos por 
 
 \section{Técnicas y Algoritmos}
 
-La generación procedural de terrenos utiliza algoritmos para crear terrenos en un entorno generado por computadora. Los algoritmos utilizados para la generación de terrenos pueden variar según el resultado deseado, pero algunas de las técnicas más populares incluyen funciones de ruido, fractales y enfoques basados en grafos.
+Como ejemplo de técnica tenemos el ruido de Perlin, el ruido simplex o por ejemplo el ruido de Voronoi. Todos ellos se asocian normalmente a la generación procedural de terrenos y todas estas técnicas se centran en generar números aleatorios dentro de un rango que comúnmente es [-1,1] y con estos números que se generan se utilizan después para crear normales usadas para representar en un mapa y de ese modo generar el terreno. Combinando diferentes funciones, podremos crear paisajes más complejos y evitar también ver los posibles patrones que puedan generar.
 
-Las funciones de ruido, como el ruido de Perlin, el ruido Simplex o el ruido Voronoi, se utilizan comúnmente en la generación procedural de terrenos. Estas funciones generan valores aleatorios que se pueden usar para crear mapas de alturas, que luego se utilizan para generar el terreno. Al combinar diferentes funciones de ruido, los desarrolladores pueden crear paisajes más complejos y diversos.
+Las funciones de ruido, como el ruido de Perlin, el ruido Simplex o el ruido Voronoi, se utilizan comúnmente en la generación procedural de terrenos. Estas funciones generan valores aleatorios en el rango [-1,1] que se pueden usar para crear mapas de alturas normalizando los valores, que luego se utilizan para generar el terreno. Al combinar diferentes funciones de ruido, los desarrolladores pueden crear paisajes más complejos y diversos.
 
-Los algoritmos fractales, como el algoritmo diamante-cuadrado, también se utilizan comúnmente en la generación procedural de terrenos. Estos algoritmos utilizan la subdivisión recursiva para generar terrenos, y cada subdivisión agrega más detalle al terreno.
+Otro tipo de algoritmos son los de tipo fractal como por ejemplo el algoritmo diamante-cuadrado. Esta tipología utiliza divisiones recursivas para generar terrenos agregando en cada una de estas subdivisiones más nivel de detalle.
 
-Enfoques basados en grafos, como el método presentado en un artículo de 2015 por Christian Schulte, utilizan grafos para representar el terreno y generan el terreno manipulando el grafo. Este enfoque se puede usar para crear terrenos más complejos y variados, con la capacidad de agregar características como ríos y carreteras.
+Tenemos también enfoques basados en grafos como el que presenta Christian Schulte \cite{ProceduralTerrainGeneration} en 2015, donde utiliza grafos para representar y manipular el terreno. Con este enfoque logró agregar características más complejas como ríos o carreteras.
 
-Otras técnicas utilizadas en la generación procedural de terrenos incluyen la simulación de erosión, que simula los efectos de la erosión causada por el agua y el viento en el terreno, y el uso de datos del mundo real, como imágenes de satélite y mapas topográficos, para crear terrenos más precisos y realistas.
+Existen otras técnicas para la generación de terrenos procedural que incluye simulación de elementos atmosféricos como la erosión causada por el agua o el viento. Para ello utiliza datos del mundo real como imágenes de satélite o mapas topográficos, creando terrenos más precisos y realistas.
 
 \subsection{Generación Procedural de Terrenos basada en Funciones de Ruido}
 
-La generación procedural de terrenos basada en funciones de ruido es una técnica popular utilizada en gráficos por computadora para crear terrenos en videojuegos, simulaciones y otras aplicaciones. Esta técnica implica el uso de funciones de ruido, como el ruido de Perlin o el ruido Simplex, para generar valores aleatorios que se pueden utilizar para crear mapas de alturas, que luego se utilizan para generar el terreno.
+En el mundo de los videojuegos la generación procedural usando funciones de ruido es una técnica bastante habitual. Como hemos visto en el punto anterior, mediante el uso de algoritmos como Perlin o Simplex, generamos valores aleatorios que utilizaremos en estos mapas como valor de altura y de ese modo tener el terreno.
 
-Una de las ventajas de utilizar la generación procedural de terrenos basada en funciones de ruido es que permite la creación de paisajes complejos y diversos con relativamente poco trabajo manual. Al combinar diferentes funciones de ruido, los desarrolladores pueden crear terrenos con colinas, montañas, valles y otras características.
+Combinando distintas funciones de ruido podemos crear mapas de modo relativamente sencillo y con poco trabajo manual, lo cual es una ventaja. Combinado estas funciones los programadores crean las colinas, montañas, etc…
 
-La generación procedural de terrenos basada en funciones de ruido es una técnica poderosa para crear paisajes complejos y diversos en gráficos por computadora. Al utilizar diferentes tipos de funciones de ruido y combinarlos de diversas formas, los desarrolladores pueden crear terrenos que son tanto realistas como visualmente interesantes.
-
-Existen varios tipos de funciones de ruido que se pueden utilizar para la generación procedural de terrenos. Algunas de las funciones de ruido más comúnmente utilizadas incluyen:
-
+Algunas de las funciones de ruido más comúnmente utilizadas para la generación procedural de terrenos incluyen:
 \begin{itemize}
-    \item \textbf{Ruido de Perlin:} El ruido de Perlin es un tipo de ruido de gradiente desarrollado por Ken Perlin en la década de 1980. Es un ruido suave y continuo que a menudo se utiliza para generar terrenos de aspecto natural \cite{perlinnoise}.
+    \item \textbf{Ruido de Perlin:} El ruido de Perlin es un tipo de ruido de gradiente desarrollado por Ken Perlin en la década de 1980. Es un ruido suave y continuo que permite transiciones graduales entre diferentes valores \cite{perlinnoise}.
     
-    \item \textbf{Ruido Simplex:} El ruido Simplex es un tipo de ruido de gradiente desarrollado por Ken Perlin en 2001. Es similar al ruido de Perlin pero es más rápido y tiene una mejor calidad visual \cite{simplexnoise}.
+    \item \textbf{Ruido Simplex:} El ruido Simplex es un tipo de ruido de gradiente desarrollado por Ken Perlin en 2001. Es similar al ruido de Perlin pero es más rápido y tiene una mejor calidad visual, dando lugar a terrenos con caracterísitcas realistas. Es comúnmente utilizado.\cite{simplexnoise}.
     
-    \item \textbf{Ruido Voronoi:} El ruido Voronoi es un tipo de ruido celular que se genera dividiendo el espacio en celdas basadas en la distancia a un conjunto de puntos. A menudo se utiliza para generar terrenos con características distintas, como acantilados y crestas \cite{voronoinoise}.
-    
-    \item \textbf{Ruido de Worley:} El ruido de Worley es otro tipo de ruido celular que se genera dividiendo el espacio en celdas basadas en la distancia a un conjunto de puntos. A menudo se utiliza para generar terrenos con características distintas, como cuevas y túneles \cite{worleynoise}.
-    
+    \item \textbf{Ruido Voronoi:} El ruido Voronoi es un tipo de ruido celular que se genera dividiendo el espacio en celdas basadas en la distancia a un conjunto de puntos de referencia. A menudo se utiliza para generar terrenos con características más geométricas debido a sus aspecto regular. \cite{voronoinoise}.
+        
     \item \textbf{Movimiento Browniano Fractal (FBM):} El FBM es una técnica que combina múltiples capas de ruido para crear terrenos más complejos y detallados. A menudo se utiliza en conjunción con otras funciones de ruido, como el ruido de Perlin o el ruido Simplex \cite{fbm}.
 \end{itemize}
 
 \subsection{Algoritmos basados en fractales para la generación de terrenos procedurales}
 
-La generación procedural de terrenos a menudo se basa en algoritmos fractales que permiten crear paisajes realistas y visualmente interesantes. Algunos de los algoritmos fractales más populares para la generación procedural de terrenos incluyen:
+La generación procedural de terrenos a menudo se basa en algoritmos fractales que permiten crear paisajes realistas. Algunos de los algoritmos fractales más populares para la generación procedural de terrenos incluyen:
 
 \begin{itemize}
     \item \textbf{Algoritmo Diamante-Cuadrado}: El algoritmo Diamante-Cuadrado es un método simple y eficiente para generar terreno fractal. Comienza con una cuadrícula cuadrada y, en cada iteración, divide cada cuadrado en cuatro cuadrados más pequeños. La altura de los nuevos vértices se ajusta en función del promedio de los vértices originales. Este proceso se repite varias veces, lo que da como resultado un terreno con una apariencia fractal \cite{DiamanteCuadrado}.
@@ -167,21 +162,21 @@ La generación procedural de terrenos a menudo se basa en algoritmos fractales q
     \item \textbf{Enfoques híbridos}: Además de los algoritmos fractales puros, existen enfoques híbridos que combinan técnicas fractales con otros métodos, como simulaciones de erosión o modelos geológicos. Estos enfoques pueden utilizarse para generar terrenos más realistas y visualmente atractivos.
 \end{itemize}
 
-Los algoritmos basados en fractales son una poderosa herramienta para la generación procedural de terrenos, permitiendo la creación de paisajes complejos y visualmente interesantes. Al combinar diferentes técnicas fractales e incorporar otros métodos, los desarrolladores pueden crear terrenos que sean tanto realistas como únicos.
+Los desarrolladores pueden emplear algortimos basados en fractales junto con otras técnicas para generar terrenos con caracterísitcas únicas, permitiendo así ampliar el abanico de posibildades para los terrenos generables.
 
 \subsection{Algoritmos de Simulación Física en la Generación Procedural de Terrenos}
 
-Los algoritmos de simulación física pueden utilizarse en la generación procedural de terrenos para crear terrenos más realistas y de aspecto natural. Estos algoritmos simulan los efectos de procesos físicos como la erosión, la deposición y la meteorización en el terreno, lo que resulta en un terreno que parece haber sido moldeado por fuerzas naturales. Algunos de los algoritmos de simulación física más comúnmente utilizados en la generación procedural de terrenos incluyen:
+Los algoritmos de simulación física pueden utilizarse en la generación procedural de terrenos para crear terrenos más realistas y de aspecto natural. Estos algoritmos simulan los efectos de procesos físicos como la erosión, la deposición y la meteorización en el terreno, lo que resulta en un terreno que parece haber sido moldeado por las fuerzas naturales, como el viento, la lluvia o el calor. Algunos de los algoritmos de simulación física más comúnmente utilizados en la generación procedural de terrenos incluyen:
 
 \begin{itemize}
     \item \textbf{Algoritmos basados en hidrología}: Los algoritmos basados en hidrología simulan el flujo del agua sobre el terreno, teniendo en cuenta factores como la pendiente, la lluvia y la evaporación. Estos algoritmos pueden utilizarse para crear terrenos con redes de ríos realistas, lagos y otras características de agua \cite{AlgoritmosHidrologia} \cite{HidrologiaDocumento}.
     
-    \item \textbf{Algoritmos de simulación de erosión}: Los algoritmos de simulación de erosión simulan los efectos de la erosión causada por el agua y el viento en el terreno, lo que da como resultado terrenos con características realistas como valles, crestas y cañones. Estos algoritmos pueden utilizarse en conjunto con otras técnicas de generación procedural, como funciones de ruido o fractales, para crear terrenos más realistas y visualmente interesantes \cite{AlgoritmosErosion} \cite{ErosionReddit}.
+    \item \textbf{Algoritmos de simulación de erosión}: Los algoritmos de simulación de erosión simulan los efectos de la erosión causada por el agua y el viento en el terreno, lo que da como resultado terrenos con características realistas como valles, crestas y cañones. Estos algoritmos pueden utilizarse en conjunto con otras técnicas de generación procedural, como funciones de ruido o fractales, para crear terrenos realistas y de aspecto natural \cite{AlgoritmosErosion} \cite{ErosionReddit}.
     
-    \item \textbf{Algoritmos de modelado geológico}: Los algoritmos de modelado geológico simulan los procesos geológicos que dan forma al terreno, como la actividad tectónica y las erupciones volcánicas. Estos algoritmos pueden utilizarse para crear terrenos con características geológicas realistas, como montañas, volcanes y líneas de falla \cite{ModeladoGeologico} \cite{GeologiaDocumento}.
+    \item \textbf{Algoritmos de modelado geológico}: Los algoritmos de modelado geológico simulan los procesos geológicos que dan forma al terreno, como la actividad tectónica y las erupciones volcánicas. Estos algoritmos pueden utilizarse para crear terrenos con características geológicas realistas, como montañas, volcanes y líneas de falla. aunque sulen dar resultados realistas a menuido se deprecan por el coste computacional que suponen \cite{ModeladoGeologico} \cite{GeologiaDocumento}.
 \end{itemize}
 
-Los algoritmos de simulación física pueden ser una herramienta poderosa para crear terrenos realistas y visualmente interesantes en la generación procedural. Al simular los efectos de procesos físicos en el terreno, los desarrolladores pueden crear terrenos que parecen haber sido moldeados por fuerzas naturales, lo que resulta en un entorno más inmersivo y creíble. 
+Los algoritmos de simulación física pueden ser una herramienta poderosa para la generación de terrenos realistas. Al simular los efectos de procesos físicos en el terreno, los desarrolladores pueden crear terrenos que parecen haber sido moldeados por fuerzas naturales, lo que resulta en un entorno más inmersivo y creíble. 
 
 Además de los ya mencionados, se siguen desarrolando nuevas téncicas y nuevos algoritmos de simulación física para la generación procedural de terrenos se centran en mejorar la realismo, eficiencia y flexibilidad en la creación de terrenos. Algunos de los avances en este campo incluyen:
 
@@ -261,7 +256,7 @@ La generación procedural de terreno posee numerosas aplicaciones en la industri
 
     \item \textbf{Ahorro de Tiempo en la Creación de Activos}: Al generar el terreno de forma procedural, los desarrolladores pueden ahorrar tiempo en la creación de activos y centrarse en otros aspectos del desarrollo del juego\cite{AhorroTiempo}.
 
-    \item \textbf{Creación de Entornos Únicos}: La generación procedural de terreno puede utilizarse para crear entornos únicos y visualmente interesantes que serían difíciles o imposibles de crear manualmente\cite{EntornosUnicos}.
+    \item \textbf{Creación de Entornos Únicos}: La generación procedural de terreno puede utilizarse para crear entornos únicos que serían difíciles o imposibles de crear manualmente\cite{EntornosUnicos}.
 
     \item \textbf{Generación de Jugabilidad Aleatoria}: La generación procedural de terreno puede utilizarse para crear jugabilidad aleatoria, como mapas, niveles, enemigos y armas aleatorias. Esto añade un elemento de imprevisibilidad y desafío al juego\cite{JugabilidadAleatoria}.
 
@@ -297,7 +292,7 @@ La generación procedural de terrenos tiene varias aplicaciones en la realidad v
     
     \item \textbf{Generación de RV procedural a partir de espacios físicos 3D reconstruidos}: La generación procedural de terrenos puede utilizarse para generar entornos de RV a partir de espacios físicos 3D reconstruidos. Esta técnica permite a los usuarios explorar entornos del mundo real en RV, brindando una experiencia más inmersiva y realista\cite{VR3DReconstructedSpace}.
     
-    \item \textbf{Generación procedural de escenas de RV}: La generación procedural de terrenos puede utilizarse para generar escenas de RV, como islas u otros entornos. Esta técnica permite a los desarrolladores crear entornos inmersivos y visualmente interesantes que pueden explorarse en RV\cite{VRSceneGeneration}.
+    \item \textbf{Generación procedural de escenas de RV}: La generación procedural de terrenos puede utilizarse para generar escenas de RV, como islas u otros entornos. Esta técnica permite a los desarrolladores crear entornos inmersivos que pueden explorarse en RV\cite{VRSceneGeneration}.
     
     \item \textbf{Experiencias de RV sobre la marcha mientras se camina dentro de grandes entornos de edificios del mundo real desconocidos}: La generación procedural de terrenos puede utilizarse para generar experiencias de RV mientras se camina dentro de grandes entornos de edificios del mundo real desconocidos. Esta técnica permite a los usuarios explorar y navegar por entornos complejos en RV, brindando una experiencia más inmersiva e interactiva\cite{VRWalkingEnvironments}.
 \end{itemize}
@@ -311,9 +306,9 @@ La generación procedural de terrenos tiene varias aplicaciones en animación y 
     
     \item \textbf{Generación procedural de objetos 3D y animaciones}: La generación procedural puede utilizarse para crear objetos 3D y animaciones para películas, como diseños de personajes, animaciones y diálogos de personajes no jugadores. Esta técnica se puede utilizar para crear contenido diverso e interesante con un esfuerzo manual mínimo\cite{ProceduralGeneration3DObjects}.
     
-    \item \textbf{Creación rápida de espacios visualmente interesantes y precisos}: La generación procedural se utiliza con frecuencia en el cine para crear espacios visualmente interesantes y precisos de forma rápida. Esta técnica se puede utilizar para crear entornos diversos e interesantes que pueden explorarse en películas\cite{CreatingVisuallyInterestingSpaces}.
+    \item \textbf{Creación rápida de espacios atractivos y precisos}: La generación procedural se utiliza con frecuencia en el cine para crear espacios atractivos visualmente y precisos de forma rápida. Esta técnica se puede utilizar para crear entornos diversos e interesantes que pueden explorarse en películas\cite{CreatingVisuallyInterestingSpaces}.
     
-    \item \textbf{Creación de cortometrajes animados utilizando generación procedural}: La generación procedural de terrenos puede utilizarse para crear cortometrajes animados utilizando formas generadas por código y campos de distancia. Esta técnica se puede utilizar para crear películas visualmente interesantes y únicas con un tamaño de archivo mínimo\cite{ShortAnimatedMoviesProceduralGeneration}.
+    \item \textbf{Creación de cortometrajes animados utilizando generación procedural}: La generación procedural de terrenos puede utilizarse para crear cortometrajes animados utilizando formas generadas por código y campos de distancia. Esta técnica se puede utilizar para crear películas con un tamaño de archivo mínimo\cite{ShortAnimatedMoviesProceduralGeneration}.
 \end{itemize}
 
 \section{Desafíos y Tendencias Futuras}
@@ -325,7 +320,7 @@ La generación procedural de terrenos presenta una serie de desafíos y tendenci
     
     \item \textbf{Equilibrio en la Jugabilidad}: Crear un mundo generado que sea justo y siga siendo desafiante puede ser un obstáculo. Equilibrar la dificultad del terreno y los mecanismos de juego es crucial para lograr una experiencia satisfactoria para el jugador \cite{BalancedGameplay}.
     
-    \item \textbf{Realismo y Variedad}: Lograr un equilibrio entre el terreno realista y paisajes diversos y visualmente interesantes es un desafío. Las tendencias futuras pueden centrarse en mejorar el realismo y la variedad de los terrenos generados mediante algoritmos y técnicas avanzadas\cite{RealismVariety}.
+    \item \textbf{Realismo y Variedad}: Lograr un equilibrio entre el terreno realista y paisajes diversos y de atractivo visual es un desafío. Las tendencias futuras pueden centrarse en mejorar el realismo y la variedad de los terrenos generados mediante algoritmos y técnicas avanzadas\cite{RealismVariety}.
     
     \item \textbf{Optimización de Rendimiento}: Generar terrenos complejos en tiempo real puede ser computacionalmente costoso. Las tendencias futuras pueden implicar la optimización de los algoritmos de generación procedural de terrenos para mejorar el rendimiento y reducir el uso de recursos\cite{PerformanceOptimization}.
     

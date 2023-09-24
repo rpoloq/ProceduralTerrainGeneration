@@ -27,16 +27,16 @@
 \contentsline {subsection}{\numberline {4.4.2}Algoritmos basados en fractales para la generación de terrenos procedurales}{31}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Algoritmos de Simulación Física en la Generación Procedural de Terrenos}{32}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Antecedentes en Unity para la Generación Procedural de Terrenos}{33}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Herramientas y Recursos de Unity}{34}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.1}Herramientas y Recursos de Unity}{33}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Plugins y Assets en Unity para la Generación de Terrenos Procedurales}{34}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Características del asset Procedural Terrain Generator en la tienda de assets de Unity}{35}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.3}Características del asset Procedural Terrain Generator en la tienda de assets de Unity}{34}{subsection.4.5.3}%
 \contentsline {section}{\numberline {4.6}Aplicaciones de la Generación Procedural de Terreno}{36}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Aplicaciones en Videojuegos}{36}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Aplicaciones en Simulaciones Científicas}{36}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Aplicaciones en Realidad Virtual y Aumentada}{37}{subsection.4.6.3}%
 \contentsline {subsection}{\numberline {4.6.4}Aplicaciones en Animación y Películas}{38}{subsection.4.6.4}%
 \contentsline {section}{\numberline {4.7}Desafíos y Tendencias Futuras}{38}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Desarrollo de la solucion}{41}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Desarrollo de la solución}{41}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Análisis}{41}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Objetivos de Implementación}{41}{subsection.5.1.1}%
 \contentsline {subsubsection}{1. Diseño de Algoritmos de Generación}{41}{section*.4}%
@@ -84,32 +84,37 @@
 \contentsline {subsubsection}{Generación de Valores de Ruido}{68}{section*.43}%
 \contentsline {paragraph}{Parámetros de Ruido}{68}{section*.44}%
 \contentsline {paragraph}{Generación de Valores de Ruido}{69}{section*.45}%
-\contentsline {paragraph}{Tipo de Ruido}{69}{section*.49}%
+\contentsline {paragraph}{Tipo de Ruido}{70}{section*.49}%
 \contentsline {subsubsection}{Generación del Mapa de Altura}{70}{section*.51}%
-\contentsline {subsubsection}{Generación de las Mallas del Terreno}{71}{section*.55}%
+\contentsline {subsubsection}{Generación de las Mallas del Terreno}{72}{section*.55}%
 \contentsline {subsubsection}{Aplicación de Algoritmos de Erosión}{73}{section*.60}%
 \contentsline {subsubsection}{Generación de Texturas del Terreno}{75}{section*.64}%
 \contentsline {subsubsection}{Generación de texturas}{75}{section*.65}%
-\contentsline {chapter}{\numberline {6}Análisis de Resultados}{77}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Generación de Terrenos}{77}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Mapas de Altura Generados}{77}{subsection.6.1.1}%
-\contentsline {subsubsection}{Escala de Ruido}{77}{section*.68}%
-\contentsline {subsubsection}{Número de Octavas}{78}{section*.70}%
-\contentsline {subsubsection}{Tipo de Ruido}{78}{section*.72}%
-\contentsline {subsubsection}{Variación de Semilla de Ruido}{79}{section*.74}%
-\contentsline {subsection}{\numberline {6.1.2}Efectos de Erosión}{80}{subsection.6.1.2}%
-\contentsline {subsubsection}{Ciclos: }{80}{section*.77}%
-\contentsline {subsubsection}{Ángulo de talud: }{81}{section*.79}%
-\contentsline {subsubsection}{Border Size y Border Max Reduction: }{81}{section*.81}%
-\contentsline {section}{\numberline {6.2}Visualización}{82}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Representación Gráfica}{82}{subsection.6.2.1}%
-\contentsline {subsubsection}{Algoritmo Perlin:}{83}{section*.83}%
-\contentsline {subsubsection}{Algoritmo Simplex:}{83}{section*.85}%
-\contentsline {subsubsection}{Algoritmo Voronoi:}{83}{section*.87}%
-\contentsline {subsection}{\numberline {6.2.2}Comparación de LOD}{84}{subsection.6.2.2}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{85}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Conclusiones}{85}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Trabajo futuro}{85}{section.7.2}%
-\contentsline {chapter}{\numberline {A}Apéndice}{87}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Cronograma de fases del desarrollo}{87}{section.Alph1.1}%
-\contentsline {chapter}{Bibliografía}{87}{figure.caption.91}%
+\contentsline {subsection}{\numberline {5.3.3}Elección de Estructuras de Datos y Tipos}{76}{subsection.5.3.3}%
+\contentsline {subsubsection}{Uso de structs en Jobs:}{76}{section*.68}%
+\contentsline {subsubsection}{NativeArrays:}{76}{section*.69}%
+\contentsline {subsubsection}{Elección del tipo de Job:}{77}{section*.70}%
+\contentsline {chapter}{\numberline {6}Análisis de Resultados}{79}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Generación de Terrenos}{79}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Mapas de Altura Generados}{79}{subsection.6.1.1}%
+\contentsline {subsubsection}{Escala de Ruido}{79}{section*.71}%
+\contentsline {subsubsection}{Número de Octavas}{80}{section*.73}%
+\contentsline {subsubsection}{Lacunaridad y perisistencia}{80}{section*.75}%
+\contentsline {subsubsection}{Tipo de Ruido}{81}{section*.78}%
+\contentsline {subsubsection}{Variación de Semilla de Ruido}{82}{section*.80}%
+\contentsline {subsection}{\numberline {6.1.2}Efectos de Erosión}{82}{subsection.6.1.2}%
+\contentsline {subsubsection}{Ciclos: }{82}{section*.83}%
+\contentsline {subsubsection}{Ángulo de talud: }{83}{section*.85}%
+\contentsline {subsubsection}{Border Size y Border Max Reduction: }{83}{section*.87}%
+\contentsline {section}{\numberline {6.2}Visualización}{84}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Representación Gráfica}{84}{subsection.6.2.1}%
+\contentsline {subsubsection}{Algoritmo Perlin:}{84}{section*.89}%
+\contentsline {subsubsection}{Algoritmo Simplex:}{84}{section*.91}%
+\contentsline {subsubsection}{Algoritmo Voronoi:}{84}{section*.93}%
+\contentsline {subsection}{\numberline {6.2.2}Comparación de LOD}{85}{subsection.6.2.2}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{89}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{89}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{89}{section.7.2}%
+\contentsline {chapter}{\numberline {A}Apéndice}{91}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Cronograma de fases del desarrollo}{91}{section.Alph1.1}%
+\contentsline {chapter}{Bibliografía}{91}{figure.caption.97}%
