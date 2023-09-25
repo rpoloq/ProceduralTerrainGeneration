@@ -10,127 +10,115 @@ Warning--entry type for "perlinnoise" isn't style-file defined
 Warning--entry type for "simplexnoise" isn't style-file defined
 --line 271 of file bib/bibliografia.bib
 Warning--entry type for "ComputerGraphicsLearningMaterials" isn't style-file defined
---line 333 of file bib/bibliografia.bib
+--line 421 of file bib/bibliografia.bib
 Warning--entry type for "HistoryofComputerAnimation" isn't style-file defined
---line 349 of file bib/bibliografia.bib
+--line 437 of file bib/bibliografia.bib
 Warning--entry type for "ComputerGraphics" isn't style-file defined
---line 365 of file bib/bibliografia.bib
+--line 453 of file bib/bibliografia.bib
 Warning--entry type for "SurveyProceduralWorlds" isn't style-file defined
---line 381 of file bib/bibliografia.bib
+--line 469 of file bib/bibliografia.bib
 Warning--entry type for "ProceduralTerrainAproach" isn't style-file defined
---line 397 of file bib/bibliografia.bib
+--line 485 of file bib/bibliografia.bib
 Warning--entry type for "ProceduralTerrainGeneration" isn't style-file defined
---line 429 of file bib/bibliografia.bib
+--line 501 of file bib/bibliografia.bib
 Warning--entry type for "DiamanteCuadrado" isn't style-file defined
---line 445 of file bib/bibliografia.bib
-Warning--entry type for "DesplazamientoPuntoMedio" isn't style-file defined
---line 461 of file bib/bibliografia.bib
-Warning--entry type for "AlgoritmosHidrologia" isn't style-file defined
---line 489 of file bib/bibliografia.bib
-Warning--entry type for "HidrologiaDocumento" isn't style-file defined
---line 503 of file bib/bibliografia.bib
-Warning--entry type for "AlgoritmosErosion" isn't style-file defined
 --line 517 of file bib/bibliografia.bib
+Warning--entry type for "DesplazamientoPuntoMedio" isn't style-file defined
+--line 533 of file bib/bibliografia.bib
+Warning--entry type for "AlgoritmosHidrologia" isn't style-file defined
+--line 561 of file bib/bibliografia.bib
+Warning--entry type for "HidrologiaDocumento" isn't style-file defined
+--line 575 of file bib/bibliografia.bib
+Warning--entry type for "AlgoritmosErosion" isn't style-file defined
+--line 589 of file bib/bibliografia.bib
 Warning--entry type for "ErosionReddit" isn't style-file defined
---line 531 of file bib/bibliografia.bib
+--line 603 of file bib/bibliografia.bib
 Warning--entry type for "GeologiaDocumento" isn't style-file defined
---line 545 of file bib/bibliografia.bib
-Warning--entry type for "SimulacionFisicaGPU" isn't style-file defined
---line 559 of file bib/bibliografia.bib
-Warning--entry type for "UnityTerrain" isn't style-file defined
---line 573 of file bib/bibliografia.bib
-Warning--entry type for "TerrainGenerator" isn't style-file defined
---line 601 of file bib/bibliografia.bib
-Warning--entry type for "ProceduralWorlds" isn't style-file defined
 --line 617 of file bib/bibliografia.bib
+Warning--entry type for "SimulacionFisicaGPU" isn't style-file defined
+--line 631 of file bib/bibliografia.bib
+Warning--entry type for "UnityTerrain" isn't style-file defined
+--line 645 of file bib/bibliografia.bib
+Warning--entry type for "TerrainGenerator" isn't style-file defined
+--line 673 of file bib/bibliografia.bib
+Warning--entry type for "ProceduralWorlds" isn't style-file defined
+--line 689 of file bib/bibliografia.bib
 Warning--entry type for "ProceduralTerrainGenerator" isn't style-file defined
---line 649 of file bib/bibliografia.bib
+--line 721 of file bib/bibliografia.bib
 Warning--entry type for "Vista2023TerrainGenerator" isn't style-file defined
---line 665 of file bib/bibliografia.bib
-Warning--entry type for "MapMagicTerrain" isn't style-file defined
---line 679 of file bib/bibliografia.bib
-Warning--entry type for "TellusTerrainGenerator" isn't style-file defined
---line 693 of file bib/bibliografia.bib
-Warning--entry type for "Rejugabilidad" isn't style-file defined
---line 707 of file bib/bibliografia.bib
-Warning--entry type for "AhorroTiempo" isn't style-file defined
---line 723 of file bib/bibliografia.bib
-Warning--entry type for "EntornosUnicos" isn't style-file defined
 --line 737 of file bib/bibliografia.bib
-Warning--entry type for "JugabilidadAleatoria" isn't style-file defined
+Warning--entry type for "MapMagicTerrain" isn't style-file defined
 --line 751 of file bib/bibliografia.bib
-Warning--entry type for "NuevasMecanicas" isn't style-file defined
+Warning--entry type for "TellusTerrainGenerator" isn't style-file defined
 --line 765 of file bib/bibliografia.bib
-Warning--entry type for "ProcedurallyGeneratedAnimatedFilms" isn't style-file defined
+Warning--entry type for "Rejugabilidad" isn't style-file defined
 --line 779 of file bib/bibliografia.bib
-Warning--entry type for "ProceduralGeneration3DObjects" isn't style-file defined
---line 793 of file bib/bibliografia.bib
-Warning--entry type for "CreatingVisuallyInterestingSpaces" isn't style-file defined
---line 807 of file bib/bibliografia.bib
-Warning--entry type for "ShortAnimatedMoviesProceduralGeneration" isn't style-file defined
+Warning--entry type for "AhorroTiempo" isn't style-file defined
+--line 795 of file bib/bibliografia.bib
+Warning--entry type for "EntornosUnicos" isn't style-file defined
+--line 809 of file bib/bibliografia.bib
+Warning--entry type for "JugabilidadAleatoria" isn't style-file defined
 --line 823 of file bib/bibliografia.bib
-Warning--entry type for "ConsistencyCoherence" isn't style-file defined
+Warning--entry type for "NuevasMecanicas" isn't style-file defined
 --line 837 of file bib/bibliografia.bib
-Warning--entry type for "RealismVariety" isn't style-file defined
+Warning--entry type for "ProcedurallyGeneratedAnimatedFilms" isn't style-file defined
+--line 851 of file bib/bibliografia.bib
+Warning--entry type for "ProceduralGeneration3DObjects" isn't style-file defined
 --line 865 of file bib/bibliografia.bib
-Warning--entry type for "PerformanceOptimization" isn't style-file defined
+Warning--entry type for "CreatingVisuallyInterestingSpaces" isn't style-file defined
 --line 879 of file bib/bibliografia.bib
+Warning--entry type for "ShortAnimatedMoviesProceduralGeneration" isn't style-file defined
+--line 895 of file bib/bibliografia.bib
+Warning--entry type for "ConsistencyCoherence" isn't style-file defined
+--line 909 of file bib/bibliografia.bib
+Warning--entry type for "BalancingGameplay" isn't style-file defined
+--line 923 of file bib/bibliografia.bib
+Warning--entry type for "RealismVariety" isn't style-file defined
+--line 937 of file bib/bibliografia.bib
+Warning--entry type for "PerformanceOptimization" isn't style-file defined
+--line 951 of file bib/bibliografia.bib
 Warning--entry type for "IntegrationWithGameSystems" isn't style-file defined
---line 893 of file bib/bibliografia.bib
-Warning--I didn't find a database entry for "FractalBrownianoMotion"
-Warning--I didn't find a database entry for "TecnicasMultifractales"
-Warning--I didn't find a database entry for "ModeladoGeologico"
+--line 965 of file bib/bibliografia.bib
 Warning--I didn't find a database entry for "GeneracionMultiBioma"
-Warning--I didn't find a database entry for "ErosionBasadaGrafos"
-Warning--I didn't find a database entry for "GeologicalModeling"
-Warning--I didn't find a database entry for "HydrologicalModeling"
-Warning--I didn't find a database entry for "EnvironmentalModeling"
-Warning--I didn't find a database entry for "DataCompression"
-Warning--I didn't find a database entry for "VRPlanetaryTerrains"
-Warning--I didn't find a database entry for "ARInteractiveTerrain"
-Warning--I didn't find a database entry for "VR3DReconstructedSpace"
-Warning--I didn't find a database entry for "VRSceneGeneration"
-Warning--I didn't find a database entry for "VRWalkingEnvironments"
-Warning--I didn't find a database entry for "BalancedGameplay"
-You've used 45 entries,
+You've used 51 entries,
             1791 wiz_defined-function locations,
-            684 strings with 11368 characters,
-and the built_in function-call counts, 5551 in all, are:
-= -- 421
-> -- 159
-< -- 0
-+ -- 81
-- -- 36
-* -- 100
-:= -- 722
-add.period$ -- 112
-call.type$ -- 45
-change.case$ -- 43
+            699 strings with 12190 characters,
+and the built_in function-call counts, 6584 in all, are:
+= -- 521
+> -- 192
+< -- 1
++ -- 95
+- -- 44
+* -- 143
+:= -- 887
+add.period$ -- 130
+call.type$ -- 51
+change.case$ -- 49
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 262
-empty$ -- 816
-format.name$ -- 36
-if$ -- 1347
+cite$ -- 51
+duplicate$ -- 317
+empty$ -- 923
+format.name$ -- 44
+if$ -- 1586
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 11
-newline$ -- 204
-num.names$ -- 23
-pop$ -- 334
+int.to.str$ -- 51
+missing$ -- 14
+newline$ -- 233
+num.names$ -- 30
+pop$ -- 361
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 157
+skip$ -- 183
 stack$ -- 0
-substring$ -- 52
-swap$ -- 45
-text.length$ -- 0
+substring$ -- 84
+swap$ -- 58
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 26
-width$ -- 47
-write$ -- 381
-(There were 51 warnings)
+while$ -- 35
+width$ -- 53
+write$ -- 446
+(There were 38 warnings)

@@ -20,6 +20,11 @@ Effelsberg~W. Freiknecht~J.
 \newblock A survey on the procedural generation of virtual worlds, 2017.
 \newblock \url{https://doi.org/10.3390/mti1040027}.
 
+\bibitem{ProceduralWorlds}
+Anónimo.
+\newblock Procedural worlds.
+\newblock \url{https://www.procedural-worlds.com}.
+
 \bibitem{TexturingModelingProcAproach}
 David~S Ebert.
 \newblock {\em Texturing \& modeling: a procedural approach}.
@@ -54,16 +59,16 @@ Sam Snider-Held.
 \newblock Neural networks and the future of 3d procedural content generation.
 \newblock {\em Towards Data Science}, 2017.
 
-\bibitem{ProceduralAssetGeneration}
-GarageFarm partner.
-\newblock The power of procedural asset generation and render farms in 3d
-  graphics.
-\newblock {\em GarageFarm.NET}, s. f.
-
 \bibitem{RealWorldDataTerrain}
 Roland Fischer, Philipp Dittmann, René Weller, and Gabriel Zachmann.
 \newblock Autobiomes: procedural generation of multi-biome landscapes.
 \newblock {\em The Visual Computer}, 36(10):2263--2272, 2020.
+
+\bibitem{ProceduralTerrainGenerator}
+Renan Oliveira.
+\newblock Procedural terrain generator.
+\newblock
+  \url{https://assetstore.unity.com/packages/tools/terrain/procedural-terrain-generator-65086}.
 
 \bibitem{proceduralTerrainGpu}
 NVIDIA.
@@ -83,11 +88,6 @@ François Labelle.
 \newblock Voronoi diagrams and delaunay triangulations.
 \newblock {\em University of Ottawa}, 2016.
 
-\bibitem{fbm}
-Ken Musgrave, Darwyn Peachey, Jim Perlin, and Ken Perlin.
-\newblock {\em Texturing and Modeling, Third Edition: A Procedural Approach}.
-\newblock Morgan Kaufmann, 2002.
-
 \bibitem{DiamanteCuadrado}
 A.~Krista Bird B. Thomas Dickerson C.~Jessica George.
 \newblock Diamond-square algorithm.
@@ -97,6 +97,16 @@ A.~Krista Bird B. Thomas Dickerson C.~Jessica George.
 \bibitem{DesplazamientoPuntoMedio}
 Midpoint displacement algorithm.
 \newblock \url{https://en.wikipedia.org/wiki/Fractal_landscape}.
+
+\bibitem{TFractionalBrownianMotion}
+Ken Musgrave, Darwyn Peachey, Jim Perlin, and Ken Perlin.
+\newblock {\em Texturing and Modeling, Third Edition: A Procedural Approach}.
+\newblock Morgan Kaufmann, 2002.
+
+\bibitem{calvet2008multifractal}
+Laurent~E Calvet and Adlai~J Fisher.
+\newblock {\em Multifractal volatility: theory, forecasting, and pricing}.
+\newblock Academic Press, 2008.
 
 \bibitem{AlgoritmosHidrologia}
 Terrain generation using procedural models based on hydrology.
@@ -126,6 +136,12 @@ Generating complex procedural terrains using gpu.
 \newblock
   \url{https://developer.nvidia.com/gpugems/gpugems3/part-i-geometry/chapter-1-generating-complex-procedural-terrains-using-gpu}.
 
+\bibitem{VillaValdes2015}
+Eduardo~Villa Valdés.
+\newblock Generación automática de entornos naturales.
+\newblock Trabajo final de máster, Universitat Politècnica de València,
+  Departamento de Sistemas Informáticos y Computación, julio 2015.
+
 \bibitem{UnityTerrain}
 Unity terrain.
 \newblock \url{https://docs.unity3d.com/Manual/terrain-UsingTerrains.html}.
@@ -134,17 +150,6 @@ Unity terrain.
 Aida Clyens.
 \newblock Terraingenerator.
 \newblock \url{https://github.com/aidan-clyens/TerrainGenerator}.
-
-\bibitem{ProceduralWorlds}
-Anónimo.
-\newblock Procedural worlds.
-\newblock \url{https://www.procedural-worlds.com}.
-
-\bibitem{ProceduralTerrainGenerator}
-Renan Oliveira.
-\newblock Procedural terrain generator.
-\newblock
-  \url{https://assetstore.unity.com/packages/tools/terrain/procedural-terrain-generator-65086}.
 
 \bibitem{Vista2023TerrainGenerator}
 Vista 2023 - procedural terrain generator.
@@ -185,6 +190,32 @@ Terrain generation.
 \newblock
   \url{https://www.cs.cmu.edu/~112/notes/student-tp-guides/Terrain.pdf}.
 
+\bibitem{AdaptiveTerrainGeneration}
+Zhang et~al.
+\newblock Adaptive and multi-resolution procedural infinite terrain generation
+  with diffusion models and perlin noise.
+\newblock {\em Nombre de la revista no especificado}, 2021.
+
+\bibitem{ARInteractiveTerrain}
+Alberto~Gomis Álvarez.
+\newblock Aplicaciones de la realidad aumentada en la promoción y la
+  edificación.
+\newblock Trabajo final de máster, Universitat Politècnica de València,
+  Departamento de Construcciones Arquitectónicas, septiembre 2017.
+
+\bibitem{VRSceneGeneration}
+José Mejía.
+\newblock {\em Generación y Ubicación de agregado pseudo-realista para
+  simulaciones de concreto en 3D}.
+\newblock PhD thesis, Universitat Politècnica de València, 11 2012.
+
+\bibitem{ProceduralContentCreation}
+Timothy Roden and Ian Parberry.
+\newblock From artistry to automation: A structured methodology for procedural
+  content creation.
+\newblock In Matthias Rauterberg, editor, {\em Entertainment Computing -- ICEC
+  2004}, pages 151--156, Berlin, Heidelberg, 2004. Springer Berlin Heidelberg.
+
 \bibitem{ProcedurallyGeneratedAnimatedFilms}
 Procedurally generated animated films.
 \newblock
@@ -209,6 +240,11 @@ Creating short animated movies using procedural generation.
 Ensuring consistency and coherence in procedural terrain.
 \newblock
   \url{https://www.linkedin.com/advice/0/how-do-you-ensure-procedural-terrain-consistent-coherent}.
+
+\bibitem{BalancingGameplay}
+Balancing gameplay in procedural terrain generation.
+\newblock
+  \url{https://tokengamer.io/unraveling-the-mysteries-of-procedural-generation-in-gaming/}.
 
 \bibitem{RealismVariety}
 Striking a balance between realism and variety in procedural terrain.

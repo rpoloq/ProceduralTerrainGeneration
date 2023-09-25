@@ -1,121 +1,81 @@
 \section{Introducción}
 
-La generación procedural de terrenos en la industria de los videojuegos es un campo en constante evolución, impulsado por la creciente demanda de experiencias de juego más inmersivas y visualmente impactantes. En este estado del arte, exploramos a fondo esta técnica, centrándonos en su aplicación en el motor de desarrollo de videojuegos Unity.
+La generación automática de paisajes en el mundo de los videojuegos ha experimentado una evolución constante debido a la creciente demanda de experiencias de juego más envolventes y visuales impactantes. En este documento, exploramos esta técnica en detalle, con un enfoque particular en su implementación en el motor de desarrollo de videojuegos Unity.
 
-La generación procedural de terrenos se ha convertido en una herramienta esencial para los creadores de videojuegos, ya que les permite diseñar mundos expansivos y auténticos que satisfacen las demandas de jugadores cada vez más exigentes. En este proyecto, nos centraremos en el conjunto de técnicas, algoritmos y herramientas que han impulsado campo en la última década. A continuación, se hará un desglose de los puntos en los que consistirá el estado del arte de este proyecto:
+La generación automática de paisajes se ha convertido en una herramienta esencial para los desarrolladores de videojuegos, ya que les permite diseñar mundos virtuales expansivos y auténticos que satisfacen las expectativas cada vez más altas de los jugadores. Este proyecto se centra en las técnicas, algoritmos y herramientas que han impulsado esta disciplina en la última década. A continuación, desglosaremos los puntos clave de este documento:
 
-\subsection{Contextualización}
+\subsection{Contexto Histórico}
 
-Para comprender la importancia de la generación procedural de terrenos, es fundamental contextualizar su evolución a lo largo del tiempo. Comenzando por una breve mirada a su historia, examinamos cómo esta disciplina ha avanzado desde sus modestos comienzos hasta convertirse en un elemento clave en la creación de mundos virtuales de alta calidad.
+Para comprender la importancia de la generación automática de paisajes, es fundamental contextualizar su evolución a lo largo del tiempo. Comenzaremos con una breve mirada a su historia, examinando cómo ha avanzado desde sus modestos inicios hasta convertirse en un elemento esencial en la creación de mundos virtuales de alta calidad.
 
 \subsection{Técnicas y Algoritmos}
 
-Un aspecto fundamental en el estado actual de la generación procedural de terrenos son las técnicas y algoritmos que sustentan su funcionamiento. Exploramos en detalle algunos de los enfoques más influyentes y ampliamente utilizados, desde los algoritmos basados en ruido como el Perlin Noise hasta técnicas más avanzadas que incorporan simulaciones físicas y procesos geológicos para lograr terrenos extremadamente realistas.
+Un aspecto fundamental en la generación de paisajes automáticos son las técnicas y algoritmos que respaldan su funcionamiento. Exploraremos detalladamente algunos de los enfoques más influyentes y ampliamente utilizados, desde los algoritmos basados en ruido, como el Perlin Noise, hasta técnicas más avanzadas que incorporan simulaciones físicas y procesos geológicos para lograr paisajes extremadamente realistas.
 
 \subsection{Herramientas y Recursos en Unity}
 
-Unity, como uno de los motores de desarrollo de videojuegos más populares en la industria, proporciona a los desarrolladores una serie de herramientas y recursos específicos para la generación procedural de terrenos. En esta revisión, examinamos cómo Unity facilita la creación de terrenos de manera eficiente y convincente, y destacamos algunos de los plugins y extensiones más notables que simplifican aún más este proceso.
+Unity, uno de los motores de desarrollo de videojuegos más populares, proporciona a los desarrolladores herramientas y recursos para la generación procedural de terreno. En esta revisión, examinaremos cómo Unity simplifica la creación de paisajes de manera eficiente y convincente, destacando algunos de los complementos y extensiones más notables que facilitan aún más este proceso.
 
-\subsection{Antecedentes}
+\subsection{Antecedentes en Unity}
 
-En esta sección, proporcionaremos una breve descripción de los antecedentes relacionados con la generación procedural de terrenos en Unity. exploraremos en detalle las herramientas y recursos disponibles en Unity para la generación procedural de terrenos. Analizaremos diversas soluciones, como plugins, assets y técnicas específicas que facilitan la creación y manipulación de terrenos dentro de la plataforma Unity.
+En esta sección, proporcionaremos una breve descripción de los antecedentes relacionados con la generación automática de paisajes en Unity. Exploraremos en detalle las herramientas y recursos disponibles en Unity para la generación de paisajes automáticos, analizando diversas soluciones, como complementos, activos y técnicas específicas que simplifican la creación y manipulación de paisajes dentro de la plataforma Unity.
 
-\subsection{Retos y Futuras Tendencias}
+\subsection{Desafíos y Futuras Tendencias}
 
-A medida que la generación procedural de terrenos se ha convertido en una práctica común, también ha enfrentado desafíos significativos. Exploraremos las dificultades más comunes, como la gestión de chunks de terreno en memoria, la transición fluida entre terrenos generados y los problemas asociados con la dirección y el movimiento de la cámara en juegos de mundo abierto. Además, consideraremos las futuras tendencias y avances que podrían dar forma al desarrollo de esta disciplina en los años venideros. 
-
+Dado que la generación automática de paisajes se ha vuelto más común, también ha enfrentado desafíos significativos. Exploraremos las dificultades más comunes, como la gestión de chunks de terreno en la memoria. Además, consideraremos las futuras tendencias y avances que podrían dar forma al desarrollo de esta rama en los próximos años.
 
 \section{Definición del Tema}
 
-La generación procedural de terrenos es una disciplina informática que ha desempeñado un papel fundamental en la creación de mundos virtuales, especialmente en la industria de los videojuegos. En esencia, se refiere a la creación automática y algorítmica de entornos de terreno en mundos virtuales.
+La generación automática de paisajes es una disciplina informática que ha desempeñado un papel fundamental en la creación de mundos virtuales, especialmente en la industria de los videojuegos. En esencia, se refiere a la creación automática y algorítmica de entornos de paisaje en mundos virtuales.
 
-En el corazón de la generación procedural de terrenos se encuentran los algoritmos matemáticos y computacionales. Estos algoritmos se basan en principios como el ruido, la interpolación y la simulación de procesos naturales para crear terrenos realistas y convincentes.
+La generación automática de paisajes se basa en algoritmos matemáticos y computacionales y estos algoritmos se basan en principios como el ruido, la interpolación y la simulación de procesos naturales para crear paisajes realistas y convincentes.
 
-La generación de terrenos se lleva a cabo mediante la manipulación de datos y la aplicación de fórmulas matemáticas para determinar las alturas y texturas de cada punto del terreno.
+La generación de paisajes se lleva a cabo mediante la manipulación de datos y la aplicación de fórmulas matemáticas para determinar las alturas y texturas de cada punto del paisaje, 
 
-La generación procedural de terrenos desempeña un papel crucial en la industria de los videojuegos, donde se utiliza para crear mundos expansivos y auténticos. Los juegos de mundo abierto, en particular, se benefician enormemente de esta técnica, ya que les permite ofrecer vastos entornos sin pantallas de carga notables, lo que mejora la inmersión del jugador.
+La generación automática de paisajes desempeña un papel crucial en la industria de los videojuegos, donde se utiliza para crear mundos expansivos y auténticos. Los juegos de mundo abierto utilizan usualmente esta técnica, ya que les permite ofrecer entornos de gran tamaño sin pantallas de carga notables, mejorando la inmersión del jugador, pero su influencia se extiende más allá de los videojuegos. Se utiliza en aplicaciones de simulación y de  visualización arquitectónica, donde la creación de entornos realistas es esencial.
 
-Pero su influencia se extiende más allá de los videojuegos. Se utiliza en aplicaciones de simulación, como la formación de pilotos, la cartografía digital y la visualización arquitectónica, donde la creación de entornos realistas es esencial.
-
-A medida que la tecnología avanza, los enfoques modernos de generación procedural de terrenos han incorporado algoritmos más avanzados, como los que simulan procesos geológicos y climáticos. Además, se están explorando técnicas que permiten una mayor interacción y personalización de los terrenos por parte de los jugadores.
-
-En resumen, la generación procedural de terrenos es una disciplina que utiliza algoritmos para crear paisajes virtuales de manera automática y coherente. Con un gran impacto en la industria de los videojuegos y se ha expandido a otros campos, a la vez que continúa evolucionando con el avance de la tecnología.
+A medida que la tecnología avanza, los enfoques modernos de generación automática de paisajes han incorporado algoritmos más avanzados, como los que simulan procesos geológicos y climáticos. Además, se están explorando técnicas que permiten una mayor interacción y personalización de los paisajes por parte de los jugadores.
 
 \section{Historia y Evolución de la Generación Procedural de Terrenos}
 
-La generación procedural de terrenos es una técnica que ha desempeñado un papel fundamental en la industria de los videojuegos y otros campos. Su ventaja principal radica en la capacidad de crear mundos y contenidos de manera dinámica, sin necesidad de almacenar grandes cantidades de datos en disco duro. A lo largo de los años, esta técnica ha evolucionado significativamente, impulsada por avances en el hardware y la demanda de mundos más expansivos y realistas.
+La generación procedural de terrenos es una técnica importante en la industria de los videojuegos y otros campos. Su principal ventaja radica en la capacidad de crear mundos y contenidos de manera dinámica, sin la necesidad de almacenar grandes cantidades de datos en el disco duro. Con el tiempo, esta técnica ha evolucionado significativamente, impulsada por avances en el hardware y la creciente demanda de mundos más expansivos y realistas  \cite{HistoryofComputerAnimation}.
 
 \subsection{Década de los 60}
 
-Según los resultados de la búsqueda, la generación procedural de terrenos en gráficos por computadora comenzó a aparecer a mediados de la década de 1960
+La generación procedural de terrenos en gráficos por computadora comenzó a surgir en la década de 1960. En aquel entonces, los gráficos por computadora se utilizaban principalmente con fines científicos, de ingeniería e investigación, aunque también se iniciaron experimentos artísticos \cite{ComputerGraphicsLearningMaterials}. Las técnicas empleadas para la generación procedural de terrenos se agrupan en la categoría más amplia de generación procedural, que implica generar objetos o valores específicos a través de algoritmos. Un ejemplo temprano de generación procedural en gráficos por computadora fue la transformación de declaraciones matemáticas en vectores de herramientas de máquinas en 3D generados por computadora, desarrollado por Douglas T. Ross en 1959 \cite{ComputerGraphics}.
 
-En ese momento, los gráficos por computadora se utilizaban principalmente para fines científicos, de ingeniería e investigativos, pero comenzaron a surgir experimentos artísticos \cite{HistoryofComputerAnimation}
+Sin embargo, no fue hasta mediados de la década de 1960 que comenzaron a aparecer experimentos artísticos, especialmente de la mano del Dr. Thomas Calvert. En cuanto a la generación específica de terrenos, un artículo de G.S. Miller titulado "La definición y representación de mapas de terreno" se presentó en la 13ª Conferencia Anual sobre Gráficos por Computadora y Técnicas Interactivas en 1986. Este artículo discutió el uso de algoritmos fractales para la generación y representación de terrenos, así como la generación de terrenos procedurales en tiempo real, que también se discutió en un artículo de 2004 de J. Olsen titulado "Generación de Terrenos Procedurales en Tiempo Real" \cite{SurveyProceduralWorlds}.
 
-Las técnicas utilizadas para la generación procedural de terrenos entran en una amplia categoría llamada generación procedural, lo que significa generar algunos objetos o valores específicos mediante un algoritmo \cite{ComputerGraphicsLearningMaterials}
-
-Uno de los primeros ejemplos de generación procedural en gráficos por computadora fue la transformación de declaraciones matemáticas en vectores de herramientas de máquinas en 3D generados por computadora por Douglas T. Ross en 1959\cite{ComputerGraphics}
-
-Sin embargo, no fue hasta mediados de la década de 1960 que comenzaron a aparecer experimentos artísticos, especialmente por parte del Dr. Thomas Calvert
-
-En términos de generación de terrenos específicamente, un artículo de G.S. Miller titulado "La definición y representación de mapas de terreno" se presentó en la 13ª Conferencia Anual sobre Gráficos por Computadora y Técnicas Interactivas en 1986 \cite{SurveyProceduralWorlds}
-
-El artículo discutió el uso de algoritmos fractales para la generación y representación de terrenos. La generación de terrenos procedurales en tiempo real también se discutió en un artículo de 2004 de J. Olsen titulado "Generación de Terrenos Procedurales en Tiempo Real"
 \subsection{Década de los 80}
 
-En la década de 1980, la generación procedural de terrenos en gráficos por computadora continuó evolucionando, impulsada por avances en tecnología y la creciente popularidad de los videojuegos. Aunque la información específica sobre esta década es limitada en los resultados de búsqueda, podemos inferir algunos desarrollos basados en el progreso general de la generación procedural durante este período.
+En la década de 1980, la generación procedural de terrenos en gráficos por computadora continuó evolucionando, impulsada por avances tecnológicos y la creciente popularidad de los videojuegos. Aunque la información específica sobre esta década es limitada en los resultados de búsqueda, se pueden inferir algunos desarrollos basados en el progreso general de la generación procedural durante este período.
 
-Uno de los primeros ejemplos de generación procedural en videojuegos se puede rastrear hasta el género de juegos de rol de mesa (RPG). Advanced Dungeons \& Dragons, el sistema de juego de mesa líder en ese momento, proporcionaba formas para que el "maestro de mazmorras" generara mazmorras y terrenos utilizando tiradas de dados aleatorias y tablas procedimentales de ramificación complejas
-
-Este concepto luego se adaptó a los juegos de computadora, con Strategic Simulations lanzando el Dungeon Master's Assistant, un programa que generaba mazmorras basadas en las tablas publicadas
-\cite{ComputerGraphics}
-
-En el contexto de gráficos por computadora y videojuegos, la generación procedural de terrenos se convirtió en una herramienta valiosa para crear paisajes realistas y diversos. Este enfoque fue particularmente útil para los juegos de mundo abierto que requerían entornos vastos y detallados. El uso de algoritmos para generar terrenos permitió a los desarrolladores reducir la cantidad de trabajo manual y crear paisajes que parecían infinitos en tamaño
-\cite{SurveyProceduralWorlds}
-
-Uno de los primeros métodos para la generación procedural de terrenos fue el algoritmo de diamante-cuadrado, una técnica de modelado fractal simple
-
-Este algoritmo permitía la generación de modelos de terreno altamente detallados al subdividir iterativamente un cuadrado y ajustar los valores de altura en cada paso
-\cite{ComputerGraphics}
-
-En la década de 1980, dadp el progreso general en gráficos por computadora y el creciente interés en la generación procedural, produjeron durante este período avances en este campo.
+Uno de los primeros ejemplos de generación procedural en videojuegos se puede rastrear hasta el género de juegos de rol de mesa (RPG). El sistema de juego de mesa líder en ese momento, Advanced Dungeons \& Dragons, proporcionaba formas para que el "maestro de mazmorras" generara mazmorras y terrenos utilizando tiradas de dados aleatorias y tablas procedimentales de ramificación complejas. Este concepto luego se adaptó a los juegos de computadora, con Strategic Simulations lanzando el Dungeon Master's Assistant, un programa que generaba mazmorras basadas en las tablas publicadas \cite{SurveyProceduralWorlds}. En el contexto de gráficos por computadora y videojuegos, la generación procedural de terrenos se convirtió en una herramienta valiosa para crear paisajes realistas y diversos, especialmente en juegos de mundo abierto que requerían entornos vastos y detallados. El uso de algoritmos para generar terrenos permitió a los desarrolladores reducir la cantidad de trabajo manual y crear paisajes que parecían infinitos en tamaño \cite{ProceduralWorlds}. Uno de los primeros métodos para la generación procedural de terrenos fue el algoritmo de diamante-cuadrado, una técnica de modelado fractal simple. Este algoritmo permitía la generación de modelos de terreno altamente detallados al subdividir iterativamente un cuadrado y ajustar los valores de altura en cada paso \cite{ComputerGraphics}.
 
 \subsection{Década de los 2000}
 
-En la década de 2000, la generación procedural de terrenos en gráficos por computadora continuó avanzando, impulsada por la creciente popularidad de los videojuegos y la necesidad de entornos más realistas y diversos. El uso de la generación procedural en videojuegos se volvió más extendido durante esta década, con muchos juegos generando aspectos del entorno o personajes no jugadores de manera procedural durante el proceso de desarrollo para ahorrar tiempo en la creación de assets \cite{TexturingModelingProcAproach}
+En la década de 2000, la generación procedural de terrenos en gráficos por computadora continuó avanzando, impulsada por la creciente popularidad de los videojuegos y la necesidad de entornos más realistas y diversos. El uso de la generación procedural en videojuegos se volvió más común durante esta década, con muchos juegos generando aspectos del entorno o personajes no jugadores de manera procedural durante el proceso de desarrollo para ahorrar tiempo en la creación de assets \cite{TexturingModelingProcAproach}. Uno de los avances destacados en la generación procedural de terrenos durante esta década fue el desarrollo de nuevos algoritmos y técnicas. Por ejemplo, se presentó un nuevo método para la generación procedural de terrenos en un artículo de 2015 escrito por Christian Schulte titulado "A Graph-Based Approach to Procedural Terrain". Este artículo describe un proceso de tres pasos para generar terrenos utilizando un enfoque basado en grafos. Otro desarrollo notable durante esta década fue el uso de la generación procedural como una mecánica de juego, como la creación de nuevos entornos para que los jugadores los exploraran. Por ejemplo, los niveles en el juego Spelunky se generan de manera procedural al reorganizar mosaicos prefabricados de geometría en un nivel con una entrada, una salida, un camino resoluble entre los dos y obstáculos en ese camino \cite{ProceduralTerrainAproach}.
 
-Uno de los avances destacados en la generación procedural de terrenos durante esta década fue el desarrollo de nuevos algoritmos y técnicas para generar terrenos. Por ejemplo, un nuevo método para la generación procedural de terrenos se presentó en un artículo de 2015 escrito por Christian Schulte titulado "A Graph-Based Approach to
-Procedural Terrain" \cite{ProceduralTerrainAproach}. El artículo describe un proceso de tres pasos para generar terrenos utilizando un enfoque basado en grafos.
-
-Otro desarrollo notable durante esta década fue el uso de la generación procedural como una mecánica de juego, como la creación de nuevos entornos para que el jugador explore. Por ejemplo, los niveles en el juego Spelunky se generan de manera procedural al reorganizar mosaicos prefabricados de geometría en un nivel con una entrada, una salida, un camino resoluble entre los dos y obstáculos en ese camino.
-
-En resumen, la década de 2000 vio un progreso continuo en la generación procedural de terrenos en gráficos por computadora, con avances en algoritmos y técnicas, así como el aumento en el uso de la generación procedural como una mecánica de juego.
+En resumen, la década de 2000 vio un progreso continuo en la generación procedural de terrenos en gráficos por computadora, con avances en algoritmos y técnicas, así como un aumento en el uso de la generación procedural como una mecánica de juego.
 
 \subsection{Década de los 2010}
+
 En la década de 2010, la generación procedural de terrenos en gráficos por computadora continuó avanzando, con el desarrollo de nuevos algoritmos y técnicas para la generación de terrenos. El uso de la generación procedural en videojuegos también siguió creciendo, con muchos juegos utilizando la generación procedural para crear entornos vastos y diversos.
 
-Un ejemplo de un nuevo algoritmo para la generación procedural de terrenos en la década de 2010 es el algoritmo adaptativo y de generación procedural de terrenos con modelos de difusión y ruido de Perlin propuesto en un artículo de 2021 por Zhang et al.
-\cite{AdaptiveandMulti-resolutionProcedurtalInfiniteTerrain}. Este algoritmo utiliza modelos generativos basados en difusión para crear terrenos con múltiples niveles de detalle, lo que permite una generación más eficiente de entornos a gran escala.
+Un ejemplo de un nuevo algoritmo para la generación procedural de terrenos en la década de 2010 es el algoritmo adaptativo y de generación procedural de terrenos con modelos de difusión y ruido de Perlin propuesto en un artículo de 2021 por Zhang et al. Este algoritmo utiliza modelos generativos basados en difusión para crear terrenos con múltiples niveles de detalle, lo que permite una generación más eficiente de entornos a gran escala \cite{AdaptiveandMulti-resolutionProcedurtalInfiniteTerrain}. Otro ejemplo de generación procedural de terrenos en la década de 2010 es la generación procedural de carreteras, propuesta en un artículo de 2010 por Galin. Este método utiliza un algoritmo de ruta más corta anisotrópica ponderada para generar carreteras automáticamente, lo que permite la creación más eficiente de redes de carreteras en entornos a gran escala \cite{ProceduralGenerationRoads}.
 
-Otro ejemplo de generación procedural de terrenos en la década de 2010 es la generación procedural de carreteras, propuesta en un artículo de 2010 por Galin \cite{ProceduralGenerationRoads}
-. Este método utiliza un algoritmo de ruta más corta anisotrópica ponderada para generar carreteras automáticamente, lo que permite la creación más eficiente de redes de carreteras en entornos a gran escala.
+En cuanto a los gráficos, se encontró una publicación de blog sobre la generación procedural de terrenos utilizando Unity. El artículo describe un proyecto que utiliza generación de malla y ruido, así como simulación de erosión hidráulica, para crear terrenos realistas en tiempo real \cite{ProceduralTerrainGeneration}.
 
-En cuanto a los gráficos, los resultados de la búsqueda incluyen una publicación de blog de Filip Joel sobre la generación procedural de terrenos utilizando Unity3D \cite{ProceduralTerrainGeneration}. El artículo describe un proyecto que utiliza generación de malla y ruido, así como simulación de erosión hidráulica, para crear terrenos realistas en tiempo real.
+En definitiva, se podría decir que la década de 2010 vio un progreso continuo en la generación procedural de terrenos en gráficos por computadora, con el desarrollo de nuevos algoritmos y técnicas, y el aumento en el uso de la generación procedural en videojuegos para crear entornos vastos y diversos.
 
-En resumen, la década de 2010 vio un progreso continuo en la generación procedural de terrenos en gráficos por computadora, con el desarrollo de nuevos algoritmos y técnicas, y el aumento en el uso de la generación procedural en videojuegos para crear entornos vastos y diversos.
+\subsection{El Futuro de la Generación Procedural} 
 
-\subsection{El Futuro de la Generación Procedural}
-
-El futuro de la generación procedural de terrenos en gráficos por computadora probablemente estará moldeado por avances en redes neuronales, un mayor uso de la generación de assets procedural y la integración de datos del mundo real.
-
-Las redes neuronales tienen el potencial de mejorar el realismo y la complejidad de los terrenos generados de manera procedural. Al utilizar técnicas de transferencia de estilo, los desarrolladores pueden crear formas generales y permitir que la red neuronal agregue detalles que parecen realistas \cite{StyleTransfer}. Este enfoque puede ayudar a superar las limitaciones de simular todos los procesos que crean terrenos reales, como la tectónica de placas y la erosión.
-
-La generación de assets procedural, que utiliza algoritmos para crear automáticamente assets como modelos 3D y texturas, también puede desempeñar un papel significativo en el futuro de la generación de terrenos \cite{ProceduralAssetGeneration}. Al combinar diversas técnicas de generación procedural sintética con modelos digitales de elevación (DEM) y datos del mundo real, los desarrolladores pueden crear paisajes multibioma con mayor precisión y atractivo visual \cite{RealWorldDataTerrain}.
-
-La integración de datos del mundo real, como imágenes de satélite y mapas topográficos, puede mejorar aún más el realismo y la precisión de los terrenos generados de manera procedural. Al combinar estas fuentes de datos con técnicas de generación procedural, los desarrolladores pueden crear entornos más inmersivos y detallados.
+El futuro de la generación procedural de terrenos en gráficos por computadora probablemente estará moldeado por avances en redes neuronales, un mayor uso de la generación de activos procedural y la integración de datos del mundo real. Las redes neuronales tienen el potencial de mejorar el realismo y la complejidad de los terrenos generados de manera procedural. Al utilizar técnicas de transferencia de estilo, los desarrolladores pueden crear formas generales y permitir que la red neuronal agregue detalles que parecen realistas \cite{StyleTransfer}. La generación de activos procedural, que utiliza algoritmos para crear automáticamente activos como modelos 3D y texturas, también puede desempeñar un papel significativo en el futuro de la generación de terrenos \cite{RealWorldDataTerrain}. Al combinar diversas técnicas de generación procedural sintética con modelos digitales de elevación (DEM) y datos del mundo real, los desarrolladores pueden crear paisajes multibioma con mayor precisión y atractivo visual. La integración de datos del mundo real, como imágenes de satélite y mapas topográficos, puede mejorar aún más el realismo y la precisión de los terrenos generados de manera procedural. Al combinar estas fuentes de datos con técnicas de generación procedural, los desarrolladores pueden crear entornos más inmersivos y detallados \cite{ProceduralTerrainGenerator}.
 
 En cuanto a hardware y rendimiento, ya se ha explorado el uso de GPU para generar terrenos procedurales complejos a velocidades de fotogramas interactivas \cite{proceduralTerrainGpu}. A medida que la tecnología continúa avanzando, podemos esperar más optimizaciones y mejoras en la eficiencia de los algoritmos de generación procedural de terrenos, lo que permitirá entornos aún más detallados y realistas.
 
-En resumen, el futuro de la generación procedural de terrenos en gráficos por computadora probablemente estará caracterizado por la combinación de redes neuronales, generación de assets procedural, integración de datos del mundo real y avances en hardware y rendimiento. Estos desarrollos permitirán a los desarrolladores crear entornos más inmersivos y diversos para videojuegos, simulaciones y otras aplicaciones.
+El futuro de la generación procedural de terrenos en gráficos por computadora probablemente estará caracterizado por la combinación de redes neuronales, generación de activos procedural, integración de datos del mundo real y avances en hardware y rendimiento. Estos desarrollos permitirán a los desarrolladores crear entornos más inmersivos y diversos para videojuegos, simulaciones y otras aplicaciones.
+
 
 \section{Técnicas y Algoritmos}
 
@@ -142,8 +102,6 @@ Algunas de las funciones de ruido más comúnmente utilizadas para la generació
     \item \textbf{Ruido Simplex:} El ruido Simplex es un tipo de ruido de gradiente desarrollado por Ken Perlin en 2001. Es similar al ruido de Perlin pero es más rápido y tiene una mejor calidad visual, dando lugar a terrenos con caracterísitcas realistas. Es comúnmente utilizado.\cite{simplexnoise}.
     
     \item \textbf{Ruido Voronoi:} El ruido Voronoi es un tipo de ruido celular que se genera dividiendo el espacio en celdas basadas en la distancia a un conjunto de puntos de referencia. A menudo se utiliza para generar terrenos con características más geométricas debido a sus aspecto regular. \cite{voronoinoise}.
-        
-    \item \textbf{Movimiento Browniano Fractal (FBM):} El FBM es una técnica que combina múltiples capas de ruido para crear terrenos más complejos y detallados. A menudo se utiliza en conjunción con otras funciones de ruido, como el ruido de Perlin o el ruido Simplex \cite{fbm}.
 \end{itemize}
 
 \subsection{Algoritmos basados en fractales para la generación de terrenos procedurales}
@@ -155,11 +113,11 @@ La generación procedural de terrenos a menudo se basa en algoritmos fractales q
     
     \item \textbf{Algoritmo de Desplazamiento del Punto Medio}: El algoritmo de Desplazamiento del Punto Medio es otro método simple para generar terreno fractal. Comienza con un segmento de línea y, en cada iteración, divide el segmento en dos partes. La altura de los nuevos vértices se ajusta mediante un valor de desplazamiento aleatorio. Este proceso se repite, creando un terreno con características fractales \cite{DesplazamientoPuntoMedio}.
     
-    \item \textbf{Movimiento Browniano Fractal (FBM)}: El Movimiento Browniano Fractal (FBM) es una técnica que combina múltiples capas de funciones de ruido para crear terrenos más complejos y detallados. A menudo se utiliza en conjunto con otros algoritmos fractales, como el Diamante-Cuadrado o el Desplazamiento del Punto Medio, para generar terrenos realistas y visualmente atractivos \cite{FractalBrownianoMotion}.
+    \item \textbf{Movimiento Browniano Fractal (FBM)}: El Movimiento Browniano Fractal (FBM) es una técnica que combina múltiples capas de funciones de ruido para crear terrenos más complejos y detallados. A menudo se utiliza en conjunto con otros algoritmos fractales, como el Diamante-Cuadrado o el Desplazamiento del Punto Medio, para generar terrenos realistas y visualmente atrassets \cite{TFractionalBrownianMotion}.
     
-    \item \textbf{Técnicas multifractales}: Las técnicas multifractales utilizan diferentes dimensiones fractales para diferentes escalas, lo que permite una representación más precisa del comportamiento del espectro de frecuencias de los paisajes reales. Estas técnicas se pueden utilizar para generar terreno con una apariencia más realista y diversa \cite{TecnicasMultifractales}.
+    \item \textbf{Técnicas multifractales}: Las técnicas multifractales utilizan diferentes dimensiones fractales para diferentes escalas, lo que permite una representación más precisa del comportamiento del espectro de frecuencias de los paisajes reales. Estas técnicas se pueden utilizar para generar terreno con una apariencia más realista y diversa \cite{calvet2008multifractal}.
     
-    \item \textbf{Enfoques híbridos}: Además de los algoritmos fractales puros, existen enfoques híbridos que combinan técnicas fractales con otros métodos, como simulaciones de erosión o modelos geológicos. Estos enfoques pueden utilizarse para generar terrenos más realistas y visualmente atractivos.
+    \item \textbf{Enfoques híbridos}: Además de los algoritmos fractales puros, existen enfoques híbridos que combinan técnicas fractales con otros métodos, como simulaciones de erosión o modelos geológicos. Estos enfoques pueden utilizarse para generar terrenos más realistas y visualmente atrassets.
 \end{itemize}
 
 Los desarrolladores pueden emplear algortimos basados en fractales junto con otras técnicas para generar terrenos con caracterísitcas únicas, permitiendo así ampliar el abanico de posibildades para los terrenos generables.
@@ -173,21 +131,21 @@ Los algoritmos de simulación física pueden utilizarse en la generación proced
     
     \item \textbf{Algoritmos de simulación de erosión}: Los algoritmos de simulación de erosión simulan los efectos de la erosión causada por el agua y el viento en el terreno, lo que da como resultado terrenos con características realistas como valles, crestas y cañones. Estos algoritmos pueden utilizarse en conjunto con otras técnicas de generación procedural, como funciones de ruido o fractales, para crear terrenos realistas y de aspecto natural \cite{AlgoritmosErosion} \cite{ErosionReddit}.
     
-    \item \textbf{Algoritmos de modelado geológico}: Los algoritmos de modelado geológico simulan los procesos geológicos que dan forma al terreno, como la actividad tectónica y las erupciones volcánicas. Estos algoritmos pueden utilizarse para crear terrenos con características geológicas realistas, como montañas, volcanes y líneas de falla. aunque sulen dar resultados realistas a menuido se deprecan por el coste computacional que suponen \cite{ModeladoGeologico} \cite{GeologiaDocumento}.
+    \item \textbf{Algoritmos de modelado geológico}: Los algoritmos de modelado geológico simulan los procesos geológicos que dan forma al terreno, como la actividad tectónica y las erupciones volcánicas. Estos algoritmos pueden utilizarse para crear terrenos con características geológicas realistas, como montañas, volcanes y líneas de falla. aunque sulen dar resultados realistas a menuido se deprecan por el coste computacional que suponen \cite{GeologiaDocumento}.
 \end{itemize}
 
-Los algoritmos de simulación física pueden ser una herramienta poderosa para la generación de terrenos realistas. Al simular los efectos de procesos físicos en el terreno, los desarrolladores pueden crear terrenos que parecen haber sido moldeados por fuerzas naturales, lo que resulta en un entorno más inmersivo y creíble. 
+Al simular los efectos de procesos físicos en el terreno, los desarrolladores pueden crear terrenos que parecen haber sido moldeados por fuerzas naturales, lo que resulta en un entorno más inmersivo y creíble. 
 
-Además de los ya mencionados, se siguen desarrolando nuevas téncicas y nuevos algoritmos de simulación física para la generación procedural de terrenos se centran en mejorar la realismo, eficiencia y flexibilidad en la creación de terrenos. Algunos de los avances en este campo incluyen:
+Además de los ya mencionados, se siguen desarrollando nuevas téncicas y nuevos algoritmos de simulación física para la generación procedural de terrenos se centran en mejorar la realismo, eficiencia y flexibilidad en la creación de terrenos. Algunos de los avances en este campo incluyen:
 
 \begin{itemize}
     \item \textbf{Simulación Física en GPU}: Utilizando la potencia de procesamiento paralelo de las GPUs modernas, los investigadores han desarrollado técnicas para generar terrenos procedurales complejos en tiempo real. Estas técnicas aprovechan las capacidades de las GPUs, como el geometry shader, stream output y el renderizado a texturas 3D, para generar rápidamente grandes bloques de terreno detallado\cite{SimulacionFisicaGPU}.
     
-    \item \textbf{Algoritmos Inspirados en la Hidrología}: Basándose en el concepto de generación de terrenos basada en hidrología, los algoritmos más recientes incorporan modelos de flujo de agua y erosión más realistas. Estos algoritmos simulan los efectos de la lluvia, la evaporación y el transporte de sedimentos, lo que resulta en terrenos con redes fluviales, lagos y otras características acuáticas más precisas\cite{AlgoritmosHidrologia}.
+    \item \textbf{Algoritmos Inspirados en la Hidrología}: Basándose en el concepto de generación de terrenos basada en hidrología, los algoritmos más recientes incorporan modelos de flujo de agua y erosión más realistas. Estos algoritmos simulan los efectos de la lluvia, la evaporación y el transporte de sedimentos, lo que da lugar a terrenos con regeros fluviales, lagos y otras características precisas\cite{AlgoritmosHidrologia}.
     
     \item \textbf{Generación de Paisajes Multibioma}: AutoBiomes es un ejemplo de algoritmo de generación procedural que se enfoca en crear paisajes multibioma. Esta técnica combina enfoques sintéticos, basados en física y basados en ejemplos para generar terrenos realistas y visualmente diversos con múltiples biomas distintos\cite{GeneracionMultiBioma}.
     
-    \item \textbf{Erosión Fluvial Basada en Grafos}: Un reciente artículo propone un algoritmo de generación procedural de terrenos basado en una representación de grafo de erosión fluvial. Este algoritmo ofrece varias mejoras novedosas, incluyendo el uso de un mapa de restricción de altura con dos tipos de fuerzas de restricción localmente definidas, lo que resulta en características de terreno más realistas y detalladas\cite{ErosionBasadaGrafos}.
+    \item \textbf{Erosión Fluvial Basada en Grafos}: Un artículo reciente se propone un algoritmo de generación procedural de terrenos basado en una representación de grafo de erosión fluvial. Este algoritmo ofrece varias mejoras novedosas, incluyendo el uso de un mapa de restricción de altura con dos tipos de fuerzas de restricción localmente definidas, lo que da lugar a características de terreno más detalladas\cite{VillaValdes2015}.
     
 \end{itemize}
 
@@ -196,20 +154,20 @@ Además de los ya mencionados, se siguen desarrolando nuevas téncicas y nuevos 
 
 Introducción:
 
-En el mundo del desarrollo de videojuegos y aplicaciones interactivas, la generación procedural de terrenos se ha convertido en un recurso fundamental para crear mundos virtuales dinámicos y sorprendentes. Unity, una de las plataformas de desarrollo más populares, ofrece una gama diversa de herramientas, activos y recursos que facilitan la creación de terrenos procedurales de alta calidad. En esta sección, exploraremos estas herramientas y recursos, así como algunas de las características clave de los activos disponibles en la Tienda de Assets de Unity. Desde el motor de terreno incorporado hasta los emocionantes activos de generación procedural, descubriremos cómo Unity brinda a los desarrolladores la capacidad de dar vida a mundos virtuales únicos y cautivadores.
+Dada la irrupción de la generación de terreno procedural, en esta sección exploraremos las herramientas y recursos que existen en Unity para llevar a cabo esta técnica, así como algunas de las características clave de los assets disponibles en la Tienda de Assets de Unity.
 
 \subsection{Herramientas y Recursos de Unity}
 
 Unity proporciona varias herramientas y recursos para la generación procedural de terrenos. A continuación, se presentan algunas de las herramientas y recursos más populares:
 
 \begin{itemize}
-    \item \textbf{Motor de Terreno}: El motor de terreno incorporado de Unity permite a los desarrolladores crear y modificar terrenos utilizando una variedad de herramientas, como pinceles, mapas de texturas y mapas de alturas. El motor de terreno puede utilizarse en conjunción con técnicas de generación procedural para crear terrenos más diversos e interesantes \cite{UnityTerrain}.
+    \item \textbf{Terrain Engine de Unity}: El motor de terreno incorporado de Unity permite a los desarrolladores crear y modificar terrenos utilizando una variedad de herramientas, como pinceles, mapas de texturas y mapas de alturas. El motor de terreno puede utilizarse junto con técnicas de generación procedural para crear todo tipo de terrenos \cite{UnityTerrain}.
     
     \item \textbf{Comunidad}: Existen varios tutoriales, cursos, repositorios y recursos disponibles online creados por la basta comunidad de Unity que cubren la generación procedural, incluyendo la generación de terrenos. Estos recursos abordan temas como funciones de ruido, fractales y simulación física, y proporcionan instrucciones paso a paso para crear terrenos procedurales .
     
-    \item \textbf{TerrainGenerator}: TerrainGenerator es una herramienta gratuita y de código abierto para Unity que permite a los desarrolladores crear terrenos procedurales utilizando algoritmos de ruido aleatorio, simulación física y materiales personalizados. La herramienta puede crear una malla de terreno, una malla de agua y colocar objetos de forma aleatoria en una escena\cite{TerrainGenerator}.
+    \item \textbf{TerrainGenerator}: TerrainGenerator es una herramienta gratuita y de código abierto para Unity que permite a los desarrolladores crear terrenos procedurales utilizando algoritmos de ruido, simulación física y materiales personalizados. La herramienta puede crear una mesh de terreno, una mesh de agua y colocar objetos de forma aleatoria en una escena\cite{TerrainGenerator}.
     
-    \item \textbf{Procedural Worlds}: Procedural Worlds es un conjunto de herramientas para Unity que permite a los desarrolladores crear y entregar contenido procedural, incluyendo terrenos, paisajes y mundos. Las herramientas incluyen Gaia Pro, GeNa Pro y otras herramientas galardonadas de creación y mejora de mundos \cite{ProceduralWorlds}.
+    \item \textbf{Procedural Worlds}: Procedural Worlds es un conjunto de herramientas para Unity que permite a los desarrolladores crear y entregar contenido procedural. Las herramientas incluyen Gaia Pro, GeNa Pro y otras herramientas. \cite{ProceduralWorlds}.
     
 \end{itemize}
 
@@ -218,7 +176,7 @@ Unity proporciona varias herramientas y recursos para la generación procedural 
 Existen varios plugins y assets en Unity que pueden ayudar en la generación de terrenos procedurales. Algunos de los más populares incluyen:
 
 \begin{itemize}
-    \item \textbf{Procedural Terrain Generator}: Este assets, disponible en la tienda de assetss de Unity, permite a los desarrolladores crear terrenos procedurales utilizando una variedad de funciones de ruido, incluidas las funciones de Perlin y Simplex. También incluye características como simulación de erosión y mezcla de texturas \cite{ProceduralTerrainGenerator}.
+    \item \textbf{Procedural Terrain Generator}: Este assets, disponible en la tienda de assets de Unity, permite a los desarrolladores crear terrenos procedurales utilizando una variedad de funciones de ruido, incluidas las funciones de Perlin y Simplex. También incluye características como simulación de erosión y mezcla de texturas \cite{ProceduralTerrainGenerator}.
     
     \item \textbf{Vista 2023 - Procedural Terrain Generator}: Este assets, también disponible en la tienda de assetss de Unity, permite a los desarrolladores crear terrenos procedurales utilizando una variedad de funciones de ruido, incluidas las funciones de Perlin, Simplex y Voronoi. También incluye características como simulación de erosión y mezcla de texturas \cite{Vista2023TerrainGenerator}.
     
@@ -252,15 +210,15 @@ Además del asset Procedural Terrain Generator, existen otros assets disponibles
 La generación procedural de terreno posee numerosas aplicaciones en la industria de los videojuegos. Algunas de las aplicaciones más destacadas incluyen:
 
 \begin{itemize}
-    \item \textbf{Aumento de la Rejugabilidad}: La generación procedural de terreno puede utilizarse para crear variaciones infinitas del entorno de un juego, lo que aumenta la rejugabilidad y mantiene el juego fresco e interesante para los jugadores\cite{Rejugabilidad}.
+    \item \textbf{Aumento de la Rejugabilidad}: Se pueden crear variaciones infinitas del entorno de un juego gracias a la genración procedural, lo que aumenta la rejugabilidad\cite{Rejugabilidad}.
 
-    \item \textbf{Ahorro de Tiempo en la Creación de Activos}: Al generar el terreno de forma procedural, los desarrolladores pueden ahorrar tiempo en la creación de activos y centrarse en otros aspectos del desarrollo del juego\cite{AhorroTiempo}.
+    \item \textbf{Ahorro de Tiempo en la Creación de Assets}: Al generar el terreno de forma procedural, los desarrolladores pueden ahorrar tiempo en la creación de assets y centrarse en otros aspectos del desarrollo del juego\cite{AhorroTiempo}.
 
-    \item \textbf{Creación de Entornos Únicos}: La generación procedural de terreno puede utilizarse para crear entornos únicos que serían difíciles o imposibles de crear manualmente\cite{EntornosUnicos}.
+    \item \textbf{Creación de Entornos Únicos}: Puede usarse para crear entornos únicos que serían difíciles o imposibles de crear manualmente\cite{EntornosUnicos}.
 
     \item \textbf{Generación de Jugabilidad Aleatoria}: La generación procedural de terreno puede utilizarse para crear jugabilidad aleatoria, como mapas, niveles, enemigos y armas aleatorias. Esto añade un elemento de imprevisibilidad y desafío al juego\cite{JugabilidadAleatoria}.
 
-    \item \textbf{Creación de Nuevas Mecánicas de Juego}: La generación procedural de terreno puede utilizarse como una mecánica de juego, como la creación de nuevos entornos para que el jugador explore o la generación de rompecabezas y desafíos\cite{NuevasMecanicas}.
+    \item \textbf{Creación de Nuevas Mecánicas de Juego}: También puede utilizarse como una mecánica de juego, como la creación de nuevos entornos para que el jugador explore o la generación de rompecabezas y desafíos\cite{NuevasMecanicas}.
 \end{itemize} 
 
 La generación procedural de terreno se ha convertido en una técnica cada vez más popular en el desarrollo de videojuegos, ofreciendo numerosos beneficios como el aumento de la rejugabilidad, el ahorro de tiempo y la creación de entornos únicos. A medida que la tecnología continúa avanzando, podemos esperar ver técnicas de generación de terreno aún más sofisticadas y realistas en los futuros videojuegos.
@@ -270,15 +228,15 @@ La generación procedural de terreno se ha convertido en una técnica cada vez m
 La generación procedural de terrenos tiene diversas aplicaciones en simulaciones científicas, particularmente en los campos de la geología, hidrología y ciencias ambientales. Algunas de las aplicaciones destacadas incluyen:
 
 \begin{enumerate}
-    \item \textbf{Modelado Geológico}: La generación procedural de terrenos se puede utilizar para crear modelos geológicos realistas en simulaciones científicas. Al simular procesos geológicos como la actividad tectónica y la erosión, los desarrolladores pueden crear terrenos que representen con precisión paisajes del mundo real\cite{GeologicalModeling}.
+    \item \textbf{Modelado Geológico}: Al simular procesos geológicos como la actividad tectónica y la erosión, los desarrolladores pueden crear terrenos que representen con precisión paisajes del mundo real\cite{GeologiaDocumento}.
     
-    \item \textbf{Modelado Hidrológico}: La generación procedural de terrenos se puede utilizar para crear modelos hidrológicos en simulaciones científicas. Al simular el flujo de agua sobre el terreno, los desarrolladores pueden crear modelos que representen con precisión sistemas de agua del mundo real, como ríos, lagos y cuencas hidrográficas\cite{HydrologicalModeling}.
+    \item \textbf{Modelado Hidrológico}: Al simular el flujo de agua sobre el terreno, los desarrolladores pueden crear modelos que representen con precisión sistemas de agua del mundo real, como ríos, lagos y cuencas hidrográficas\cite{HidrologiaDocumento}.
     
-    \item \textbf{Modelado Ambiental}: La generación procedural de terrenos se puede utilizar para crear modelos en simulaciones ambientales, como simulaciones de cambio climático o desastres naturales. Al generar terrenos que representen con precisión entornos del mundo real, los desarrolladores pueden crear simulaciones más precisas y realistas\cite{EnvironmentalModeling}.
+    \item \textbf{Modelado Ambiental}: Al generar terrenos que representen con precisión entornos del mundo real, los desarrolladores pueden crear simulaciones más precisas y realistas\cite{AdaptiveTerrainGeneration}.
     
-    \item \textbf{Compresión de Datos}: La generación procedural de terrenos se puede utilizar para comprimir grandes cantidades de datos de terreno en un archivo de menor tamaño. Al generar terrenos de manera procedural, los desarrolladores pueden crear terrenos sobre la marcha, reduciendo la necesidad de grandes cantidades de datos de terreno pregenerados\cite{DataCompression}.
+    \item \textbf{Compresión de Datos}: La generación procedural de terrenos se puede utilizar para comprimir grandes cantidades de datos de terreno en un archivo de menor tamaño. Al generar terrenos de manera procedural, los desarrolladores pueden crear terrenos sobre la marcha, reduciendo la necesidad de grandes cantidades de datos de terreno pregenerados\cite{RealWorldDataTerrain}.
 \end{enumerate}
-
+ 
 La generación procedural de terrenos tiene numerosas aplicaciones en simulaciones científicas, ofreciendo beneficios como mayor precisión, compresión de datos y la capacidad de simular sistemas naturales complejos.
 
 \subsection{Aplicaciones en Realidad Virtual y Aumentada}
@@ -286,46 +244,44 @@ La generación procedural de terrenos tiene numerosas aplicaciones en simulacion
 La generación procedural de terrenos tiene varias aplicaciones en la realidad virtual (RV) y la realidad aumentada (RA), ofreciendo beneficios como mayor inmersión, interactividad y realismo. Algunas de las aplicaciones destacadas incluyen:
 
 \begin{itemize}
-    \item \textbf{Terrenos a escala planetaria en RV}: La generación procedural de terrenos puede utilizarse para crear terrenos a escala planetaria en RV, permitiendo a los usuarios explorar entornos vastos y diversos. Esta técnica se puede utilizar para crear experiencias inmersivas para la educación, el entretenimiento y la investigación científica\cite{VRPlanetaryTerrains}.
     
-    \item \textbf{Generación interactiva de terrenos virtuales utilizando marcadores de RA}: La generación procedural de terrenos puede utilizarse para crear terrenos virtuales interactivos utilizando marcadores de RA. Esta técnica permite a los usuarios crear y modificar terrenos en tiempo real, brindando una experiencia más atractiva e interactiva\cite{ARInteractiveTerrain}.
+    \item \textbf{Generación interactiva de terrenos virtuales utilizando marcadores de RA}: La creación de terrenos virtuales utilizando marcadores de RA podría sería una apliación de la generación procedural en este ámbito. Esta técnica permite a los usuarios crear y modificar terrenos en tiempo real, brindando una experiencia más atractiva e interactiva\cite{ARInteractiveTerrain}.
     
-    \item \textbf{Generación de RV procedural a partir de espacios físicos 3D reconstruidos}: La generación procedural de terrenos puede utilizarse para generar entornos de RV a partir de espacios físicos 3D reconstruidos. Esta técnica permite a los usuarios explorar entornos del mundo real en RV, brindando una experiencia más inmersiva y realista\cite{VR3DReconstructedSpace}.
+    \item \textbf{Generación de RV procedural a partir de espacios físicos 3D reconstruidos}: La generación procedural de terrenos puede utilizarse para generar entornos de RV a partir de espacios físicos 3D reconstruidos. Por lo que los usuarios pueden explorar entornos del mundo real en RV de manera más inmersiva\cite{ARInteractiveTerrain}.
     
     \item \textbf{Generación procedural de escenas de RV}: La generación procedural de terrenos puede utilizarse para generar escenas de RV, como islas u otros entornos. Esta técnica permite a los desarrolladores crear entornos inmersivos que pueden explorarse en RV\cite{VRSceneGeneration}.
     
-    \item \textbf{Experiencias de RV sobre la marcha mientras se camina dentro de grandes entornos de edificios del mundo real desconocidos}: La generación procedural de terrenos puede utilizarse para generar experiencias de RV mientras se camina dentro de grandes entornos de edificios del mundo real desconocidos. Esta técnica permite a los usuarios explorar y navegar por entornos complejos en RV, brindando una experiencia más inmersiva e interactiva\cite{VRWalkingEnvironments}.
+    \item \textbf{Experiencias de RV sobre la marcha mientras se camina dentro de grandes entornos de edificios del mundo real desconocidos}: La generación procedural de terrenos puede utilizarse para generar experiencias de RV mientras se camina dentro de grandes entornos de edificios del mundo real desconocidos, brindando una experiencia más inmersiva e interactiva\cite{ProceduralContentCreation}.
 \end{itemize}
 
-\subsection{Aplicaciones en Animación y Películas}
+\subsection{Aplicaciones en Animación y Películas} 
 
-La generación procedural de terrenos tiene varias aplicaciones en animación y películas, ofreciendo beneficios como mayor eficiencia, flexibilidad y creatividad. Algunas de las aplicaciones destacadas incluyen:
+La generación procedural de terrenos tiene muchas aplicaciones en la industria de la animación y el cine. Esto ofrece ventajas como una mayor eficiencia, flexibilidad y creatividad. Algunas de las aplicaciones son:
 
 \begin{itemize}
-    \item \textbf{Películas animadas generadas proceduralmente}: La generación procedural de terrenos puede utilizarse para crear películas animadas con entornos y personajes generados aleatoriamente. Esta técnica se puede utilizar para crear películas únicas e interesantes visualmente con un esfuerzo manual mínimo\cite{ProcedurallyGeneratedAnimatedFilms}.
+    \item \textbf{Películas animadas generadas proceduralmente}: Esta técnica se utiliza para crear películas animadas con entornos y personajes generados de manera aleatoria. Esto permite crear películas visualmente únicas e interesantes con un esfuerzo mínimo en la creación manual\cite{ProcedurallyGeneratedAnimatedFilms}.
     
-    \item \textbf{Generación procedural de objetos 3D y animaciones}: La generación procedural puede utilizarse para crear objetos 3D y animaciones para películas, como diseños de personajes, animaciones y diálogos de personajes no jugadores. Esta técnica se puede utilizar para crear contenido diverso e interesante con un esfuerzo manual mínimo\cite{ProceduralGeneration3DObjects}.
+    \item \textbf{Generación procedural de objetos 3D y animaciones}: La generación procedural se emplea para crear objetos 3D y animaciones para películas, como los diseños de personajes, animaciones y diálogos de personajes no jugadores. Esto da como resultado contenido diverso e interesante con poco esfuerzo manual\cite{ProceduralGeneration3DObjects}.
     
-    \item \textbf{Creación rápida de espacios atractivos y precisos}: La generación procedural se utiliza con frecuencia en el cine para crear espacios atractivos visualmente y precisos de forma rápida. Esta técnica se puede utilizar para crear entornos diversos e interesantes que pueden explorarse en películas\cite{CreatingVisuallyInterestingSpaces}.
+    \item \textbf{Creación rápida de escenarios precisos}: En la industria cinematográfica, la generación procedural se usa para crear escenarios visualmente precisos de manera rápida, habilitando la creación de entornos que se pueden explorar en películas\cite{CreatingVisuallyInterestingSpaces}.
     
-    \item \textbf{Creación de cortometrajes animados utilizando generación procedural}: La generación procedural de terrenos puede utilizarse para crear cortometrajes animados utilizando formas generadas por código y campos de distancia. Esta técnica se puede utilizar para crear películas con un tamaño de archivo mínimo\cite{ShortAnimatedMoviesProceduralGeneration}.
+    \item \textbf{Creación de cortos animados con generación procedural}: La generación procedural de terrenos también se aplica para crear cortos animados mediante la generación de formas y campos de distancia por código. Esto reduce la complejidad de los archivos y facilita la producción de películas con un tamaño de archivo mínimo\cite{ShortAnimatedMoviesProceduralGeneration}.
 \end{itemize}
 
 \section{Desafíos y Tendencias Futuras}
 
-La generación procedural de terrenos presenta una serie de desafíos y tendencias que son fundamentales para su evolución y aplicación continua en el desarrollo de juegos y otras áreas. Algunos de estos desafíos y tendencias incluyen:
+La generación procedural de terrenos presenta una serie de desafíos y tendencias que son esenciales para su evolución y aplicación en el desarrollo de juegos y otras áreas. Algunos de estos desafíos y tendencias incluyen:
 
 \begin{enumerate}
-    \item \textbf{Consistencia y Coherencia}: Asegurar que el terreno generado sea consistente y coherente en diversas plataformas y dispositivos puede ser un desafío. Técnicas como las funciones de ruido, la síntesis de terreno y la generación de contenido procedural (PCG) pueden ayudar a abordar este desafío\cite{ConsistencyCoherence}.
+    \item \textbf{Consistencia y Coherencia}: Garantizar que el terreno generado sea consistente y coherente en diversas plataformas y dispositivos puede ser un desafío. Para abordar esto, se utilizan técnicas como las funciones de ruido, la síntesis de terreno y la generación de contenido procedural (PCG)\cite{ConsistencyCoherence}.
     
-    \item \textbf{Equilibrio en la Jugabilidad}: Crear un mundo generado que sea justo y siga siendo desafiante puede ser un obstáculo. Equilibrar la dificultad del terreno y los mecanismos de juego es crucial para lograr una experiencia satisfactoria para el jugador \cite{BalancedGameplay}.
+    \item \textbf{Equilibrio en la Jugabilidad}: Crear un mundo generado que sea justo y mantenga un nivel adecuado de desafío puede ser complicado. Encontrar el equilibrio entre la dificultad del terreno y los elementos de juego es esencial para proporcionar una experiencia satisfactoria para los jugadores\cite{BalancingGameplay}.
     
-    \item \textbf{Realismo y Variedad}: Lograr un equilibrio entre el terreno realista y paisajes diversos y de atractivo visual es un desafío. Las tendencias futuras pueden centrarse en mejorar el realismo y la variedad de los terrenos generados mediante algoritmos y técnicas avanzadas\cite{RealismVariety}.
+    \item \textbf{Realismo y Variedad}: Lograr un equilibrio entre un terreno realista y paisajes diversos y visualmente atractivos es un reto. Las tendencias futuras se centran en mejorar la apariencia realista y la variedad de los terrenos generados mediante algoritmos y técnicas más avanzadas\cite{RealismVariety}.
     
-    \item \textbf{Optimización de Rendimiento}: Generar terrenos complejos en tiempo real puede ser computacionalmente costoso. Las tendencias futuras pueden implicar la optimización de los algoritmos de generación procedural de terrenos para mejorar el rendimiento y reducir el uso de recursos\cite{PerformanceOptimization}.
+    \item \textbf{Optimización de Rendimiento}: Generar terrenos complejos en tiempo real puede ser intensivo en recursos computacionales. Las tendencias futuras incluyen la optimización de los algoritmos de generación procedural de terrenos para mejorar el rendimiento y reducir el uso de recursos\cite{PerformanceOptimization}.
     
-    \item \textbf{Integración con Otros Sistemas de Juego}: La generación procedural de terrenos debe integrarse sin problemas con otros sistemas de juego, como la simulación de física, la inteligencia artificial y el diseño de niveles. Las tendencias futuras pueden implicar el desarrollo de técnicas más avanzadas para integrar la generación procedural de terrenos con estos sistemas\cite{IntegrationWithGameSystems}.
+    \item \textbf{Integración con Otros Sistemas de Juego}: La generación procedural de terrenos debe integrarse de manera efectiva con otros sistemas de juego, como la simulación de física, la inteligencia artificial y el diseño de niveles. Las tendencias futuras implican el desarrollo de técnicas avanzadas para lograr esta integración sin problemas\cite{IntegrationWithGameSystems}.
 \end{enumerate}
 
-En resumen, la generación procedural de terrenos es una tendencia creciente en el desarrollo de juegos, que ofrece oportunidades para crear mundos de juego más grandes, dinámicos e interesantes. Abordar los desafíos y adoptar las tendencias futuras en este campo conducirá a técnicas de generación de terrenos más avanzadas y realistas.
-
+En resumen, la generación procedural de terrenos es una tendencia en crecimiento en el desarrollo de juegos y otras áreas, lo que brinda la oportunidad de crear mundos de juego más grandes, dinámicos e interesantes. Abordar los desafíos y adoptar las tendencias futuras en este campo conducirá a técnicas de generación de terrenos más avanzadas y realistas.
