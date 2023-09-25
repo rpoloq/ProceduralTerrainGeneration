@@ -209,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5773597102642131376}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.13, z: -2.48}
+  m_LocalPosition: {x: 0, y: 0.85, z: -1.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -784,7 +784,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 500
+    maxNumParticles: 700
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -846,7 +846,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 1.88
-    length: 0.46
+    length: 0
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -5058,6 +5058,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: acf010e13b85cd24e9ba9aecddb44350, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: acf010e13b85cd24e9ba9aecddb44350, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 58e6039cb498f6e4391a83a89b1f8ae9, type: 2}
+    - target: {fileID: -5754084199372789682, guid: acf010e13b85cd24e9ba9aecddb44350, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -4889810541665870955, guid: a13055fe1274dbf429588693510bada0, type: 3}
     - target: {fileID: 919132149155446097, guid: acf010e13b85cd24e9ba9aecddb44350, type: 3}
       propertyPath: m_Name
       value: Modelo

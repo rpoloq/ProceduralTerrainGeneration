@@ -144,10 +144,14 @@ public class EndlessTerrain : MonoBehaviour {
 						if (lodMesh.hasMesh) {
 							_previousLODIndex = lodIndex;
 							_meshFilter.mesh = lodMesh.mesh;
-							_meshCollider.sharedMesh = lodMesh.mesh;
+							
+							if (lodIndex == 0)
+								_meshCollider.sharedMesh = lodMesh.mesh;
 						} else if (!lodMesh.hasRequestedMesh) {
 							lodMesh.RequestMesh (_mapData);
 						}
+
+						_meshCollider.enabled = lodIndex == 0;
 					}
 
 					_terrainChunksVisibleLastUpdate.Add (this);

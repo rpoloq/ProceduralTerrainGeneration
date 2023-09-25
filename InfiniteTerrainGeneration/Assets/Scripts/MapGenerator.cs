@@ -10,7 +10,7 @@ using UnityEngine.Serialization;
 
 public class MapGenerator : MonoBehaviour {
 
-	public const int MapChunkSize = 37;
+	public const int MapChunkSize = 25;
 	public ConfigSettings configSettings;
 	public Gradient colorGradient;
 	private int _batchSize = 32;
