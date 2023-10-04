@@ -10,7 +10,7 @@ public static class Erosion {
         
         int index = y * mapChunkSize + x;
         
-        bool isInsideBorder = InsideBorder(x, y, erosionSettings.borderSize, mapChunkSize);
+        bool isInsideBorder  = InsideBorder(x, y, erosionSettings.borderSize, mapChunkSize);
         
         float currentHeight = heightMap[index];
         float minHeight = currentHeight;
@@ -67,4 +67,5 @@ public static class Erosion {
                y >= borderSize && 
                y < mapChunkSize - borderSize;
     }
+    
 }

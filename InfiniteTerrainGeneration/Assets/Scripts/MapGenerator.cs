@@ -10,14 +10,15 @@ using UnityEngine.Serialization;
 
 public class MapGenerator : MonoBehaviour {
 
-	public const int MapChunkSize = 25;
+	public const int MapChunkSize = 49;
 	public ConfigSettings configSettings;
 	public Gradient colorGradient;
 	private int _batchSize = 32;
 
 
 	public void DrawMapInEditor() {
-		MapData mapData = GenerateMapDataJob(Vector2.zero);
+		// MapData mapData = GenerateMapDataJob(Vector2.zero);
+		MapData mapData = GenerateMapData(Vector2.zero);
 
 		MapDisplay display = FindObjectOfType<MapDisplay> ();
 		if (configSettings.editorPreviewSettings.drawMode == EditorPreviewSettings.DrawMode.NoiseMap) {
@@ -55,6 +56,20 @@ public class MapGenerator : MonoBehaviour {
 	MapData GenerateMapData(Vector2 centre) {
 		float[] noiseMap = Noise.GenerateNoiseMap (MapChunkSize, configSettings.heightMapSettings, new float2(centre.x, centre.y));
 
+		if (configSettings.erosionSettings.activateErosion)
+		{
+			for (int i = 0; i < configSettings.erosionSettings.cicles; i++)
+			{
+				noiseMap = ThermalErosion(noiseMap, MapChunkSize, configSettings.erosionSettings,
+					i / (float)configSettings.erosionSettings.cicles);
+			}
+		}
+
+		// noiseMap[0] = 0;
+		// noiseMap[MapChunkSize] = 1.5f;
+		// noiseMap[MapChunkSize * (MapChunkSize - 1)] = 2.5f;
+		// noiseMap[MapChunkSize * MapChunkSize - 1] = 3.5f;
+		
 		Color[] colourMap = new Color[MapChunkSize * MapChunkSize];
 
 		
@@ -70,7 +85,85 @@ public class MapGenerator : MonoBehaviour {
 		return new MapData (noiseMap, colourMap);
 	}
 	
+	public float[] ThermalErosion(float[] heightMap, int mapChunkSize, ErosionSettings erosionSettings, float iterFraction)
+	{
+		int size = mapChunkSize;
+
+		float[]modifiedHeightMap = new float[heightMap.Length];
+
+		for (int index = 0; index < size * size; index++)
+		{
+			int x = index % size;
+			int y = index / size;
+
+			bool isInsideBorder = InsideBorder(x, y, erosionSettings.borderSize, size);
+
+			float currentHeight = heightMap[index];
+			float minHeight = currentHeight;
+
+			for (int dy = -1; dy <= 1; dy++)
+			{
+				for (int dx = -1; dx <= 1; dx++)
+				{
+					int nx = x + dx;
+					int ny = y + dy;
+
+					if (nx >= 0 && nx < size && ny >= 0 && ny < size)
+					{
+						int neighborIndex = ny * size + nx;
+						float neighborHeight = heightMap[neighborIndex];
+
+						if (neighborHeight < minHeight)
+						{
+							minHeight = neighborHeight;
+						}
+					}
+				}
+			}
+
+			float heightDiff = currentHeight - minHeight;
+			float angle = Mathf.Atan(heightDiff);
+			float borderMaxReduction = erosionSettings.borderMaxReduction;
+			float currentBorderReduction = borderMaxReduction * iterFraction;
+			float erodedValue = 0.0f;
+
+			if (angle > erosionSettings.talusAngle)
+			{
+				if (!isInsideBorder)
+				{
+					erodedValue = currentHeight - currentBorderReduction;
+				}
+				else
+				{
+					float sediments = (angle - erosionSettings.talusAngle) * 0.5f;
+					erodedValue = currentHeight - sediments;
+				}
+			}
+			else
+			{
+				erodedValue = currentHeight;
+			}
+
+			modifiedHeightMap[index] = erodedValue;
+		}
+
+		return modifiedHeightMap;
+	}
 	
+	private bool InsideBorder(int x, int y, int borderSize, int mapChunkSize)
+	{
+		// Comprueba si está dentro del borde en el eje X.
+		bool insideX = x >= borderSize && x < mapChunkSize - borderSize;
+
+		// Comprueba si está dentro del borde en el eje Z, teniendo en cuenta la dirección.
+		bool insideZ = y >= borderSize && y < mapChunkSize - borderSize;
+		
+		if (y  == 1  || y  == (MapChunkSize * MapChunkSize - MapChunkSize/2))
+			Console.WriteLine("Comprobar si esta en el borde");
+		// Devuelve true si está dentro del borde en ambos ejes.
+		return insideX && insideZ;
+	}
+
 	MapData GenerateMapDataJob(Vector2 centre) {
 		
 		NativeArray<Color> gradientColorArray = CreateGradientColor();

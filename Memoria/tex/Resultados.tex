@@ -99,19 +99,19 @@ La lacunaridad y la persistencia son dos propiedades relacionadas con las octava
     \begin{subfigure}{0.3\linewidth}
         \centering
         \includegraphics[width=\linewidth]{img/LowPers.png}
-        \caption{Lacunaridad = 0 }
+        \caption{Persistencia = 0 }
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.3\linewidth}
         \centering
         \includegraphics[width=\linewidth]{img/MediumPers.png}
-        \caption{Lacunaridad = 0,5 }
+        \caption{Persistencia = 0,5 }
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.3\linewidth}
         \centering
         \includegraphics[width=\linewidth]{img/HeightPers.png}
-        \caption{Lacunaridad = 1 }
+        \caption{Persistencia = 1 }
     \end{subfigure}
     \caption{Comparación entre valores de persistencia bajo, medio y alto.}
 \end{figure}
@@ -154,7 +154,7 @@ Como se observa en las imágenes, el ruido Perlin tiene variaciones más suaves,
 
 \subsubsection{Variación de Semilla de Ruido}
 
-La semilla de ruido inicial puede afectar drásticamente la apariencia del terreno. Se han generado mapas de altura con diferentes semillas para mostrar cómo cambia el terreno:
+La semilla de ruido inicial puede afectar drásticamente la apariencia del terreno:
 
 \begin{itemize}
     \item \textbf{Semilla 123:} Mostrando el terreno generado con la semilla 123.
@@ -179,6 +179,7 @@ La semilla de ruido inicial puede afectar drásticamente la apariencia del terre
         \caption{Ruido con los diferentes algoritmos con la semilla 123.}
     \end{figure}
 
+    \newpage
     \item \textbf{Semilla 456:} Presentando el terreno generado con la semilla 456.
     \begin{figure}[ht]
         \begin{subfigure}{0.3\linewidth}
@@ -204,16 +205,16 @@ La semilla de ruido inicial puede afectar drásticamente la apariencia del terre
 
 \subsection{Efectos de Erosión}
 
-\subsubsection{Ciclos: }Los ciclos representan el número de iteraciones en los que se van a recalcular las alturas de los vértices. A mayor número de ciclos, menores serán las diferencias de alturas entre los vértices.    
+\subsubsection{Ciclos: }Los ciclos representan el número de iteraciones en los que se van a recalcular las alturas de los vértices. 
 \begin{figure}[ht]
     \centering
-    \begin{minipage}{0.4\textwidth}
+    \begin{minipage}{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/0ciclos.png}
         \caption{0 Ciclos de erosión, la erosión no afecta}
     \end{minipage}%
     \hfill
-    \begin{minipage}{0.4\textwidth}
+    \begin{minipage}{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/3ciclos.png}
         \caption{3 Ciclos de erosión con ángulo de talud de 0 grados}
@@ -221,13 +222,13 @@ La semilla de ruido inicial puede afectar drásticamente la apariencia del terre
     
     \vspace{0.5cm} % Espacio vertical entre las dos filas de imágenes
     
-    \begin{minipage}{0.4\textwidth}
+    \begin{minipage}{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/7ciclos.png}
         \caption{7 Ciclos de erosión con ángulo de talud de 0 grados}
     \end{minipage}%
     \hfill
-    \begin{minipage}{0.4\textwidth}
+    \begin{minipage}{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/12ciclos.png}
         \caption{12 Ciclos de erosión con ángulo de talud de 0 grados}
@@ -428,19 +429,4 @@ En esta sección se presenta una comparación visual de los diferentes niveles d
 \end{itemize}
 
 Estas imágenes permiten apreciar las diferencias en la calidad y detalle del terreno en función del nivel de detalle seleccionado.
-
-
-% \section{Rendimiento}
-
-% \subsection{Tiempo de Generación de Terreno}
-
-% Se realizarán pruebas de rendimiento para medir el tiempo necesario para generar un terreno con diferentes configuraciones. Se analizará cómo la paralelización de tareas afecta el rendimiento en sistemas multicore.
-
-% \subsection{Optimización de Malla}
-
-% Se evaluará el impacto de las técnicas de optimización, como el LOD (Niveles de Detalle) y el almacenamiento en caché, en el rendimiento de la aplicación. Se compararán las tasas de fotogramas (FPS) en diferentes configuraciones de malla.
-
-% \section{Conclusión del Análisis}
-
-% En esta sección final del capítulo, se resumirán los resultados clave del análisis y se discutirán las conclusiones obtenidas. Se destacarán los logros del proyecto, las lecciones aprendidas y las posibles mejoras futuras.
 

@@ -99,7 +99,6 @@ public class EndlessTerrain : MonoBehaviour {
 			_meshObject.transform.position = positionV3 * Scale;
 			_meshObject.transform.parent = parent;
 			_meshObject.transform.localScale = Vector3.one * Scale;
-			// _meshObject.tag = "Ground";
 			
 			SetVisible(false);
 
